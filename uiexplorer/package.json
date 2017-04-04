@@ -1,0 +1,13 @@
+{
+  "name": "UIExplorer",
+  "version": "0.3.0",
+  "private": true,
+  "scripts": {
+    "start": "react-native start server --transformer scalajsTransformer.js"
+  },
+  "dependencies": {
+    "react": "16.0.0-alpha.6",
+    "react-native": "0.43.0",
+    "react-navigation": "react-community/react-navigation"
+  }
+}
