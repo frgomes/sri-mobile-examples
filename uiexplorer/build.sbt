@@ -11,7 +11,7 @@ libraryDependencies ++= Seq(
   "scalajs-react-interface" %%% "core" % "2017.3.26-beta",
   "scalajs-react-interface" %%% "mobile" % "2017.3.26-beta",
   "org.scala-lang.modules" %% "scala-async" % "0.9.6",
-  "scalajs-react-interface" %%% "universal" % "2017.4.4-beta",
+  "scalajs-react-interface" %%% "universal" % "2017.4.5-beta",
   "scalajs-react-interface" %%% "navigation" % "2017.3.26-beta",
   "scalajs-react-interface" %%% "platform-config-ios" % "2017.3.26-beta" % ios,
   "scalajs-react-interface" %%% "platform-config-android" % "2017.3.26-beta" % android

@@ -80,9 +80,9 @@ object FlatListExample extends UIExample {
         FlatList(
           data = data,
           ref = storeListRef _,
-          HeaderComponent = () => ListExamplesShared.HeaderComponent,
-          FooterComponent = () => ListExamplesShared.FooterComponent,
-          SeparatorComponent = () => ListExamplesShared.SeparatorComponent,
+          ListHeaderComponent = () => ListExamplesShared.HeaderComponent,
+          ListFooterComponent = () => ListExamplesShared.FooterComponent,
+          ItemSeparatorComponent = () => ListExamplesShared.SeparatorComponent,
           debug = state.debug,
           horizontal = state.horizontal,
           disableVirtualization = !state.virtualized,
