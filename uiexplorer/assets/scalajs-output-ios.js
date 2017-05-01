@@ -1096,6 +1096,7 @@ var $i_$002e$002fimages$002fic$005fsettings$005fblack$005f48dp$002epng = require
 var $i_$002e$002fimages$002fthumbnails$002fsuperlike$002epng = require("./images/thumbnails/superlike.png");
 var $i_$002e$002fimages$002fthumbnails$002fvictory$002epng = require("./images/thumbnails/victory.png");
 var $i_react$002dnavigation = require("react-navigation");
+var $i_prop$002dtypes = require("prop-types");
 var $i_react$002dnative = require("react-native");
 var $i_react$002dnative$002fLibraries$002fRenderer$002fsrc$002frenderers$002fnative$002fReactNativePropRegistry = require("react-native/Libraries/Renderer/src/renderers/native/ReactNativePropRegistry");
 var $i_react = require("react");
@@ -3538,46 +3539,6 @@ function $m_Lsri_mobile_examples_uiexplorer_components_TouchableExample$Touchabl
   return $n_Lsri_mobile_examples_uiexplorer_components_TouchableExample$TouchableFeedbackEvents$
 }
 /** @constructor */
-function $c_Lsri_mobile_examples_uiexplorer_components_UIExplorerDetailsScreen$() {
-  $c_O.call(this)
-}
-$c_Lsri_mobile_examples_uiexplorer_components_UIExplorerDetailsScreen$.prototype = new $h_O();
-$c_Lsri_mobile_examples_uiexplorer_components_UIExplorerDetailsScreen$.prototype.constructor = $c_Lsri_mobile_examples_uiexplorer_components_UIExplorerDetailsScreen$;
-/** @constructor */
-function $h_Lsri_mobile_examples_uiexplorer_components_UIExplorerDetailsScreen$() {
-  /*<skip>*/
-}
-$h_Lsri_mobile_examples_uiexplorer_components_UIExplorerDetailsScreen$.prototype = $c_Lsri_mobile_examples_uiexplorer_components_UIExplorerDetailsScreen$.prototype;
-$c_Lsri_mobile_examples_uiexplorer_components_UIExplorerDetailsScreen$.prototype.init___ = (function() {
-  $n_Lsri_mobile_examples_uiexplorer_components_UIExplorerDetailsScreen$ = this;
-  var title = $m_Lsri_navigation_NavigationScreenOptionsImplicits$().ftoJSF1__F1__Lsri_macros_OptionalParam(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(navigation$2) {
-    var value = navigation$2.state.params;
-    if ((value === (void 0))) {
-      throw new $c_ju_NoSuchElementException().init___T("undefined.get")
-    };
-    var jsx$1 = value.title;
-    return $as_T(jsx$1)
-  })));
-  var fresh$macro$5 = {};
-  title.foreach__F1__V(new $c_Lsri_navigation_NavigationScreenOptions$$anonfun$17().init___sjs_js_Object(fresh$macro$5));
-  $a_Lsri_mobile_examples_uiexplorer_components_UIExplorerDetailsScreen().navigationOptions = fresh$macro$5;
-  return this
-});
-var $d_Lsri_mobile_examples_uiexplorer_components_UIExplorerDetailsScreen$ = new $TypeData().initClass({
-  Lsri_mobile_examples_uiexplorer_components_UIExplorerDetailsScreen$: 0
-}, false, "sri.mobile.examples.uiexplorer.components.UIExplorerDetailsScreen$", {
-  Lsri_mobile_examples_uiexplorer_components_UIExplorerDetailsScreen$: 1,
-  O: 1
-});
-$c_Lsri_mobile_examples_uiexplorer_components_UIExplorerDetailsScreen$.prototype.$classData = $d_Lsri_mobile_examples_uiexplorer_components_UIExplorerDetailsScreen$;
-var $n_Lsri_mobile_examples_uiexplorer_components_UIExplorerDetailsScreen$ = (void 0);
-function $m_Lsri_mobile_examples_uiexplorer_components_UIExplorerDetailsScreen$() {
-  if ((!$n_Lsri_mobile_examples_uiexplorer_components_UIExplorerDetailsScreen$)) {
-    $n_Lsri_mobile_examples_uiexplorer_components_UIExplorerDetailsScreen$ = new $c_Lsri_mobile_examples_uiexplorer_components_UIExplorerDetailsScreen$().init___()
-  };
-  return $n_Lsri_mobile_examples_uiexplorer_components_UIExplorerDetailsScreen$
-}
-/** @constructor */
 function $c_Lsri_mobile_examples_uiexplorer_components_UIExplorerListScreen$() {
   $c_O.call(this);
   this.COMPONENTS$1 = null;
@@ -3599,39 +3560,32 @@ function $h_Lsri_mobile_examples_uiexplorer_components_UIExplorerListScreen$() {
 $h_Lsri_mobile_examples_uiexplorer_components_UIExplorerListScreen$.prototype = $c_Lsri_mobile_examples_uiexplorer_components_UIExplorerListScreen$.prototype;
 $c_Lsri_mobile_examples_uiexplorer_components_UIExplorerListScreen$.prototype.init___ = (function() {
   $n_Lsri_mobile_examples_uiexplorer_components_UIExplorerListScreen$ = this;
-  var fresh$macro$5 = {};
-  fresh$macro$5.title = "UIExplorer";
-  $a_Lsri_mobile_examples_uiexplorer_components_UIExplorerListScreen().navigationOptions = fresh$macro$5;
   $m_sci_List$();
   var xs = new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lsri_mobile_examples_uiexplorer_components_ViewExample$(), $m_Lsri_mobile_examples_uiexplorer_components_KeyboardAvoidingViewExample$(), $m_Lsri_mobile_examples_uiexplorer_components_TouchableExample$(), $m_Lsri_mobile_examples_uiexplorer_components_TextInputExample$(), $m_Lsri_mobile_examples_uiexplorer_components_ButtonExample$(), $m_Lsri_mobile_examples_uiexplorer_components_AnimatedExample$(), $m_Lsri_mobile_examples_uiexplorer_components_SliderExample$(), $m_Lsri_mobile_examples_uiexplorer_components_SwitchExample$(), $m_Lsri_mobile_examples_uiexplorer_components_RefreshControlExample$(), $m_Lsri_mobile_examples_uiexplorer_components_FlatListExample$(), $m_Lsri_mobile_examples_uiexplorer_components_SectionListExample$(), $m_Lsri_mobile_examples_uiexplorer_components_ActivityIndicatorExample$()]);
-  var this$12 = $m_sci_List$();
-  var cbf = this$12.ReusableCBFInstance$2;
+  var this$2 = $m_sci_List$();
+  var cbf = this$2.ReusableCBFInstance$2;
   this.COMPONENTS$1 = $as_sci_List($s_sc_TraversableLike$class__to__sc_TraversableLike__scg_CanBuildFrom__O(xs, cbf));
   $m_sci_List$();
   var xs$1 = new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lsri_mobile_examples_uiexplorer_components_ios_SegmentedControlExample$(), $m_Lsri_mobile_examples_uiexplorer_components_ScrollViewExample$(), $m_Lsri_mobile_examples_uiexplorer_components_ModalExample$(), $m_Lsri_mobile_examples_uiexplorer_components_ios_WebViewExample$()]);
-  var this$14 = $m_sci_List$();
-  var cbf$1 = this$14.ReusableCBFInstance$2;
+  var this$4 = $m_sci_List$();
+  var cbf$1 = this$4.ReusableCBFInstance$2;
   this.IOS$undCOMPONENTS$1 = $as_sci_List($s_sc_TraversableLike$class__to__sc_TraversableLike__scg_CanBuildFrom__O(xs$1, cbf$1));
   $m_sci_List$();
   var xs$2 = new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lsri_mobile_examples_uiexplorer_components_android_ToolbarAndroidExample$(), $m_Lsri_mobile_examples_uiexplorer_components_ScrollViewSimpleExample$()]);
-  var this$16 = $m_sci_List$();
-  var cbf$2 = this$16.ReusableCBFInstance$2;
+  var this$6 = $m_sci_List$();
+  var cbf$2 = this$6.ReusableCBFInstance$2;
   this.ANDROID$undCOMPONENTS$1 = $as_sci_List($s_sc_TraversableLike$class__to__sc_TraversableLike__scg_CanBuildFrom__O(xs$2, cbf$2));
   $m_sci_List$();
-  var xs$3 = new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lsri_mobile_examples_uiexplorer_apis_AlertExample$(), $m_Lsri_mobile_examples_uiexplorer_apis_GeolocationExample$(), $m_Lsri_mobile_examples_uiexplorer_apis_LinkingExample$()]);
-  var this$18 = $m_sci_List$();
-  var cbf$3 = this$18.ReusableCBFInstance$2;
+  var xs$3 = new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lsri_mobile_examples_uiexplorer_apis_AlertExample$(), $m_Lsri_mobile_examples_uiexplorer_apis_GeolocationExample$(), $m_Lsri_mobile_examples_uiexplorer_apis_LinkingExample$(), $m_Lsri_mobile_examples_uiexplorer_apis_AsyncStorageExample$(), $m_Lsri_mobile_examples_uiexplorer_apis_AppStateExample$()]);
+  var this$8 = $m_sci_List$();
+  var cbf$3 = this$8.ReusableCBFInstance$2;
   this.APIS$1 = $as_sci_List($s_sc_TraversableLike$class__to__sc_TraversableLike__scg_CanBuildFrom__O(xs$3, cbf$3));
+  this.IOS$undAPIS$1 = $m_sci_Nil$();
   $m_sci_List$();
-  var xs$4 = new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lsri_mobile_examples_uiexplorer_apis_AsyncStorageExample$(), $m_Lsri_mobile_examples_uiexplorer_apis_AppStateExample$()]);
-  var this$20 = $m_sci_List$();
-  var cbf$4 = this$20.ReusableCBFInstance$2;
-  this.IOS$undAPIS$1 = $as_sci_List($s_sc_TraversableLike$class__to__sc_TraversableLike__scg_CanBuildFrom__O(xs$4, cbf$4));
-  $m_sci_List$();
-  var xs$5 = new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lsri_mobile_examples_uiexplorer_apis_android_ToastAndroidExample$()]);
-  var this$22 = $m_sci_List$();
-  var cbf$5 = this$22.ReusableCBFInstance$2;
-  this.ANDROID$undAPIS$1 = $as_sci_List($s_sc_TraversableLike$class__to__sc_TraversableLike__scg_CanBuildFrom__O(xs$5, cbf$5));
+  var xs$4 = new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lsri_mobile_examples_uiexplorer_apis_android_ToastAndroidExample$()]);
+  var this$10 = $m_sci_List$();
+  var cbf$4 = this$10.ReusableCBFInstance$2;
+  this.ANDROID$undAPIS$1 = $as_sci_List($s_sc_TraversableLike$class__to__sc_TraversableLike__scg_CanBuildFrom__O(xs$4, cbf$4));
   this.finalComponentsList$1 = this.getComponents__sjs_js_Array();
   this.finalAPIList$1 = this.getAPIs__sjs_js_Array();
   this.ds$1 = $m_Lsri_universal_package$().createListViewDataSource__sjs_js_Function2__sjs_js_Function2__sjs_js_Function3__sjs_js_Function2__Lsri_universal_components_ListViewDataSource((function(r1$2, r2$2) {
@@ -3998,42 +3952,6 @@ function $m_Lsri_navigation_NavigationCtrl$() {
   return $n_Lsri_navigation_NavigationCtrl$
 }
 /** @constructor */
-function $c_Lsri_navigation_NavigationScreenOptionsImplicits$() {
-  $c_O.call(this)
-}
-$c_Lsri_navigation_NavigationScreenOptionsImplicits$.prototype = new $h_O();
-$c_Lsri_navigation_NavigationScreenOptionsImplicits$.prototype.constructor = $c_Lsri_navigation_NavigationScreenOptionsImplicits$;
-/** @constructor */
-function $h_Lsri_navigation_NavigationScreenOptionsImplicits$() {
-  /*<skip>*/
-}
-$h_Lsri_navigation_NavigationScreenOptionsImplicits$.prototype = $c_Lsri_navigation_NavigationScreenOptionsImplicits$.prototype;
-$c_Lsri_navigation_NavigationScreenOptionsImplicits$.prototype.init___ = (function() {
-  return this
-});
-$c_Lsri_navigation_NavigationScreenOptionsImplicits$.prototype.ftoJSF1__F1__Lsri_macros_OptionalParam = (function($in) {
-  var a = (function(f) {
-    return (function(arg1) {
-      return f.apply__O__O(arg1)
-    })
-  })($in);
-  return new $c_Lsri_macros_OptSpecified().init___O(a)
-});
-var $d_Lsri_navigation_NavigationScreenOptionsImplicits$ = new $TypeData().initClass({
-  Lsri_navigation_NavigationScreenOptionsImplicits$: 0
-}, false, "sri.navigation.NavigationScreenOptionsImplicits$", {
-  Lsri_navigation_NavigationScreenOptionsImplicits$: 1,
-  O: 1
-});
-$c_Lsri_navigation_NavigationScreenOptionsImplicits$.prototype.$classData = $d_Lsri_navigation_NavigationScreenOptionsImplicits$;
-var $n_Lsri_navigation_NavigationScreenOptionsImplicits$ = (void 0);
-function $m_Lsri_navigation_NavigationScreenOptionsImplicits$() {
-  if ((!$n_Lsri_navigation_NavigationScreenOptionsImplicits$)) {
-    $n_Lsri_navigation_NavigationScreenOptionsImplicits$ = new $c_Lsri_navigation_NavigationScreenOptionsImplicits$().init___()
-  };
-  return $n_Lsri_navigation_NavigationScreenOptionsImplicits$
-}
-/** @constructor */
 function $c_Lsri_navigation_package$() {
   $c_O.call(this);
   this.navigationContextType$1 = null
@@ -4048,7 +3966,7 @@ $h_Lsri_navigation_package$.prototype = $c_Lsri_navigation_package$.prototype;
 $c_Lsri_navigation_package$.prototype.init___ = (function() {
   $n_Lsri_navigation_package$ = this;
   var jsx$1 = $m_sjs_js_Dictionary$();
-  var y = $i_react.PropTypes.object.isRequired;
+  var y = $i_prop$002dtypes.object.isRequired;
   this.navigationContextType$1 = jsx$1.apply__sc_Seq__sjs_js_Dictionary(new $c_sjs_js_WrappedArray().init___sjs_js_Array([new $c_T2().init___O__O("navigation", y)]));
   return this
 });
@@ -7255,20 +7173,43 @@ $c_Lsri_mobile_examples_uiexplorer_MobileApp$.prototype.main__V = (function() {
     var jsx$1 = false
   };
   $g.REACT_ELEMENT_TYPE = (jsx$1 ? $g.Symbol["for"]("react.element") : 60103);
+  var fresh$macro$2 = {};
+  fresh$macro$2.title = "UIExplorer";
+  $m_Lsri_navigation_package$();
+  $m_Lsri_navigation_package$();
   $m_Lsri_navigation_package$();
   var constructor = $a_Lsri_mobile_examples_uiexplorer_components_UIExplorerListScreen();
   var name = $d_Lsri_mobile_examples_uiexplorer_components_UIExplorerListScreen.getClassOf().getName__T();
-  var fresh$macro$11 = {
+  var fresh$macro$9 = {
     "screen": constructor
   };
-  var jsx$2 = new $c_T2().init___O__O(name, fresh$macro$11);
+  fresh$macro$9.navigationOptions = fresh$macro$2;
+  var jsx$3 = new $c_T2().init___O__O(name, fresh$macro$9);
+  var a$1 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(props$2) {
+    var value = props$2.navigation.state.params;
+    if ((value === (void 0))) {
+      throw new $c_ju_NoSuchElementException().init___T("undefined.get")
+    };
+    var jsx$2 = value.title;
+    var a = $as_T(jsx$2);
+    var fresh$macro$2$1 = {};
+    fresh$macro$2$1.title = a;
+    return fresh$macro$2$1
+  }));
+  $m_Lsri_navigation_package$();
+  $m_Lsri_navigation_package$();
   $m_Lsri_navigation_package$();
   var constructor$1 = $a_Lsri_mobile_examples_uiexplorer_components_UIExplorerDetailsScreen();
   var name$1 = $d_Lsri_mobile_examples_uiexplorer_components_UIExplorerDetailsScreen.getClassOf().getName__T();
-  var fresh$macro$11$1 = {
+  var fresh$macro$9$1 = {
     "screen": constructor$1
   };
-  var routes = new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$2, new $c_T2().init___O__O(name$1, fresh$macro$11$1)]);
+  fresh$macro$9$1.navigationOptions = (function(f) {
+    return (function(arg1) {
+      return f.apply__O__O(arg1)
+    })
+  })(a$1);
+  var routes = new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$3, new $c_T2().init___O__O(name$1, fresh$macro$9$1)]);
   var root = (0, $i_react$002dnavigation.StackNavigator)($m_sjs_js_Dictionary$().apply__sc_Seq__sjs_js_Dictionary(routes));
   $i_react$002dnative.AppRegistry.registerComponent("UIExplorer", (function(root$1) {
     return (function() {
@@ -8742,8 +8683,8 @@ $c_Lsri_mobile_examples_uiexplorer_components_ViewExample$.prototype.init___ = (
     while ((!these.isEmpty__Z())) {
       var arg1 = these.head__O();
       $uI(result.push(arg1));
-      var this$213 = these;
-      these = this$213.tail__sci_List()
+      var this$210 = these;
+      these = this$210.tail__sci_List()
     };
     var jsx$1 = $i_react;
     var a$17 = jsx$1.createElement.apply(jsx$1, [ctor$6, fresh$macro$3$3].concat(result));
@@ -15607,7 +15548,7 @@ $c_Lsri_mobile_examples_uiexplorer_apis_AlertExample$$anonfun$13.prototype.apply
     })
   })(a1);
   var ctor$1 = $i_react$002dnative.TouchableHighlight;
-  var this$62 = $m_sjsr_package$();
+  var this$61 = $m_sjsr_package$();
   if ($is_sjs_js_ArrayOps(x$199)) {
     var x2 = $as_sjs_js_ArrayOps(x$199);
     var children = x2.scala$scalajs$js$ArrayOps$$array$f
@@ -15620,7 +15561,7 @@ $c_Lsri_mobile_examples_uiexplorer_apis_AlertExample$$anonfun$13.prototype.apply
       return (function(x$2) {
         return $uI(result$1.push(x$2))
       })
-    })(this$62, result)));
+    })(this$61, result)));
     var children = result
   };
   var jsx$2 = $i_react;
@@ -15644,7 +15585,7 @@ $c_Lsri_mobile_examples_uiexplorer_apis_AlertExample$$anonfun$13.prototype.apply
     })
   })(a2);
   var ctor$3 = $i_react$002dnative.TouchableHighlight;
-  var this$128 = $m_sjsr_package$();
+  var this$125 = $m_sjsr_package$();
   if ($is_sjs_js_ArrayOps(x$212)) {
     var x2$1 = $as_sjs_js_ArrayOps(x$212);
     var children$1 = x2$1.scala$scalajs$js$ArrayOps$$array$f
@@ -15657,7 +15598,7 @@ $c_Lsri_mobile_examples_uiexplorer_apis_AlertExample$$anonfun$13.prototype.apply
       return (function(x$2$1) {
         return $uI(result$3.push(x$2$1))
       })
-    })(this$128, result$2)));
+    })(this$125, result$2)));
     var children$1 = result$2
   };
   var jsx$4 = $i_react;
@@ -15681,7 +15622,7 @@ $c_Lsri_mobile_examples_uiexplorer_apis_AlertExample$$anonfun$13.prototype.apply
     })
   })(a3);
   var ctor$5 = $i_react$002dnative.TouchableHighlight;
-  var this$194 = $m_sjsr_package$();
+  var this$189 = $m_sjsr_package$();
   if ($is_sjs_js_ArrayOps(x$225)) {
     var x2$2 = $as_sjs_js_ArrayOps(x$225);
     var children$2 = x2$2.scala$scalajs$js$ArrayOps$$array$f
@@ -15694,7 +15635,7 @@ $c_Lsri_mobile_examples_uiexplorer_apis_AlertExample$$anonfun$13.prototype.apply
       return (function(x$2$2) {
         return $uI(result$5.push(x$2$2))
       })
-    })(this$194, result$4)));
+    })(this$189, result$4)));
     var children$2 = result$4
   };
   var jsx$6 = $i_react;
@@ -15718,7 +15659,7 @@ $c_Lsri_mobile_examples_uiexplorer_apis_AlertExample$$anonfun$13.prototype.apply
     })
   })(a4);
   var ctor$7 = $i_react$002dnative.TouchableHighlight;
-  var this$260 = $m_sjsr_package$();
+  var this$253 = $m_sjsr_package$();
   if ($is_sjs_js_ArrayOps(x$238)) {
     var x2$3 = $as_sjs_js_ArrayOps(x$238);
     var children$3 = x2$3.scala$scalajs$js$ArrayOps$$array$f
@@ -15731,7 +15672,7 @@ $c_Lsri_mobile_examples_uiexplorer_apis_AlertExample$$anonfun$13.prototype.apply
       return (function(x$2$3) {
         return $uI(result$7.push(x$2$3))
       })
-    })(this$260, result$6)));
+    })(this$253, result$6)));
     var children$3 = result$6
   };
   var jsx$8 = $i_react;
@@ -15755,7 +15696,7 @@ $c_Lsri_mobile_examples_uiexplorer_apis_AlertExample$$anonfun$13.prototype.apply
     })
   })(a5);
   var ctor$9 = $i_react$002dnative.TouchableHighlight;
-  var this$326 = $m_sjsr_package$();
+  var this$317 = $m_sjsr_package$();
   if ($is_sjs_js_ArrayOps(x$251)) {
     var x2$4 = $as_sjs_js_ArrayOps(x$251);
     var children$4 = x2$4.scala$scalajs$js$ArrayOps$$array$f
@@ -15768,7 +15709,7 @@ $c_Lsri_mobile_examples_uiexplorer_apis_AlertExample$$anonfun$13.prototype.apply
       return (function(x$2$4) {
         return $uI(result$9.push(x$2$4))
       })
-    })(this$326, result$8)));
+    })(this$317, result$8)));
     var children$4 = result$8
   };
   var jsx$10 = $i_react;
@@ -16504,7 +16445,7 @@ $c_Lsri_mobile_examples_uiexplorer_apis_LinkingExample$OpenURLButton$$anonfun$2.
     })
   })(a);
   var ctor$2 = $i_react$002dnative.TouchableOpacity;
-  var this$60 = $m_sjsr_package$();
+  var this$59 = $m_sjsr_package$();
   if ($is_sjs_js_ArrayOps(x$186)) {
     var x2 = $as_sjs_js_ArrayOps(x$186);
     var children = x2.scala$scalajs$js$ArrayOps$$array$f
@@ -16517,7 +16458,7 @@ $c_Lsri_mobile_examples_uiexplorer_apis_LinkingExample$OpenURLButton$$anonfun$2.
       return (function(x$2$1) {
         return $uI(result$1.push(x$2$1))
       })
-    })(this$60, result)));
+    })(this$59, result)));
     var children = result
   };
   var jsx$2 = $i_react;
@@ -16558,7 +16499,10 @@ $c_Lsri_mobile_examples_uiexplorer_apis_android_ToastAndroidExample$$anonfun$3.p
   fresh$macro$19.style = a$1;
   var ctor = $i_react$002dnative.Text;
   var a$2 = $i_react.createElement(ctor, fresh$macro$19, "Click me.");
-  var x$97 = $as_sc_Seq(jsx$1.apply__sc_Seq__sc_GenTraversable(new $c_sjs_js_WrappedArray().init___sjs_js_Array([a$2])));
+  var x$1 = $i_react$002dnative.View;
+  var x$2$1 = {};
+  var a$3 = $i_react.createElement(x$1, x$2$1, a$2);
+  var x$97 = $as_sc_Seq(jsx$1.apply__sc_Seq__sc_GenTraversable(new $c_sjs_js_WrappedArray().init___sjs_js_Array([a$3])));
   var fresh$macro$23 = {};
   fresh$macro$23.onPress = (function(f) {
     return (function() {
@@ -16566,7 +16510,7 @@ $c_Lsri_mobile_examples_uiexplorer_apis_android_ToastAndroidExample$$anonfun$3.p
     })
   })(a);
   var ctor$1 = $i_react$002dnative.TouchableWithoutFeedback;
-  var this$40 = $m_sjsr_package$();
+  var this$53 = $m_sjsr_package$();
   if ($is_sjs_js_ArrayOps(x$97)) {
     var x2 = $as_sjs_js_ArrayOps(x$97);
     var children = x2.scala$scalajs$js$ArrayOps$$array$f
@@ -16576,38 +16520,41 @@ $c_Lsri_mobile_examples_uiexplorer_apis_android_ToastAndroidExample$$anonfun$3.p
   } else {
     var result = [];
     x$97.foreach__F1__V(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function($this, result$1) {
-      return (function(x$2$1) {
-        return $uI(result$1.push(x$2$1))
+      return (function(x$2$2) {
+        return $uI(result$1.push(x$2$2))
       })
-    })(this$40, result)));
+    })(this$53, result)));
     var children = result
   };
   var jsx$2 = $i_react;
-  var a$3 = jsx$2.createElement.apply(jsx$2, [ctor$1, fresh$macro$23].concat(children));
-  var x$1 = new $c_Lsri_mobile_examples_uiexplorer_components_UIExplorerBlock$Props().init___T__T("Simple toast", "");
+  var a$4 = jsx$2.createElement.apply(jsx$2, [ctor$1, fresh$macro$23].concat(children));
+  var x$1$1 = new $c_Lsri_mobile_examples_uiexplorer_components_UIExplorerBlock$Props().init___T__T("Simple toast", "");
   var constructor = $a_Lsri_mobile_examples_uiexplorer_components_UIExplorerBlock$Component();
   var p = {
-    "scalaProps": x$1
+    "scalaProps": x$1$1
   };
-  var a$4 = $i_react.createElement(constructor, p, a$3);
-  var a$5 = new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function() {
+  var a$5 = $i_react.createElement(constructor, p, a$4);
+  var a$6 = new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function() {
     $i_react$002dnative.ToastAndroid.show("This is a toast with long duration", $uI($i_react$002dnative.ToastAndroid.LONG))
   }));
   var jsx$3 = $m_sc_Seq$();
-  var a$6 = $m_Lsri_mobile_examples_uiexplorer_apis_android_ToastAndroidExample$styles$().text$1;
+  var a$7 = $m_Lsri_mobile_examples_uiexplorer_apis_android_ToastAndroidExample$styles$().text$1;
   var fresh$macro$19$1 = {};
-  fresh$macro$19$1.style = a$6;
+  fresh$macro$19$1.style = a$7;
   var ctor$2 = $i_react$002dnative.Text;
-  var a$7 = $i_react.createElement(ctor$2, fresh$macro$19$1, "Click me too.");
-  var x$106 = $as_sc_Seq(jsx$3.apply__sc_Seq__sc_GenTraversable(new $c_sjs_js_WrappedArray().init___sjs_js_Array([a$7])));
+  var a$8 = $i_react.createElement(ctor$2, fresh$macro$19$1, "Click me too.");
+  var x$1$2 = $i_react$002dnative.View;
+  var x$2$3 = {};
+  var a$9 = $i_react.createElement(x$1$2, x$2$3, a$8);
+  var x$106 = $as_sc_Seq(jsx$3.apply__sc_Seq__sc_GenTraversable(new $c_sjs_js_WrappedArray().init___sjs_js_Array([a$9])));
   var fresh$macro$23$1 = {};
   fresh$macro$23$1.onPress = (function(f$1) {
     return (function() {
       return f$1.apply__O()
     })
-  })(a$5);
+  })(a$6);
   var ctor$3 = $i_react$002dnative.TouchableWithoutFeedback;
-  var this$109 = $m_sjsr_package$();
+  var this$134 = $m_sjsr_package$();
   if ($is_sjs_js_ArrayOps(x$106)) {
     var x2$1 = $as_sjs_js_ArrayOps(x$106);
     var children$1 = x2$1.scala$scalajs$js$ArrayOps$$array$f
@@ -16617,26 +16564,26 @@ $c_Lsri_mobile_examples_uiexplorer_apis_android_ToastAndroidExample$$anonfun$3.p
   } else {
     var result$2 = [];
     x$106.foreach__F1__V(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function($this$1, result$3) {
-      return (function(x$2$2) {
-        return $uI(result$3.push(x$2$2))
+      return (function(x$2$4) {
+        return $uI(result$3.push(x$2$4))
       })
-    })(this$109, result$2)));
+    })(this$134, result$2)));
     var children$1 = result$2
   };
   var jsx$4 = $i_react;
-  var a$8 = jsx$4.createElement.apply(jsx$4, [ctor$3, fresh$macro$23$1].concat(children$1));
-  var x$1$1 = new $c_Lsri_mobile_examples_uiexplorer_components_UIExplorerBlock$Props().init___T__T("Toast with long duration", "");
+  var a$10 = jsx$4.createElement.apply(jsx$4, [ctor$3, fresh$macro$23$1].concat(children$1));
+  var x$1$3 = new $c_Lsri_mobile_examples_uiexplorer_components_UIExplorerBlock$Props().init___T__T("Toast with long duration", "");
   var constructor$1 = $a_Lsri_mobile_examples_uiexplorer_components_UIExplorerBlock$Component();
   var p$1 = {
-    "scalaProps": x$1$1
+    "scalaProps": x$1$3
   };
-  var a$9 = $i_react.createElement(constructor$1, p$1, a$8);
+  var a$11 = $i_react.createElement(constructor$1, p$1, a$10);
   var props = new $c_Lsri_mobile_examples_uiexplorer_components_UIExplorerPage$Props().init___Z(true);
   var constructor$2 = $a_Lsri_mobile_examples_uiexplorer_components_UIExplorerPage();
   var p$2 = {
     "scalaProps": props
   };
-  return $i_react.createElement(constructor$2, p$2, a$4, a$9)
+  return $i_react.createElement(constructor$2, p$2, a$5, a$11)
 });
 $c_Lsri_mobile_examples_uiexplorer_apis_android_ToastAndroidExample$$anonfun$3.prototype.apply__O = (function() {
   return this.apply__Lsri_core_ReactElement()
@@ -18031,7 +17978,7 @@ $c_Lsri_mobile_examples_uiexplorer_components_RefreshControlExample$Row$$anonfun
     })
   })(a);
   var ctor$2 = $i_react$002dnative.TouchableWithoutFeedback;
-  var this$59 = $m_sjsr_package$();
+  var this$58 = $m_sjsr_package$();
   if ($is_sjs_js_ArrayOps(x$185)) {
     var x2 = $as_sjs_js_ArrayOps(x$185);
     var children = x2.scala$scalajs$js$ArrayOps$$array$f
@@ -18044,7 +17991,7 @@ $c_Lsri_mobile_examples_uiexplorer_components_RefreshControlExample$Row$$anonfun
       return (function(x$2$1) {
         return $uI(result$1.push(x$2$1))
       })
-    })(this$59, result)));
+    })(this$58, result)));
     var children = result
   };
   var jsx$2 = $i_react;
@@ -18492,9 +18439,9 @@ $c_Lsri_mobile_examples_uiexplorer_components_ScrollViewExample$$anonfun$2.proto
   fresh$macro$2$1.top = (-50.0);
   var a$5 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(e$2$1) {
     var x$3 = new $c_s_StringContext().init___sc_Seq(new $c_sjs_js_WrappedArray().init___sjs_js_Array(["on Scroll: (", ", ", ")"])).s__sc_Seq__T(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$uD(e$2$1.nativeEvent.contentOffset.x), $uD(e$2$1.nativeEvent.contentOffset.y)]));
-    var this$74 = $m_s_Console$();
-    var this$75 = $as_Ljava_io_PrintStream(this$74.outVar$2.v$1);
-    this$75.java$lang$JSConsoleBasedPrintStream$$printString__T__V((x$3 + "\n"))
+    var this$73 = $m_s_Console$();
+    var this$74 = $as_Ljava_io_PrintStream(this$73.outVar$2.v$1);
+    this$74.java$lang$JSConsoleBasedPrintStream$$printString__T__V((x$3 + "\n"))
   }));
   var jsx$3 = $m_sc_Seq$();
   var array$4 = $m_Lsri_mobile_examples_uiexplorer_components_ScrollViewExample$().THUMBS$1;
@@ -18538,7 +18485,7 @@ $c_Lsri_mobile_examples_uiexplorer_components_ScrollViewExample$$anonfun$2.proto
   })(a$5);
   fresh$macro$12$1.horizontal = true;
   var ctor$1 = $i_react$002dnative.ScrollView;
-  var this$96 = $m_sjsr_package$();
+  var this$95 = $m_sjsr_package$();
   if ($is_sjs_js_ArrayOps(x$386)) {
     var x2$1 = $as_sjs_js_ArrayOps(x$386);
     var children$1 = x2$1.scala$scalajs$js$ArrayOps$$array$f
@@ -18551,7 +18498,7 @@ $c_Lsri_mobile_examples_uiexplorer_components_ScrollViewExample$$anonfun$2.proto
       return (function(x$2$1) {
         return $uI(result$3.push(x$2$1))
       })
-    })(this$96, result$2)));
+    })(this$95, result$2)));
     var children$1 = result$2
   };
   var jsx$4 = $i_react;
@@ -19561,9 +19508,9 @@ $c_Lsri_mobile_examples_uiexplorer_components_TouchableExample$$anonfun$7.protot
   var a$6 = jsx$2.createElement.apply(jsx$2, [ctor$1, fresh$macro$24].concat(children));
   var a$7 = $m_Lsri_mobile_examples_uiexplorer_components_TouchableExample$styles$().wrapper$1;
   var a$8 = new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function() {
-    var this$60 = $m_s_Console$();
-    var this$61 = $as_Ljava_io_PrintStream(this$60.outVar$2.v$1);
-    this$61.java$lang$JSConsoleBasedPrintStream$$printString__T__V("custom THW text - hightlight\n")
+    var this$59 = $m_s_Console$();
+    var this$60 = $as_Ljava_io_PrintStream(this$59.outVar$2.v$1);
+    this$60.java$lang$JSConsoleBasedPrintStream$$printString__T__V("custom THW text - hightlight\n")
   }));
   var jsx$3 = $m_sc_Seq$();
   var a$9 = $m_Lsri_mobile_examples_uiexplorer_components_TouchableExample$styles$().text$1;
@@ -19582,7 +19529,7 @@ $c_Lsri_mobile_examples_uiexplorer_components_TouchableExample$$anonfun$7.protot
     })
   })(a$8);
   var ctor$3 = $i_react$002dnative.TouchableHighlight;
-  var this$104 = $m_sjsr_package$();
+  var this$102 = $m_sjsr_package$();
   if ($is_sjs_js_ArrayOps(x$387)) {
     var x2$1 = $as_sjs_js_ArrayOps(x$387);
     var children$1 = x2$1.scala$scalajs$js$ArrayOps$$array$f
@@ -19595,7 +19542,7 @@ $c_Lsri_mobile_examples_uiexplorer_components_TouchableExample$$anonfun$7.protot
       return (function(x$2$1) {
         return $uI(result$3.push(x$2$1))
       })
-    })(this$104, result$2)));
+    })(this$102, result$2)));
     var children$1 = result$2
   };
   var jsx$4 = $i_react;
@@ -20595,39 +20542,6 @@ function $m_Lsri_mobile_examples_uiexplorer_components_ios_WebViewExample$State$
   };
   return $n_Lsri_mobile_examples_uiexplorer_components_ios_WebViewExample$State$
 }
-/** @constructor */
-function $c_Lsri_navigation_NavigationScreenOptions$$anonfun$17() {
-  $c_sr_AbstractFunction1.call(this);
-  this.fresh$macro$5$1$2 = null
-}
-$c_Lsri_navigation_NavigationScreenOptions$$anonfun$17.prototype = new $h_sr_AbstractFunction1();
-$c_Lsri_navigation_NavigationScreenOptions$$anonfun$17.prototype.constructor = $c_Lsri_navigation_NavigationScreenOptions$$anonfun$17;
-/** @constructor */
-function $h_Lsri_navigation_NavigationScreenOptions$$anonfun$17() {
-  /*<skip>*/
-}
-$h_Lsri_navigation_NavigationScreenOptions$$anonfun$17.prototype = $c_Lsri_navigation_NavigationScreenOptions$$anonfun$17.prototype;
-$c_Lsri_navigation_NavigationScreenOptions$$anonfun$17.prototype.apply__O__O = (function(v1) {
-  this.apply__sjs_js_$bar__V(v1)
-});
-$c_Lsri_navigation_NavigationScreenOptions$$anonfun$17.prototype.apply__sjs_js_$bar__V = (function(v) {
-  this.fresh$macro$5$1$2.title = v
-});
-$c_Lsri_navigation_NavigationScreenOptions$$anonfun$17.prototype.init___sjs_js_Object = (function(fresh$macro$5$1) {
-  this.fresh$macro$5$1$2 = fresh$macro$5$1;
-  return this
-});
-var $d_Lsri_navigation_NavigationScreenOptions$$anonfun$17 = new $TypeData().initClass({
-  Lsri_navigation_NavigationScreenOptions$$anonfun$17: 0
-}, false, "sri.navigation.NavigationScreenOptions$$anonfun$17", {
-  Lsri_navigation_NavigationScreenOptions$$anonfun$17: 1,
-  sr_AbstractFunction1: 1,
-  O: 1,
-  F1: 1,
-  s_Serializable: 1,
-  Ljava_io_Serializable: 1
-});
-$c_Lsri_navigation_NavigationScreenOptions$$anonfun$17.prototype.$classData = $d_Lsri_navigation_NavigationScreenOptions$$anonfun$17;
 /** @constructor */
 function $c_jl_ArithmeticException() {
   $c_jl_RuntimeException.call(this)
@@ -23872,8 +23786,8 @@ function $s_Lsri_mobile_examples_uiexplorer_apis_AppStateExample$AppStateSubscri
       i = ((1 + i) | 0)
     };
     b.append__T__scm_StringBuilder("");
-    var this$24 = b.underlying$5;
-    var a$2 = this$24.content$1;
+    var this$23 = b.underlying$5;
+    var a$2 = this$23.content$1;
     var x$31$1 = $i_react$002dnative.Text;
     var x$32$1 = {};
     var a$3 = $i_react.createElement(x$31$1, x$32$1, a$2);
@@ -23971,7 +23885,7 @@ function $s_Lsri_mobile_examples_uiexplorer_apis_AsyncStorageExample$Component__
     })
   })(a$1);
   var ctor$1 = $i_react$002dnative.Picker;
-  var this$29 = $m_sjsr_package$();
+  var this$28 = $m_sjsr_package$();
   if ($is_sjs_js_ArrayOps(x$21)) {
     var x2 = $as_sjs_js_ArrayOps(x$21);
     var children = x2.scala$scalajs$js$ArrayOps$$array$f
@@ -23984,7 +23898,7 @@ function $s_Lsri_mobile_examples_uiexplorer_apis_AsyncStorageExample$Component__
       return (function(x$2) {
         return $uI(result$1.push(x$2))
       })
-    })(this$29, result)));
+    })(this$28, result)));
     var children = result
   };
   var jsx$2 = $i_react;
@@ -24014,7 +23928,7 @@ function $s_Lsri_mobile_examples_uiexplorer_apis_AsyncStorageExample$Component__
     })
   })(a$8);
   var ctor$3 = $i_react$002dnative.Text;
-  var this$127 = $m_sjsr_package$();
+  var this$122 = $m_sjsr_package$();
   if ($is_sjs_js_ArrayOps(x$117)) {
     var x2$1 = $as_sjs_js_ArrayOps(x$117);
     var children$1 = x2$1.scala$scalajs$js$ArrayOps$$array$f
@@ -24027,7 +23941,7 @@ function $s_Lsri_mobile_examples_uiexplorer_apis_AsyncStorageExample$Component__
       return (function(x$2$1) {
         return $uI(result$3.push(x$2$1))
       })
-    })(this$127, result$2)));
+    })(this$122, result$2)));
     var children$1 = result$2
   };
   var jsx$3 = $i_react;
@@ -24849,17 +24763,17 @@ function $s_Lsri_mobile_examples_uiexplorer_components_FlatListExample$Component
       })
     })(x$235)
   };
-  fresh$macro$28.FooterComponent = (function(f$8) {
+  fresh$macro$28.ListFooterComponent = (function(f$8) {
     return (function() {
       return f$8.apply__O()
     })
   })(a$36);
-  fresh$macro$28.HeaderComponent = (function(f$9) {
+  fresh$macro$28.ListHeaderComponent = (function(f$9) {
     return (function() {
       return f$9.apply__O()
     })
   })(a$35);
-  fresh$macro$28.SeparatorComponent = (function(f$10) {
+  fresh$macro$28.ItemSeparatorComponent = (function(f$10) {
     return (function() {
       return f$10.apply__O()
     })
@@ -25010,7 +24924,7 @@ function $s_Lsri_mobile_examples_uiexplorer_components_KeyboardAvoidingViewExamp
     })
   })(a$11);
   var ctor$3 = $i_react$002dnative.TouchableHighlight;
-  var this$124 = $m_sjsr_package$();
+  var this$121 = $m_sjsr_package$();
   if ($is_sjs_js_ArrayOps(x$409)) {
     var x2 = $as_sjs_js_ArrayOps(x$409);
     var children = x2.scala$scalajs$js$ArrayOps$$array$f
@@ -25023,7 +24937,7 @@ function $s_Lsri_mobile_examples_uiexplorer_components_KeyboardAvoidingViewExamp
       return (function(x$2) {
         return $uI(result$1.push(x$2))
       })
-    })(this$124, result)));
+    })(this$121, result)));
     var children = result
   };
   var jsx$2 = $i_react;
@@ -25046,7 +24960,7 @@ function $s_Lsri_mobile_examples_uiexplorer_components_KeyboardAvoidingViewExamp
     })
   })(a$15);
   var ctor$5 = $i_react$002dnative.TouchableHighlight;
-  var this$186 = $m_sjsr_package$();
+  var this$180 = $m_sjsr_package$();
   if ($is_sjs_js_ArrayOps(x$426)) {
     var x2$1 = $as_sjs_js_ArrayOps(x$426);
     var children$1 = x2$1.scala$scalajs$js$ArrayOps$$array$f
@@ -25059,7 +24973,7 @@ function $s_Lsri_mobile_examples_uiexplorer_components_KeyboardAvoidingViewExamp
       return (function(x$2$1) {
         return $uI(result$3.push(x$2$1))
       })
-    })(this$186, result$2)));
+    })(this$180, result$2)));
     var children$1 = result$2
   };
   var jsx$4 = $i_react;
@@ -25310,7 +25224,7 @@ function $s_Lsri_mobile_examples_uiexplorer_components_ListExamplesShared$ItemCo
     })
   })(a);
   var ctor$3 = $i_react$002dnative.TouchableHighlight;
-  var this$184 = $m_sjsr_package$();
+  var this$183 = $m_sjsr_package$();
   if ($is_sjs_js_ArrayOps(x$935)) {
     var x2$1 = $as_sjs_js_ArrayOps(x$935);
     var children$1 = x2$1.scala$scalajs$js$ArrayOps$$array$f
@@ -25323,7 +25237,7 @@ function $s_Lsri_mobile_examples_uiexplorer_components_ListExamplesShared$ItemCo
       return (function(x$2$1) {
         return $uI(result$3.push(x$2$1))
       })
-    })(this$184, result$2)));
+    })(this$183, result$2)));
     var children$1 = result$2
   };
   var jsx$5 = $i_react;
@@ -25421,7 +25335,7 @@ function $s_Lsri_mobile_examples_uiexplorer_components_ModalExample$Component__r
   fresh$macro$14.transparent = a$1;
   fresh$macro$14.visible = a$2;
   var ctor$3 = $i_react$002dnative.Modal;
-  var this$93 = $m_sjsr_package$();
+  var this$92 = $m_sjsr_package$();
   if ($is_sjs_js_ArrayOps(x$460)) {
     var x2 = $as_sjs_js_ArrayOps(x$460);
     var children = x2.scala$scalajs$js$ArrayOps$$array$f
@@ -25434,7 +25348,7 @@ function $s_Lsri_mobile_examples_uiexplorer_components_ModalExample$Component__r
       return (function(x$2) {
         return $uI(result$1.push(x$2))
       })
-    })(this$93, result)));
+    })(this$92, result)));
     var children = result
   };
   var jsx$2 = $i_react;
@@ -25640,15 +25554,15 @@ function $s_Lsri_mobile_examples_uiexplorer_components_RefreshControlExample$Com
   var a$4 = $i_react.createElement(ctor, fresh$macro$26);
   var jsx$2 = $m_sc_Seq$();
   var jsx$1 = $m_Lsri_universal_package$();
-  var this$35 = $as_Lsri_mobile_examples_uiexplorer_components_RefreshControlExample$State($this.scalaState).rowData$1;
+  var this$34 = $as_Lsri_mobile_examples_uiexplorer_components_RefreshControlExample$State($this.scalaState).rowData$1;
   $m_sci_Vector$();
   var bf = $m_sc_IndexedSeq$().ReusableCBF$6;
-  var x$223 = $as_sc_Seq(jsx$2.apply__sc_Seq__sc_GenTraversable(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$1.genTravarsableToJSArrayReactElement__sc_GenTraversableOnce__sjs_js_$bar($as_sc_GenTraversableOnce($as_sc_TraversableLike($s_sc_IterableLike$class__zipWithIndex__sc_IterableLike__scg_CanBuildFrom__O(this$35, bf)).map__F1__scg_CanBuildFrom__O(new $c_Lsri_mobile_examples_uiexplorer_components_RefreshControlExample$Component$$anonfun$render$1().init___Lsri_mobile_examples_uiexplorer_components_RefreshControlExample$Component($this), ($m_sci_Vector$(), $m_sc_IndexedSeq$().ReusableCBF$6))))])));
+  var x$223 = $as_sc_Seq(jsx$2.apply__sc_Seq__sc_GenTraversable(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$1.genTravarsableToJSArrayReactElement__sc_GenTraversableOnce__sjs_js_$bar($as_sc_GenTraversableOnce($as_sc_TraversableLike($s_sc_IterableLike$class__zipWithIndex__sc_IterableLike__scg_CanBuildFrom__O(this$34, bf)).map__F1__scg_CanBuildFrom__O(new $c_Lsri_mobile_examples_uiexplorer_components_RefreshControlExample$Component$$anonfun$render$1().init___Lsri_mobile_examples_uiexplorer_components_RefreshControlExample$Component($this), ($m_sci_Vector$(), $m_sc_IndexedSeq$().ReusableCBF$6))))])));
   var fresh$macro$12 = {};
   fresh$macro$12.style = a;
   fresh$macro$12.refreshControl = a$4;
   var ctor$1 = $i_react$002dnative.ScrollView;
-  var this$40 = $m_sjsr_package$();
+  var this$39 = $m_sjsr_package$();
   if ($is_sjs_js_ArrayOps(x$223)) {
     var x2 = $as_sjs_js_ArrayOps(x$223);
     var children = x2.scala$scalajs$js$ArrayOps$$array$f
@@ -25661,7 +25575,7 @@ function $s_Lsri_mobile_examples_uiexplorer_components_RefreshControlExample$Com
       return (function(x$2) {
         return $uI(result$1.push(x$2))
       })
-    })(this$40, result)));
+    })(this$39, result)));
     var children = result
   };
   var jsx$3 = $i_react;
@@ -25791,7 +25705,7 @@ function $s_Lsri_mobile_examples_uiexplorer_components_ScrollViewSimpleExample$C
   var this$4 = new $c_sci_Range$Inclusive().init___I__I__I(1, nItems, 1);
   var this$5 = $m_sci_List$();
   var cbf = this$5.ReusableCBFInstance$2;
-  var this$48 = $as_sci_List($s_sc_TraversableLike$class__to__sc_TraversableLike__scg_CanBuildFrom__O(this$4, cbf));
+  var this$46 = $as_sci_List($s_sc_TraversableLike$class__to__sc_TraversableLike__scg_CanBuildFrom__O(this$4, cbf));
   var f = (function(style$1) {
     return (function(i$2) {
       var i = $uI(i$2);
@@ -25805,7 +25719,7 @@ function $s_Lsri_mobile_examples_uiexplorer_components_ScrollViewSimpleExample$C
       var fresh$macro$25 = {};
       fresh$macro$25.style = style$1;
       var ctor = $i_react$002dnative.TouchableOpacity;
-      var this$42 = $m_sjsr_package$();
+      var this$41 = $m_sjsr_package$();
       if ($is_sjs_js_ArrayOps(x$10)) {
         var x2 = $as_sjs_js_ArrayOps(x$10);
         var children = x2.scala$scalajs$js$ArrayOps$$array$f
@@ -25818,7 +25732,7 @@ function $s_Lsri_mobile_examples_uiexplorer_components_ScrollViewSimpleExample$C
           return (function(x$2) {
             return $uI(result$1.push(x$2))
           })
-        })(this$42, result)));
+        })(this$41, result)));
         var children = result
       };
       fresh$macro$25.key = a;
@@ -25826,39 +25740,39 @@ function $s_Lsri_mobile_examples_uiexplorer_components_ScrollViewSimpleExample$C
       return jsx$2.createElement.apply(jsx$2, [ctor, fresh$macro$25].concat(children))
     })
   })(style);
-  var this$47 = $m_sci_List$();
-  var bf = this$47.ReusableCBFInstance$2;
+  var this$45 = $m_sci_List$();
+  var bf = this$45.ReusableCBFInstance$2;
   if ((bf === $m_sci_List$().ReusableCBFInstance$2)) {
-    if ((this$48 === $m_sci_Nil$())) {
+    if ((this$46 === $m_sci_Nil$())) {
       var jsx$3 = $m_sci_Nil$()
     } else {
-      var arg1 = this$48.head__O();
+      var arg1 = this$46.head__O();
       var h = new $c_sci_$colon$colon().init___O__sci_List(f(arg1), $m_sci_Nil$());
       var t = h;
-      var rest = this$48.tail__sci_List();
+      var rest = this$46.tail__sci_List();
       while ((rest !== $m_sci_Nil$())) {
         var arg1$1 = rest.head__O();
         var nx = new $c_sci_$colon$colon().init___O__sci_List(f(arg1$1), $m_sci_Nil$());
         t.tl$5 = nx;
         t = nx;
-        var this$49 = rest;
-        rest = this$49.tail__sci_List()
+        var this$47 = rest;
+        rest = this$47.tail__sci_List()
       };
       var jsx$3 = h
     }
   } else {
-    var b = $s_sc_TraversableLike$class__builder$1__p0__sc_TraversableLike__scg_CanBuildFrom__scm_Builder(this$48, bf);
-    var these = this$48;
+    var b = $s_sc_TraversableLike$class__builder$1__p0__sc_TraversableLike__scg_CanBuildFrom__scm_Builder(this$46, bf);
+    var these = this$46;
     while ((!these.isEmpty__Z())) {
       var arg1$2 = these.head__O();
       b.$$plus$eq__O__scm_Builder(f(arg1$2));
-      var this$50 = these;
-      these = this$50.tail__sci_List()
+      var this$48 = these;
+      these = this$48.tail__sci_List()
     };
     var jsx$3 = b.result__O()
   };
   var col = $as_sc_GenTraversableOnce(jsx$3);
-  var this$53 = $m_sjsr_package$();
+  var this$51 = $m_sjsr_package$();
   if ($is_sjs_js_ArrayOps(col)) {
     var x2$1 = $as_sjs_js_ArrayOps(col);
     return x2$1.scala$scalajs$js$ArrayOps$$array$f
@@ -25871,7 +25785,7 @@ function $s_Lsri_mobile_examples_uiexplorer_components_ScrollViewSimpleExample$C
       return (function(x$2$1) {
         return $uI(result$3.push(x$2$1))
       })
-    })(this$53, result$2)));
+    })(this$51, result$2)));
     return result$2
   }
 }
@@ -26869,7 +26783,7 @@ function $s_Lsri_mobile_examples_uiexplorer_components_TextInputExample$WithLabe
   var fresh$macro$3 = {};
   fresh$macro$3.style = a$2;
   var ctor$1 = $i_react$002dnative.View;
-  var this$48 = $m_sjsr_package$();
+  var this$47 = $m_sjsr_package$();
   if ($is_sjs_js_ArrayOps(x$474)) {
     var x2$1 = $as_sjs_js_ArrayOps(x$474);
     var children$1 = x2$1.scala$scalajs$js$ArrayOps$$array$f
@@ -26882,7 +26796,7 @@ function $s_Lsri_mobile_examples_uiexplorer_components_TextInputExample$WithLabe
       return (function(x$2$1) {
         return $uI(result$3.push(x$2$1))
       })
-    })(this$48, result$2)));
+    })(this$47, result$2)));
     var children$1 = result$2
   };
   fresh$macro$3.key = "lab";
@@ -27000,7 +26914,7 @@ function $s_Lsri_mobile_examples_uiexplorer_components_TouchableExample$Touchabl
     })
   })(a$5);
   var ctor$1 = $i_react$002dnative.TouchableOpacity;
-  var this$46 = $m_sjsr_package$();
+  var this$45 = $m_sjsr_package$();
   if ($is_sjs_js_ArrayOps(x$485)) {
     var x2 = $as_sjs_js_ArrayOps(x$485);
     var children = x2.scala$scalajs$js$ArrayOps$$array$f
@@ -27013,7 +26927,7 @@ function $s_Lsri_mobile_examples_uiexplorer_components_TouchableExample$Touchabl
       return (function(x$2) {
         return $uI(result$1.push(x$2))
       })
-    })(this$46, result)));
+    })(this$45, result)));
     var children = result
   };
   var jsx$2 = $i_react;
@@ -27050,7 +26964,7 @@ function $s_Lsri_mobile_examples_uiexplorer_components_TouchableExample$Touchabl
     var x$589 = $as_sc_Seq($m_sc_Seq$().apply__sc_Seq__sc_GenTraversable(new $c_sjs_js_WrappedArray().init___sjs_js_Array([e])));
     var fresh$macro$19$1 = {};
     var ctor$3 = $i_react$002dnative.Text;
-    var this$100 = $m_sjsr_package$();
+    var this$98 = $m_sjsr_package$();
     if ($is_sjs_js_ArrayOps(x$589)) {
       var x2$1 = $as_sjs_js_ArrayOps(x$589);
       var children$1 = x2$1.scala$scalajs$js$ArrayOps$$array$f
@@ -27063,7 +26977,7 @@ function $s_Lsri_mobile_examples_uiexplorer_components_TouchableExample$Touchabl
         return (function(x$2$1) {
           return $uI(result$3.push(x$2$1))
         })
-      })(this$100, result$2)));
+      })(this$98, result$2)));
       var children$1 = result$2
     };
     fresh$macro$19$1.key = a$11;
@@ -27116,8 +27030,8 @@ function $s_Lsri_mobile_examples_uiexplorer_components_UIExplorerBlock$Component
   var ctor = $i_react$002dnative.Text;
   var a$4 = $i_react.createElement(ctor, fresh$macro$19, a$3);
   var x = $as_Lsri_mobile_examples_uiexplorer_components_UIExplorerBlock$Props($this.scalaProps).description$1;
-  var this$40 = new $c_sci_StringOps().init___T(x);
-  var value = $s_sc_TraversableOnce$class__nonEmpty__sc_TraversableOnce__Z(this$40);
+  var this$39 = new $c_sci_StringOps().init___T(x);
+  var value = $s_sc_TraversableOnce$class__nonEmpty__sc_TraversableOnce__Z(this$39);
   if (value) {
     var a$5 = $m_Lsri_mobile_examples_uiexplorer_components_UIExplorerBlock$styles$().descriptionText$1;
     var a$6 = $as_Lsri_mobile_examples_uiexplorer_components_UIExplorerBlock$Props($this.scalaProps).description$1;
@@ -27184,7 +27098,7 @@ function $s_Lsri_mobile_examples_uiexplorer_components_UIExplorerButton$Componen
     })
   })(v);
   var ctor = $i_react$002dnative.TouchableHighlight;
-  var this$42 = $m_sjsr_package$();
+  var this$41 = $m_sjsr_package$();
   if ($is_sjs_js_ArrayOps(x$105)) {
     var x2 = $as_sjs_js_ArrayOps(x$105);
     var children = x2.scala$scalajs$js$ArrayOps$$array$f
@@ -27197,7 +27111,7 @@ function $s_Lsri_mobile_examples_uiexplorer_components_UIExplorerButton$Componen
       return (function(x$2) {
         return $uI(result$1.push(x$2))
       })
-    })(this$42, result)));
+    })(this$41, result)));
     var children = result
   };
   var jsx$2 = $i_react;
@@ -27305,7 +27219,7 @@ function $s_Lsri_mobile_examples_uiexplorer_components_UIExplorerPageLazyLoad$Co
     fresh$macro$12.keyboardDismissMode = "interactive";
     fresh$macro$12.keyboardShouldPersistTaps = "handled";
     var ctor$2 = $i_react$002dnative.ScrollView;
-    var this$61 = $m_sjsr_package$();
+    var this$60 = $m_sjsr_package$();
     if ($is_sjs_js_ArrayOps(x$108)) {
       var x2 = $as_sjs_js_ArrayOps(x$108);
       var children = x2.scala$scalajs$js$ArrayOps$$array$f
@@ -27318,7 +27232,7 @@ function $s_Lsri_mobile_examples_uiexplorer_components_UIExplorerPageLazyLoad$Co
         return (function(x$2) {
           return $uI(result$1.push(x$2))
         })
-      })(this$61, result)));
+      })(this$60, result)));
       var children = result
     };
     var jsx$2 = $i_react;
@@ -27476,7 +27390,7 @@ function $s_Lsri_mobile_examples_uiexplorer_components_android_ToolbarAndroidExa
   fresh$macro$5$1.style = a$10;
   fresh$macro$5$1.logo = a$9;
   var x$6$1 = $i_react$002dnative.ToolbarAndroid;
-  var this$152 = $m_sjsr_package$();
+  var this$149 = $m_sjsr_package$();
   if ($is_sjs_js_ArrayOps(x$218)) {
     var x2 = $as_sjs_js_ArrayOps(x$218);
     var x$8 = x2.scala$scalajs$js$ArrayOps$$array$f
@@ -27489,7 +27403,7 @@ function $s_Lsri_mobile_examples_uiexplorer_components_android_ToolbarAndroidExa
       return (function(x$2) {
         return $uI(result$2.push(x$2))
       })
-    })(this$152, result$1)));
+    })(this$149, result$1)));
     var x$8 = result$1
   };
   var jsx$3 = $i_react;
@@ -27513,8 +27427,8 @@ function $s_Lsri_mobile_examples_uiexplorer_components_android_ToolbarAndroidExa
   while ((!these$1.isEmpty__Z())) {
     var arg1$3 = these$1.head__O();
     $uI(result$3.push(arg1$3));
-    var this$201 = these$1;
-    these$1 = this$201.tail__sci_List()
+    var this$198 = these$1;
+    these$1 = this$198.tail__sci_List()
   };
   var jsx$4 = $i_react;
   var a$22 = jsx$4.createElement.apply(jsx$4, [x$6$2, fresh$macro$5$2].concat(result$3));
@@ -27540,8 +27454,8 @@ function $s_Lsri_mobile_examples_uiexplorer_components_android_ToolbarAndroidExa
   while ((!these$2.isEmpty__Z())) {
     var arg1$4 = these$2.head__O();
     $uI(result$4.push(arg1$4));
-    var this$249 = these$2;
-    these$2 = this$249.tail__sci_List()
+    var this$246 = these$2;
+    these$2 = this$246.tail__sci_List()
   };
   var jsx$5 = $i_react;
   var a$28 = jsx$5.createElement.apply(jsx$5, [x$6$3, fresh$macro$5$3].concat(result$4));
@@ -27569,8 +27483,8 @@ function $s_Lsri_mobile_examples_uiexplorer_components_android_ToolbarAndroidExa
   while ((!these$3.isEmpty__Z())) {
     var arg1$5 = these$3.head__O();
     $uI(result$5.push(arg1$5));
-    var this$301 = these$3;
-    these$3 = this$301.tail__sci_List()
+    var this$298 = these$3;
+    these$3 = this$298.tail__sci_List()
   };
   var jsx$6 = $i_react;
   var a$34 = jsx$6.createElement.apply(jsx$6, [x$6$4, fresh$macro$5$4].concat(result$5));
@@ -27858,7 +27772,7 @@ function $s_Lsri_mobile_examples_uiexplorer_components_ios_WebViewExample$Compon
     })
   })(a$2);
   var ctor$1 = $i_react$002dnative.TouchableHighlight;
-  var this$67 = $m_sjsr_package$();
+  var this$66 = $m_sjsr_package$();
   if ($is_sjs_js_ArrayOps(x$453)) {
     var x2 = $as_sjs_js_ArrayOps(x$453);
     var children = x2.scala$scalajs$js$ArrayOps$$array$f
@@ -27871,7 +27785,7 @@ function $s_Lsri_mobile_examples_uiexplorer_components_ios_WebViewExample$Compon
       return (function(x$2) {
         return $uI(result$1.push(x$2))
       })
-    })(this$67, result)));
+    })(this$66, result)));
     var children = result
   };
   var jsx$2 = $i_react;
@@ -27905,7 +27819,7 @@ function $s_Lsri_mobile_examples_uiexplorer_components_ios_WebViewExample$Compon
     })
   })(a$8);
   var ctor$3 = $i_react$002dnative.TouchableHighlight;
-  var this$134 = $m_sjsr_package$();
+  var this$131 = $m_sjsr_package$();
   if ($is_sjs_js_ArrayOps(x$466)) {
     var x2$1 = $as_sjs_js_ArrayOps(x$466);
     var children$1 = x2$1.scala$scalajs$js$ArrayOps$$array$f
@@ -27918,7 +27832,7 @@ function $s_Lsri_mobile_examples_uiexplorer_components_ios_WebViewExample$Compon
       return (function(x$2$1) {
         return $uI(result$3.push(x$2$1))
       })
-    })(this$134, result$2)));
+    })(this$131, result$2)));
     var children$1 = result$2
   };
   var jsx$4 = $i_react;
@@ -27977,7 +27891,7 @@ function $s_Lsri_mobile_examples_uiexplorer_components_ios_WebViewExample$Compon
     })
   })(a$19);
   var ctor$5 = $i_react$002dnative.TouchableOpacity;
-  var this$209 = $m_sjsr_package$();
+  var this$203 = $m_sjsr_package$();
   if ($is_sjs_js_ArrayOps(x$669)) {
     var x2$2 = $as_sjs_js_ArrayOps(x$669);
     var children$2 = x2$2.scala$scalajs$js$ArrayOps$$array$f
@@ -27990,7 +27904,7 @@ function $s_Lsri_mobile_examples_uiexplorer_components_ios_WebViewExample$Compon
       return (function(x$2$2) {
         return $uI(result$5.push(x$2$2))
       })
-    })(this$209, result$4)));
+    })(this$203, result$4)));
     var children$2 = result$4
   };
   var jsx$6 = $i_react;
@@ -29058,9 +28972,6 @@ var $d_sjs_js_JavaScriptException = new $TypeData().initClass({
   s_Serializable: 1
 });
 $c_sjs_js_JavaScriptException.prototype.$classData = $d_sjs_js_JavaScriptException;
-function $s_Lsri_mobile_examples_uiexplorer_components_UIExplorerDetailsScreen__clinit___() {
-  $m_Lsri_mobile_examples_uiexplorer_components_UIExplorerDetailsScreen$()
-}
 function $s_Lsri_mobile_examples_uiexplorer_components_UIExplorerDetailsScreen__render__Lsri_mobile_examples_uiexplorer_components_UIExplorerDetailsScreen__Lsri_core_ReactElement($this) {
   var a = $m_Lsri_mobile_examples_uiexplorer_components_GlobalStyles$().wholeContainer$1;
   var value = $this.params;
@@ -29091,9 +29002,7 @@ function $a_Lsri_mobile_examples_uiexplorer_components_UIExplorerDetailsScreen()
     $c_Lsri_mobile_examples_uiexplorer_components_UIExplorerDetailsScreen.prototype.render = (function() {
       return $s_Lsri_mobile_examples_uiexplorer_components_UIExplorerDetailsScreen__render__Lsri_mobile_examples_uiexplorer_components_UIExplorerDetailsScreen__Lsri_core_ReactElement(this)
     });
-    $c_Lsri_mobile_examples_uiexplorer_components_UIExplorerDetailsScreen.navigationOptions = null;
-    $b_Lsri_mobile_examples_uiexplorer_components_UIExplorerDetailsScreen = $c_Lsri_mobile_examples_uiexplorer_components_UIExplorerDetailsScreen;
-    $s_Lsri_mobile_examples_uiexplorer_components_UIExplorerDetailsScreen__clinit___()
+    $b_Lsri_mobile_examples_uiexplorer_components_UIExplorerDetailsScreen = $c_Lsri_mobile_examples_uiexplorer_components_UIExplorerDetailsScreen
   };
   return $b_Lsri_mobile_examples_uiexplorer_components_UIExplorerDetailsScreen
 }
@@ -29921,7 +29830,7 @@ function $s_Lsri_mobile_examples_uiexplorer_components_UIExplorerListScreen__ren
     })
   })(a$1);
   var ctor$3 = $i_react$002dnative.TouchableHighlight;
-  var this$98 = $m_sjsr_package$();
+  var this$96 = $m_sjsr_package$();
   if ($is_sjs_js_ArrayOps(x$475)) {
     var x2 = $as_sjs_js_ArrayOps(x$475);
     var children = x2.scala$scalajs$js$ArrayOps$$array$f
@@ -29934,7 +29843,7 @@ function $s_Lsri_mobile_examples_uiexplorer_components_UIExplorerListScreen__ren
       return (function(x$2) {
         return $uI(result$1.push(x$2))
       })
-    })(this$98, result)));
+    })(this$96, result)));
     var children = result
   };
   var jsx$2 = $i_react;
@@ -29949,8 +29858,8 @@ function $s_Lsri_mobile_examples_uiexplorer_components_UIExplorerListScreen__ren
   while ((!these.isEmpty__Z())) {
     var arg1 = these.head__O();
     $uI(result$2.push(arg1));
-    var this$118 = these;
-    these = this$118.tail__sci_List()
+    var this$115 = these;
+    these = this$115.tail__sci_List()
   };
   var jsx$3 = $i_react;
   var a$12 = jsx$3.createElement.apply(jsx$3, [ctor$4, fresh$macro$3$1].concat(result$2));
@@ -30029,9 +29938,6 @@ function $s_Lsri_mobile_examples_uiexplorer_components_UIExplorerListScreen__ren
   fresh$macro$3.style = a;
   var ctor$1 = $i_react$002dnative.View;
   return $i_react.createElement(ctor$1, fresh$macro$3, a$3)
-}
-function $s_Lsri_mobile_examples_uiexplorer_components_UIExplorerListScreen__clinit___() {
-  $m_Lsri_mobile_examples_uiexplorer_components_UIExplorerListScreen$()
 }
 function $s_Lsri_mobile_examples_uiexplorer_components_UIExplorerListScreen__render__Lsri_mobile_examples_uiexplorer_components_UIExplorerListScreen__Lsri_core_ReactElement($this) {
   var a = $m_Lsri_mobile_examples_uiexplorer_components_UIExplorerListScreen$styles$().listContainer$1;
@@ -30136,9 +30042,7 @@ function $a_Lsri_mobile_examples_uiexplorer_components_UIExplorerListScreen() {
       var prep1 = $as_T(arg$2);
       return $s_Lsri_mobile_examples_uiexplorer_components_UIExplorerListScreen__renderSectionHeader__Lsri_mobile_examples_uiexplorer_components_UIExplorerListScreen__O__T__Lsri_core_ReactElement(this, prep0, prep1)
     });
-    $c_Lsri_mobile_examples_uiexplorer_components_UIExplorerListScreen.navigationOptions = null;
-    $b_Lsri_mobile_examples_uiexplorer_components_UIExplorerListScreen = $c_Lsri_mobile_examples_uiexplorer_components_UIExplorerListScreen;
-    $s_Lsri_mobile_examples_uiexplorer_components_UIExplorerListScreen__clinit___()
+    $b_Lsri_mobile_examples_uiexplorer_components_UIExplorerListScreen = $c_Lsri_mobile_examples_uiexplorer_components_UIExplorerListScreen
   };
   return $b_Lsri_mobile_examples_uiexplorer_components_UIExplorerListScreen
 }
@@ -37769,4 +37673,5 @@ $e.sri.mobile = ($e.sri.mobile || {});
 $e.sri.mobile.examples = ($e.sri.mobile.examples || {});
 $e.sri.mobile.examples.uiexplorer = ($e.sri.mobile.examples.uiexplorer || {});
 $e.sri.mobile.examples.uiexplorer.MobileApp = $m_Lsri_mobile_examples_uiexplorer_MobileApp$;
+$m_Lsri_mobile_examples_uiexplorer_MobileApp$().main__V();
 //# sourceMappingURL=scalajs-output-ios.js.map

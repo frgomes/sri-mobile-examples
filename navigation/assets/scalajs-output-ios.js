@@ -1080,6 +1080,7 @@ var $asArrayOf_F = $makeAsArrayOfPrimitive($isArrayOf_F, "F");
 var $asArrayOf_D = $makeAsArrayOfPrimitive($isArrayOf_D, "D");
 
 var $i_react$002dnavigation = require("react-navigation");
+var $i_prop$002dtypes = require("prop-types");
 var $i_react$002dnative$002fLibraries$002fRenderer$002fsrc$002frenderers$002fnative$002fReactNativePropRegistry = require("react-native/Libraries/Renderer/src/renderers/native/ReactNativePropRegistry");
 var $i_react = require("react");
 var $i_react$002dnative = require("react-native");
@@ -1486,317 +1487,191 @@ function $m_Lsri_core_package$() {
   return $n_Lsri_core_package$
 }
 /** @constructor */
-function $c_Lsri_macros_OptionalParam() {
+function $c_Lsri_mobile_examples_navigationx_stacksindrawer_MyNavScreen$() {
   $c_O.call(this)
 }
-$c_Lsri_macros_OptionalParam.prototype = new $h_O();
-$c_Lsri_macros_OptionalParam.prototype.constructor = $c_Lsri_macros_OptionalParam;
+$c_Lsri_mobile_examples_navigationx_stacksindrawer_MyNavScreen$.prototype = new $h_O();
+$c_Lsri_mobile_examples_navigationx_stacksindrawer_MyNavScreen$.prototype.constructor = $c_Lsri_mobile_examples_navigationx_stacksindrawer_MyNavScreen$;
 /** @constructor */
-function $h_Lsri_macros_OptionalParam() {
+function $h_Lsri_mobile_examples_navigationx_stacksindrawer_MyNavScreen$() {
   /*<skip>*/
 }
-$h_Lsri_macros_OptionalParam.prototype = $c_Lsri_macros_OptionalParam.prototype;
-/** @constructor */
-function $c_Lsri_mobile_examples_navigationx_stackintabs_HomeScreen$() {
-  $c_O.call(this)
-}
-$c_Lsri_mobile_examples_navigationx_stackintabs_HomeScreen$.prototype = new $h_O();
-$c_Lsri_mobile_examples_navigationx_stackintabs_HomeScreen$.prototype.constructor = $c_Lsri_mobile_examples_navigationx_stackintabs_HomeScreen$;
-/** @constructor */
-function $h_Lsri_mobile_examples_navigationx_stackintabs_HomeScreen$() {
-  /*<skip>*/
-}
-$h_Lsri_mobile_examples_navigationx_stackintabs_HomeScreen$.prototype = $c_Lsri_mobile_examples_navigationx_stackintabs_HomeScreen$.prototype;
-$c_Lsri_mobile_examples_navigationx_stackintabs_HomeScreen$.prototype.init___ = (function() {
-  $n_Lsri_mobile_examples_navigationx_stackintabs_HomeScreen$ = this;
-  var fresh$macro$5 = {};
-  fresh$macro$5.title = "Home";
-  $a_Lsri_mobile_examples_navigationx_stackintabs_HomeScreen().navigationOptions = fresh$macro$5;
+$h_Lsri_mobile_examples_navigationx_stacksindrawer_MyNavScreen$.prototype = $c_Lsri_mobile_examples_navigationx_stacksindrawer_MyNavScreen$.prototype;
+$c_Lsri_mobile_examples_navigationx_stacksindrawer_MyNavScreen$.prototype.init___ = (function() {
+  $n_Lsri_mobile_examples_navigationx_stacksindrawer_MyNavScreen$ = this;
+  $a_Lsri_mobile_examples_navigationx_stacksindrawer_MyNavScreen().contextTypes = $m_Lsri_navigation_package$().navigationContextType$1;
   return this
 });
-var $d_Lsri_mobile_examples_navigationx_stackintabs_HomeScreen$ = new $TypeData().initClass({
-  Lsri_mobile_examples_navigationx_stackintabs_HomeScreen$: 0
-}, false, "sri.mobile.examples.navigationx.stackintabs.HomeScreen$", {
-  Lsri_mobile_examples_navigationx_stackintabs_HomeScreen$: 1,
-  O: 1
-});
-$c_Lsri_mobile_examples_navigationx_stackintabs_HomeScreen$.prototype.$classData = $d_Lsri_mobile_examples_navigationx_stackintabs_HomeScreen$;
-var $n_Lsri_mobile_examples_navigationx_stackintabs_HomeScreen$ = (void 0);
-function $m_Lsri_mobile_examples_navigationx_stackintabs_HomeScreen$() {
-  if ((!$n_Lsri_mobile_examples_navigationx_stackintabs_HomeScreen$)) {
-    $n_Lsri_mobile_examples_navigationx_stackintabs_HomeScreen$ = new $c_Lsri_mobile_examples_navigationx_stackintabs_HomeScreen$().init___()
-  };
-  return $n_Lsri_mobile_examples_navigationx_stackintabs_HomeScreen$
-}
-/** @constructor */
-function $c_Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen$() {
-  $c_O.call(this)
-}
-$c_Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen$.prototype = new $h_O();
-$c_Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen$.prototype.constructor = $c_Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen$;
-/** @constructor */
-function $h_Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen$() {
-  /*<skip>*/
-}
-$h_Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen$.prototype = $c_Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen$.prototype;
-$c_Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen$.prototype.init___ = (function() {
-  $n_Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen$ = this;
-  $a_Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen().contextTypes = $m_Lsri_navigation_package$().navigationContextType$1;
-  return this
-});
-$c_Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen$.prototype.apply__T__Lsri_core_ReactElement = (function(banner) {
-  var constructor = $a_Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen();
+$c_Lsri_mobile_examples_navigationx_stacksindrawer_MyNavScreen$.prototype.apply__T__Lsri_core_ReactElement = (function(banner) {
+  var constructor = $a_Lsri_mobile_examples_navigationx_stacksindrawer_MyNavScreen();
   var p = {
     "scalaProps": banner
   };
   return $i_react.createElement(constructor, p)
 });
-var $d_Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen$ = new $TypeData().initClass({
-  Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen$: 0
-}, false, "sri.mobile.examples.navigationx.stackintabs.MyNavScreen$", {
-  Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen$: 1,
+var $d_Lsri_mobile_examples_navigationx_stacksindrawer_MyNavScreen$ = new $TypeData().initClass({
+  Lsri_mobile_examples_navigationx_stacksindrawer_MyNavScreen$: 0
+}, false, "sri.mobile.examples.navigationx.stacksindrawer.MyNavScreen$", {
+  Lsri_mobile_examples_navigationx_stacksindrawer_MyNavScreen$: 1,
   O: 1
 });
-$c_Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen$.prototype.$classData = $d_Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen$;
-var $n_Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen$ = (void 0);
-function $m_Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen$() {
-  if ((!$n_Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen$)) {
-    $n_Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen$ = new $c_Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen$().init___()
+$c_Lsri_mobile_examples_navigationx_stacksindrawer_MyNavScreen$.prototype.$classData = $d_Lsri_mobile_examples_navigationx_stacksindrawer_MyNavScreen$;
+var $n_Lsri_mobile_examples_navigationx_stacksindrawer_MyNavScreen$ = (void 0);
+function $m_Lsri_mobile_examples_navigationx_stacksindrawer_MyNavScreen$() {
+  if ((!$n_Lsri_mobile_examples_navigationx_stacksindrawer_MyNavScreen$)) {
+    $n_Lsri_mobile_examples_navigationx_stacksindrawer_MyNavScreen$ = new $c_Lsri_mobile_examples_navigationx_stacksindrawer_MyNavScreen$().init___()
   };
-  return $n_Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen$
+  return $n_Lsri_mobile_examples_navigationx_stacksindrawer_MyNavScreen$
 }
 /** @constructor */
-function $c_Lsri_mobile_examples_navigationx_stackintabs_NotificationsSettingsScreen$() {
-  $c_O.call(this)
-}
-$c_Lsri_mobile_examples_navigationx_stackintabs_NotificationsSettingsScreen$.prototype = new $h_O();
-$c_Lsri_mobile_examples_navigationx_stackintabs_NotificationsSettingsScreen$.prototype.constructor = $c_Lsri_mobile_examples_navigationx_stackintabs_NotificationsSettingsScreen$;
-/** @constructor */
-function $h_Lsri_mobile_examples_navigationx_stackintabs_NotificationsSettingsScreen$() {
-  /*<skip>*/
-}
-$h_Lsri_mobile_examples_navigationx_stackintabs_NotificationsSettingsScreen$.prototype = $c_Lsri_mobile_examples_navigationx_stackintabs_NotificationsSettingsScreen$.prototype;
-$c_Lsri_mobile_examples_navigationx_stackintabs_NotificationsSettingsScreen$.prototype.init___ = (function() {
-  $n_Lsri_mobile_examples_navigationx_stackintabs_NotificationsSettingsScreen$ = this;
-  var fresh$macro$5 = {};
-  fresh$macro$5.title = "Notification Settings";
-  $a_Lsri_mobile_examples_navigationx_stackintabs_NotificationsSettingsScreen().navigationOptions = fresh$macro$5;
-  return this
-});
-var $d_Lsri_mobile_examples_navigationx_stackintabs_NotificationsSettingsScreen$ = new $TypeData().initClass({
-  Lsri_mobile_examples_navigationx_stackintabs_NotificationsSettingsScreen$: 0
-}, false, "sri.mobile.examples.navigationx.stackintabs.NotificationsSettingsScreen$", {
-  Lsri_mobile_examples_navigationx_stackintabs_NotificationsSettingsScreen$: 1,
-  O: 1
-});
-$c_Lsri_mobile_examples_navigationx_stackintabs_NotificationsSettingsScreen$.prototype.$classData = $d_Lsri_mobile_examples_navigationx_stackintabs_NotificationsSettingsScreen$;
-var $n_Lsri_mobile_examples_navigationx_stackintabs_NotificationsSettingsScreen$ = (void 0);
-function $m_Lsri_mobile_examples_navigationx_stackintabs_NotificationsSettingsScreen$() {
-  if ((!$n_Lsri_mobile_examples_navigationx_stackintabs_NotificationsSettingsScreen$)) {
-    $n_Lsri_mobile_examples_navigationx_stackintabs_NotificationsSettingsScreen$ = new $c_Lsri_mobile_examples_navigationx_stackintabs_NotificationsSettingsScreen$().init___()
-  };
-  return $n_Lsri_mobile_examples_navigationx_stackintabs_NotificationsSettingsScreen$
-}
-/** @constructor */
-function $c_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen$() {
-  $c_O.call(this)
-}
-$c_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen$.prototype = new $h_O();
-$c_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen$.prototype.constructor = $c_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen$;
-/** @constructor */
-function $h_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen$() {
-  /*<skip>*/
-}
-$h_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen$.prototype = $c_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen$.prototype;
-$c_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen$.prototype.init___ = (function() {
-  $n_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen$ = this;
-  var header = $m_Lsri_navigation_NavigationScreenOptionsImplicits$().ftoJSF1__F1__Lsri_macros_OptionalParam(new $c_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen$$anonfun$2().init___());
-  var fresh$macro$5 = {};
-  fresh$macro$5.title = "Profile";
-  header.foreach__F1__V(new $c_Lsri_navigation_NavigationScreenOptions$$anonfun$18().init___sjs_js_Object(fresh$macro$5));
-  $a_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen().navigationOptions = fresh$macro$5;
-  return this
-});
-var $d_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen$ = new $TypeData().initClass({
-  Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen$: 0
-}, false, "sri.mobile.examples.navigationx.stackintabs.ProfileScreen$", {
-  Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen$: 1,
-  O: 1
-});
-$c_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen$.prototype.$classData = $d_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen$;
-var $n_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen$ = (void 0);
-function $m_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen$() {
-  if ((!$n_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen$)) {
-    $n_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen$ = new $c_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen$().init___()
-  };
-  return $n_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen$
-}
-/** @constructor */
-function $c_Lsri_mobile_examples_navigationx_stackintabs_SettingsScreen$() {
-  $c_O.call(this)
-}
-$c_Lsri_mobile_examples_navigationx_stackintabs_SettingsScreen$.prototype = new $h_O();
-$c_Lsri_mobile_examples_navigationx_stackintabs_SettingsScreen$.prototype.constructor = $c_Lsri_mobile_examples_navigationx_stackintabs_SettingsScreen$;
-/** @constructor */
-function $h_Lsri_mobile_examples_navigationx_stackintabs_SettingsScreen$() {
-  /*<skip>*/
-}
-$h_Lsri_mobile_examples_navigationx_stackintabs_SettingsScreen$.prototype = $c_Lsri_mobile_examples_navigationx_stackintabs_SettingsScreen$.prototype;
-$c_Lsri_mobile_examples_navigationx_stackintabs_SettingsScreen$.prototype.init___ = (function() {
-  $n_Lsri_mobile_examples_navigationx_stackintabs_SettingsScreen$ = this;
-  var fresh$macro$5 = {};
-  fresh$macro$5.title = "Settings";
-  $a_Lsri_mobile_examples_navigationx_stackintabs_SettingsScreen().navigationOptions = fresh$macro$5;
-  return this
-});
-var $d_Lsri_mobile_examples_navigationx_stackintabs_SettingsScreen$ = new $TypeData().initClass({
-  Lsri_mobile_examples_navigationx_stackintabs_SettingsScreen$: 0
-}, false, "sri.mobile.examples.navigationx.stackintabs.SettingsScreen$", {
-  Lsri_mobile_examples_navigationx_stackintabs_SettingsScreen$: 1,
-  O: 1
-});
-$c_Lsri_mobile_examples_navigationx_stackintabs_SettingsScreen$.prototype.$classData = $d_Lsri_mobile_examples_navigationx_stackintabs_SettingsScreen$;
-var $n_Lsri_mobile_examples_navigationx_stackintabs_SettingsScreen$ = (void 0);
-function $m_Lsri_mobile_examples_navigationx_stackintabs_SettingsScreen$() {
-  if ((!$n_Lsri_mobile_examples_navigationx_stackintabs_SettingsScreen$)) {
-    $n_Lsri_mobile_examples_navigationx_stackintabs_SettingsScreen$ = new $c_Lsri_mobile_examples_navigationx_stackintabs_SettingsScreen$().init___()
-  };
-  return $n_Lsri_mobile_examples_navigationx_stackintabs_SettingsScreen$
-}
-/** @constructor */
-function $c_Lsri_mobile_examples_navigationx_stackintabs_package$() {
+function $c_Lsri_mobile_examples_navigationx_stacksindrawer_package$() {
   $c_O.call(this);
   this.MainTab$1 = null;
   this.SettingsTab$1 = null;
   this.root$1 = null
 }
-$c_Lsri_mobile_examples_navigationx_stackintabs_package$.prototype = new $h_O();
-$c_Lsri_mobile_examples_navigationx_stackintabs_package$.prototype.constructor = $c_Lsri_mobile_examples_navigationx_stackintabs_package$;
+$c_Lsri_mobile_examples_navigationx_stacksindrawer_package$.prototype = new $h_O();
+$c_Lsri_mobile_examples_navigationx_stacksindrawer_package$.prototype.constructor = $c_Lsri_mobile_examples_navigationx_stacksindrawer_package$;
 /** @constructor */
-function $h_Lsri_mobile_examples_navigationx_stackintabs_package$() {
+function $h_Lsri_mobile_examples_navigationx_stacksindrawer_package$() {
   /*<skip>*/
 }
-$h_Lsri_mobile_examples_navigationx_stackintabs_package$.prototype = $c_Lsri_mobile_examples_navigationx_stackintabs_package$.prototype;
-$c_Lsri_mobile_examples_navigationx_stackintabs_package$.prototype.init___ = (function() {
-  $n_Lsri_mobile_examples_navigationx_stackintabs_package$ = this;
+$h_Lsri_mobile_examples_navigationx_stacksindrawer_package$.prototype = $c_Lsri_mobile_examples_navigationx_stacksindrawer_package$.prototype;
+$c_Lsri_mobile_examples_navigationx_stacksindrawer_package$.prototype.init___ = (function() {
+  $n_Lsri_mobile_examples_navigationx_stacksindrawer_package$ = this;
+  var fresh$macro$2 = {};
+  fresh$macro$2.title = "Home";
   $m_Lsri_navigation_package$();
-  var constructor = $a_Lsri_mobile_examples_navigationx_stackintabs_HomeScreen();
-  var name = $d_Lsri_mobile_examples_navigationx_stackintabs_HomeScreen.getClassOf().getName__T();
-  var fresh$macro$11 = {
+  $m_Lsri_navigation_package$();
+  $m_Lsri_navigation_package$();
+  var constructor = $a_Lsri_mobile_examples_navigationx_stacksindrawer_HomeScreen();
+  var name = $d_Lsri_mobile_examples_navigationx_stacksindrawer_HomeScreen.getClassOf().getName__T();
+  var fresh$macro$9 = {
     "screen": constructor
   };
-  var jsx$1 = new $c_T2().init___O__O(name, fresh$macro$11);
+  fresh$macro$9.navigationOptions = fresh$macro$2;
+  var jsx$1 = new $c_T2().init___O__O(name, fresh$macro$9);
+  var a = new $c_Lsri_mobile_examples_navigationx_stacksindrawer_package$$anonfun$2().init___();
   $m_Lsri_navigation_package$();
-  var constructor$1 = $a_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen();
-  var name$1 = $d_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen.getClassOf().getName__T();
-  var fresh$macro$11$1 = {
+  $m_Lsri_navigation_package$();
+  $m_Lsri_navigation_package$();
+  var constructor$1 = $a_Lsri_mobile_examples_navigationx_stacksindrawer_ProfileScreen();
+  var name$1 = $d_Lsri_mobile_examples_navigationx_stacksindrawer_ProfileScreen.getClassOf().getName__T();
+  var fresh$macro$9$1 = {
     "screen": constructor$1
   };
-  var routes = new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$1, new $c_T2().init___O__O(name$1, fresh$macro$11$1)]);
+  fresh$macro$9$1.navigationOptions = (function(f) {
+    return (function(arg1) {
+      return f.apply__O__O(arg1)
+    })
+  })(a);
+  var routes = new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$1, new $c_T2().init___O__O(name$1, fresh$macro$9$1)]);
   this.MainTab$1 = (0, $i_react$002dnavigation.StackNavigator)($m_sjs_js_Dictionary$().apply__sc_Seq__sjs_js_Dictionary(routes));
+  var fresh$macro$2$1 = {};
+  fresh$macro$2$1.title = "Settings";
   $m_Lsri_navigation_package$();
-  var constructor$2 = $a_Lsri_mobile_examples_navigationx_stackintabs_SettingsScreen();
-  var name$2 = $d_Lsri_mobile_examples_navigationx_stackintabs_SettingsScreen.getClassOf().getName__T();
-  var fresh$macro$11$2 = {
+  $m_Lsri_navigation_package$();
+  $m_Lsri_navigation_package$();
+  var constructor$2 = $a_Lsri_mobile_examples_navigationx_stacksindrawer_SettingsScreen();
+  var name$2 = $d_Lsri_mobile_examples_navigationx_stacksindrawer_SettingsScreen.getClassOf().getName__T();
+  var fresh$macro$9$2 = {
     "screen": constructor$2
   };
-  var jsx$2 = new $c_T2().init___O__O(name$2, fresh$macro$11$2);
+  fresh$macro$9$2.navigationOptions = fresh$macro$2$1;
+  var jsx$2 = new $c_T2().init___O__O(name$2, fresh$macro$9$2);
+  var fresh$macro$2$2 = {};
+  fresh$macro$2$2.title = "Notification Settings";
   $m_Lsri_navigation_package$();
-  var constructor$3 = $a_Lsri_mobile_examples_navigationx_stackintabs_NotificationsSettingsScreen();
-  var name$3 = $d_Lsri_mobile_examples_navigationx_stackintabs_NotificationsSettingsScreen.getClassOf().getName__T();
-  var fresh$macro$11$3 = {
+  $m_Lsri_navigation_package$();
+  $m_Lsri_navigation_package$();
+  var constructor$3 = $a_Lsri_mobile_examples_navigationx_stacksindrawer_NotificationsSettingsScreen();
+  var name$3 = $d_Lsri_mobile_examples_navigationx_stacksindrawer_NotificationsSettingsScreen.getClassOf().getName__T();
+  var fresh$macro$9$3 = {
     "screen": constructor$3
   };
-  var routes$1 = new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$2, new $c_T2().init___O__O(name$3, fresh$macro$11$3)]);
+  fresh$macro$9$3.navigationOptions = fresh$macro$2$2;
+  var routes$1 = new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$2, new $c_T2().init___O__O(name$3, fresh$macro$9$3)]);
   this.SettingsTab$1 = (0, $i_react$002dnavigation.StackNavigator)($m_sjs_js_Dictionary$().apply__sc_Seq__sjs_js_Dictionary(routes$1));
-  var fresh$macro$20 = {};
-  fresh$macro$20.tabBarPosition = "bottom";
-  fresh$macro$20.swipeEnabled = false;
-  fresh$macro$20.animationEnabled = false;
-  var x$109 = this.MainTab$1;
-  var a$1 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(iconOptions$2) {
+  var x$133 = this.MainTab$1;
+  var a$2 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(iconOptions$2) {
     if ($uZ(iconOptions$2.focused)) {
-      var x$100_$_get$2 = "ios-home"
+      var x$125_$_get$2 = "ios-home"
     } else {
-      var x$100_$_get$2 = "ios-home-outline"
+      var x$125_$_get$2 = "ios-home-outline"
     };
-    var a = $as_T(iconOptions$2.tintColor);
+    var a$1 = $as_T(iconOptions$2.tintColor);
     var fresh$macro$30 = {};
-    fresh$macro$30.color = a;
+    fresh$macro$30.color = a$1;
     var fresh$macro$4 = {};
-    var arg1 = x$100_$_get$2;
-    fresh$macro$4.name = arg1;
+    var arg1$1 = x$125_$_get$2;
+    fresh$macro$4.name = arg1$1;
     fresh$macro$4.style = fresh$macro$30;
-    fresh$macro$4.size = 27.0;
+    fresh$macro$4.size = 27;
     var ctor = $moduleDefault($i_react$002dnative$002dvector$002dicons$002fIonicons);
     return $i_react.createElement(ctor, fresh$macro$4)
   }));
-  var fresh$macro$3 = {};
-  fresh$macro$3.icon = (function(f) {
-    return (function(arg1$1) {
-      return f.apply__O__O(arg1$1)
+  var fresh$macro$4$1 = {};
+  fresh$macro$4$1.drawerIcon = (function(f$1) {
+    return (function(arg1$2) {
+      return f$1.apply__O__O(arg1$2)
     })
-  })(a$1);
-  fresh$macro$3.label = "Home";
-  var fresh$macro$5 = {};
-  fresh$macro$5.tabBar = fresh$macro$3;
+  })(a$2);
+  fresh$macro$4$1.drawerLabel = "Home";
   $m_Lsri_navigation_package$();
   $m_Lsri_navigation_package$();
-  var fresh$macro$11$4 = {
-    "screen": x$109
+  var fresh$macro$9$4 = {
+    "screen": x$133
   };
-  fresh$macro$11$4.navigationOptions = fresh$macro$5;
-  var jsx$3 = new $c_T2().init___O__O("MainTab", fresh$macro$11$4);
-  var x$209 = this.SettingsTab$1;
-  var a$3 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(iconOptions$2$1) {
+  fresh$macro$9$4.navigationOptions = fresh$macro$4$1;
+  var jsx$3 = new $c_T2().init___O__O("HomeDrawer", fresh$macro$9$4);
+  var x$232 = this.SettingsTab$1;
+  var a$4 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(iconOptions$2$1) {
     if ($uZ(iconOptions$2$1.focused)) {
-      var x$200_$_get$2 = "ios-settings"
+      var x$224_$_get$2 = "ios-settings"
     } else {
-      var x$200_$_get$2 = "ios-settings-outline"
+      var x$224_$_get$2 = "ios-settings-outline"
     };
-    var a$2 = $as_T(iconOptions$2$1.tintColor);
+    var a$3 = $as_T(iconOptions$2$1.tintColor);
     var fresh$macro$30$1 = {};
-    fresh$macro$30$1.color = a$2;
-    var fresh$macro$4$1 = {};
-    var arg1$2 = x$200_$_get$2;
-    fresh$macro$4$1.name = arg1$2;
-    fresh$macro$4$1.style = fresh$macro$30$1;
-    fresh$macro$4$1.size = 27.0;
+    fresh$macro$30$1.color = a$3;
+    var fresh$macro$4$2 = {};
+    var arg1$3 = x$224_$_get$2;
+    fresh$macro$4$2.name = arg1$3;
+    fresh$macro$4$2.style = fresh$macro$30$1;
+    fresh$macro$4$2.size = 27;
     var ctor$1 = $moduleDefault($i_react$002dnative$002dvector$002dicons$002fIonicons);
-    return $i_react.createElement(ctor$1, fresh$macro$4$1)
+    return $i_react.createElement(ctor$1, fresh$macro$4$2)
   }));
-  var fresh$macro$3$1 = {};
-  fresh$macro$3$1.icon = (function(f$1) {
-    return (function(arg1$3) {
-      return f$1.apply__O__O(arg1$3)
+  var fresh$macro$4$3 = {};
+  fresh$macro$4$3.drawerIcon = (function(f$2) {
+    return (function(arg1$4) {
+      return f$2.apply__O__O(arg1$4)
     })
-  })(a$3);
-  fresh$macro$3$1.label = "Settings";
-  var fresh$macro$5$1 = {};
-  fresh$macro$5$1.tabBar = fresh$macro$3$1;
+  })(a$4);
+  fresh$macro$4$3.drawerLabel = "Settings";
   $m_Lsri_navigation_package$();
   $m_Lsri_navigation_package$();
-  var fresh$macro$11$5 = {
-    "screen": x$209
+  var fresh$macro$9$5 = {
+    "screen": x$232
   };
-  fresh$macro$11$5.navigationOptions = fresh$macro$5$1;
-  var routes$2 = new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$3, new $c_T2().init___O__O("SettingsTab", fresh$macro$11$5)]);
-  this.root$1 = (0, $i_react$002dnavigation.TabNavigator)($m_sjs_js_Dictionary$().apply__sc_Seq__sjs_js_Dictionary(routes$2), fresh$macro$20);
+  fresh$macro$9$5.navigationOptions = fresh$macro$4$3;
+  var routes$2 = new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$3, new $c_T2().init___O__O("SettingsDrawer", fresh$macro$9$5)]);
+  this.root$1 = (0, $i_react$002dnavigation.DrawerNavigator)($m_sjs_js_Dictionary$().apply__sc_Seq__sjs_js_Dictionary(routes$2));
   return this
 });
-var $d_Lsri_mobile_examples_navigationx_stackintabs_package$ = new $TypeData().initClass({
-  Lsri_mobile_examples_navigationx_stackintabs_package$: 0
-}, false, "sri.mobile.examples.navigationx.stackintabs.package$", {
-  Lsri_mobile_examples_navigationx_stackintabs_package$: 1,
+var $d_Lsri_mobile_examples_navigationx_stacksindrawer_package$ = new $TypeData().initClass({
+  Lsri_mobile_examples_navigationx_stacksindrawer_package$: 0
+}, false, "sri.mobile.examples.navigationx.stacksindrawer.package$", {
+  Lsri_mobile_examples_navigationx_stacksindrawer_package$: 1,
   O: 1
 });
-$c_Lsri_mobile_examples_navigationx_stackintabs_package$.prototype.$classData = $d_Lsri_mobile_examples_navigationx_stackintabs_package$;
-var $n_Lsri_mobile_examples_navigationx_stackintabs_package$ = (void 0);
-function $m_Lsri_mobile_examples_navigationx_stackintabs_package$() {
-  if ((!$n_Lsri_mobile_examples_navigationx_stackintabs_package$)) {
-    $n_Lsri_mobile_examples_navigationx_stackintabs_package$ = new $c_Lsri_mobile_examples_navigationx_stackintabs_package$().init___()
+$c_Lsri_mobile_examples_navigationx_stacksindrawer_package$.prototype.$classData = $d_Lsri_mobile_examples_navigationx_stacksindrawer_package$;
+var $n_Lsri_mobile_examples_navigationx_stacksindrawer_package$ = (void 0);
+function $m_Lsri_mobile_examples_navigationx_stacksindrawer_package$() {
+  if ((!$n_Lsri_mobile_examples_navigationx_stacksindrawer_package$)) {
+    $n_Lsri_mobile_examples_navigationx_stacksindrawer_package$ = new $c_Lsri_mobile_examples_navigationx_stacksindrawer_package$().init___()
   };
-  return $n_Lsri_mobile_examples_navigationx_stackintabs_package$
+  return $n_Lsri_mobile_examples_navigationx_stacksindrawer_package$
 }
 /** @constructor */
 function $c_Lsri_navigation_NavigationCtrl$() {
@@ -1839,42 +1714,6 @@ function $m_Lsri_navigation_NavigationCtrl$() {
   return $n_Lsri_navigation_NavigationCtrl$
 }
 /** @constructor */
-function $c_Lsri_navigation_NavigationScreenOptionsImplicits$() {
-  $c_O.call(this)
-}
-$c_Lsri_navigation_NavigationScreenOptionsImplicits$.prototype = new $h_O();
-$c_Lsri_navigation_NavigationScreenOptionsImplicits$.prototype.constructor = $c_Lsri_navigation_NavigationScreenOptionsImplicits$;
-/** @constructor */
-function $h_Lsri_navigation_NavigationScreenOptionsImplicits$() {
-  /*<skip>*/
-}
-$h_Lsri_navigation_NavigationScreenOptionsImplicits$.prototype = $c_Lsri_navigation_NavigationScreenOptionsImplicits$.prototype;
-$c_Lsri_navigation_NavigationScreenOptionsImplicits$.prototype.init___ = (function() {
-  return this
-});
-$c_Lsri_navigation_NavigationScreenOptionsImplicits$.prototype.ftoJSF1__F1__Lsri_macros_OptionalParam = (function($in) {
-  var a = (function(f) {
-    return (function(arg1) {
-      return f.apply__O__O(arg1)
-    })
-  })($in);
-  return new $c_Lsri_macros_OptSpecified().init___O(a)
-});
-var $d_Lsri_navigation_NavigationScreenOptionsImplicits$ = new $TypeData().initClass({
-  Lsri_navigation_NavigationScreenOptionsImplicits$: 0
-}, false, "sri.navigation.NavigationScreenOptionsImplicits$", {
-  Lsri_navigation_NavigationScreenOptionsImplicits$: 1,
-  O: 1
-});
-$c_Lsri_navigation_NavigationScreenOptionsImplicits$.prototype.$classData = $d_Lsri_navigation_NavigationScreenOptionsImplicits$;
-var $n_Lsri_navigation_NavigationScreenOptionsImplicits$ = (void 0);
-function $m_Lsri_navigation_NavigationScreenOptionsImplicits$() {
-  if ((!$n_Lsri_navigation_NavigationScreenOptionsImplicits$)) {
-    $n_Lsri_navigation_NavigationScreenOptionsImplicits$ = new $c_Lsri_navigation_NavigationScreenOptionsImplicits$().init___()
-  };
-  return $n_Lsri_navigation_NavigationScreenOptionsImplicits$
-}
-/** @constructor */
 function $c_Lsri_navigation_package$() {
   $c_O.call(this);
   this.navigationContextType$1 = null
@@ -1889,7 +1728,7 @@ $h_Lsri_navigation_package$.prototype = $c_Lsri_navigation_package$.prototype;
 $c_Lsri_navigation_package$.prototype.init___ = (function() {
   $n_Lsri_navigation_package$ = this;
   var jsx$1 = $m_sjs_js_Dictionary$();
-  var y = $i_react.PropTypes.object.isRequired;
+  var y = $i_prop$002dtypes.object.isRequired;
   this.navigationContextType$1 = jsx$1.apply__sc_Seq__sjs_js_Dictionary(new $c_sjs_js_WrappedArray().init___sjs_js_Array([new $c_T2().init___O__O("navigation", y)]));
   return this
 });
@@ -2920,7 +2759,7 @@ $c_Lsri_mobile_examples_navigationx_MobileApp$.prototype.main__V = (function() {
   };
   $g.REACT_ELEMENT_TYPE = (jsx$1 ? $g.Symbol["for"]("react.element") : 60103);
   $i_react$002dnative.AppRegistry.registerComponent("navigation", (function() {
-    return $m_Lsri_mobile_examples_navigationx_stackintabs_package$().root$1
+    return $m_Lsri_mobile_examples_navigationx_stacksindrawer_package$().root$1
   }))
 });
 $c_Lsri_mobile_examples_navigationx_MobileApp$.prototype.$$js$exported$meth$main__O = (function() {
@@ -5065,105 +4904,72 @@ function $h_sr_AbstractFunction0$mcZ$sp() {
 }
 $h_sr_AbstractFunction0$mcZ$sp.prototype = $c_sr_AbstractFunction0$mcZ$sp.prototype;
 /** @constructor */
-function $c_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen$$anonfun$2() {
+function $c_Lsri_mobile_examples_navigationx_stacksindrawer_package$$anonfun$2() {
   $c_sr_AbstractFunction1.call(this)
 }
-$c_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen$$anonfun$2.prototype = new $h_sr_AbstractFunction1();
-$c_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen$$anonfun$2.prototype.constructor = $c_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen$$anonfun$2;
+$c_Lsri_mobile_examples_navigationx_stacksindrawer_package$$anonfun$2.prototype = new $h_sr_AbstractFunction1();
+$c_Lsri_mobile_examples_navigationx_stacksindrawer_package$$anonfun$2.prototype.constructor = $c_Lsri_mobile_examples_navigationx_stacksindrawer_package$$anonfun$2;
 /** @constructor */
-function $h_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen$$anonfun$2() {
+function $h_Lsri_mobile_examples_navigationx_stacksindrawer_package$$anonfun$2() {
   /*<skip>*/
 }
-$h_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen$$anonfun$2.prototype = $c_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen$$anonfun$2.prototype;
-$c_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen$$anonfun$2.prototype.init___ = (function() {
+$h_Lsri_mobile_examples_navigationx_stacksindrawer_package$$anonfun$2.prototype = $c_Lsri_mobile_examples_navigationx_stacksindrawer_package$$anonfun$2.prototype;
+$c_Lsri_mobile_examples_navigationx_stacksindrawer_package$$anonfun$2.prototype.init___ = (function() {
   return this
 });
-$c_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen$$anonfun$2.prototype.apply__O__O = (function(v1) {
-  return this.apply__Lsri_navigation_NavigationScreenProp__Lsri_navigation_HeaderConfig(v1)
+$c_Lsri_mobile_examples_navigationx_stacksindrawer_package$$anonfun$2.prototype.apply__O__O = (function(v1) {
+  return this.apply__Lsri_navigation_NavigationScreenConfigProps__Lsri_navigation_NavigationStackScreenOptions(v1)
 });
-$c_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen$$anonfun$2.prototype.apply__Lsri_navigation_NavigationScreenProp__Lsri_navigation_HeaderConfig = (function(navigation) {
-  var value = navigation.state.params;
+$c_Lsri_mobile_examples_navigationx_stacksindrawer_package$$anonfun$2.prototype.apply__Lsri_navigation_NavigationScreenConfigProps__Lsri_navigation_NavigationStackScreenOptions = (function(props) {
+  var value = props.navigation.state.params;
   if ((value === (void 0))) {
     throw new $c_ju_NoSuchElementException().init___T("undefined.get")
   };
   var value$1 = value.name;
   var a = $as_T(((value$1 === (void 0)) ? "" : value$1));
-  var value$2 = navigation.state.params;
+  var value$2 = props.navigation.state.params;
   if ((value$2 === (void 0))) {
     throw new $c_ju_NoSuchElementException().init___T("undefined.get")
   };
   var value$3 = value$2.mode;
   if ((value$3 !== (void 0))) {
-    var x$2 = $as_T(value$3);
-    var jsx$1 = (x$2 === "edit")
+    var x$1 = $as_T(value$3);
+    var jsx$1 = (x$1 === "edit")
   } else {
     var jsx$1 = false
   };
   if (jsx$1) {
-    var x$4 = "Done"
+    var x$6 = "Done"
   } else {
-    var x$4 = "Edit"
+    var x$6 = "Edit"
   };
-  var x$5 = new $c_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen$$anonfun$2$$anonfun$1().init___Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen$$anonfun$2__Lsri_navigation_NavigationScreenProp(this, navigation);
+  var x$7 = new $c_Lsri_mobile_examples_navigationx_stacksindrawer_package$$anonfun$2$$anonfun$1().init___Lsri_mobile_examples_navigationx_stacksindrawer_package$$anonfun$2__Lsri_navigation_NavigationScreenConfigProps(this, props);
   var fresh$macro$6 = {
-    "title": x$4,
+    "title": x$6,
     "onPress": (function(f) {
       return (function() {
         return f.apply__O()
       })
-    })(x$5)
+    })(x$7)
   };
   var ctor = $i_react$002dnative.Button;
   var a$1 = $i_react.createElement(ctor, fresh$macro$6);
   var fresh$macro$2 = {};
   fresh$macro$2.title = a;
-  fresh$macro$2.right = a$1;
+  fresh$macro$2.headerRight = a$1;
   return fresh$macro$2
 });
-var $d_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen$$anonfun$2 = new $TypeData().initClass({
-  Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen$$anonfun$2: 0
-}, false, "sri.mobile.examples.navigationx.stackintabs.ProfileScreen$$anonfun$2", {
-  Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen$$anonfun$2: 1,
+var $d_Lsri_mobile_examples_navigationx_stacksindrawer_package$$anonfun$2 = new $TypeData().initClass({
+  Lsri_mobile_examples_navigationx_stacksindrawer_package$$anonfun$2: 0
+}, false, "sri.mobile.examples.navigationx.stacksindrawer.package$$anonfun$2", {
+  Lsri_mobile_examples_navigationx_stacksindrawer_package$$anonfun$2: 1,
   sr_AbstractFunction1: 1,
   O: 1,
   F1: 1,
   s_Serializable: 1,
   Ljava_io_Serializable: 1
 });
-$c_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen$$anonfun$2.prototype.$classData = $d_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen$$anonfun$2;
-/** @constructor */
-function $c_Lsri_navigation_NavigationScreenOptions$$anonfun$18() {
-  $c_sr_AbstractFunction1.call(this);
-  this.fresh$macro$5$1$2 = null
-}
-$c_Lsri_navigation_NavigationScreenOptions$$anonfun$18.prototype = new $h_sr_AbstractFunction1();
-$c_Lsri_navigation_NavigationScreenOptions$$anonfun$18.prototype.constructor = $c_Lsri_navigation_NavigationScreenOptions$$anonfun$18;
-/** @constructor */
-function $h_Lsri_navigation_NavigationScreenOptions$$anonfun$18() {
-  /*<skip>*/
-}
-$h_Lsri_navigation_NavigationScreenOptions$$anonfun$18.prototype = $c_Lsri_navigation_NavigationScreenOptions$$anonfun$18.prototype;
-$c_Lsri_navigation_NavigationScreenOptions$$anonfun$18.prototype.apply__O__O = (function(v1) {
-  this.apply__sjs_js_$bar__V(v1)
-});
-$c_Lsri_navigation_NavigationScreenOptions$$anonfun$18.prototype.apply__sjs_js_$bar__V = (function(v) {
-  this.fresh$macro$5$1$2.header = v
-});
-$c_Lsri_navigation_NavigationScreenOptions$$anonfun$18.prototype.init___sjs_js_Object = (function(fresh$macro$5$1) {
-  this.fresh$macro$5$1$2 = fresh$macro$5$1;
-  return this
-});
-var $d_Lsri_navigation_NavigationScreenOptions$$anonfun$18 = new $TypeData().initClass({
-  Lsri_navigation_NavigationScreenOptions$$anonfun$18: 0
-}, false, "sri.navigation.NavigationScreenOptions$$anonfun$18", {
-  Lsri_navigation_NavigationScreenOptions$$anonfun$18: 1,
-  sr_AbstractFunction1: 1,
-  O: 1,
-  F1: 1,
-  s_Serializable: 1,
-  Ljava_io_Serializable: 1
-});
-$c_Lsri_navigation_NavigationScreenOptions$$anonfun$18.prototype.$classData = $d_Lsri_navigation_NavigationScreenOptions$$anonfun$18;
+$c_Lsri_mobile_examples_navigationx_stacksindrawer_package$$anonfun$2.prototype.$classData = $d_Lsri_mobile_examples_navigationx_stacksindrawer_package$$anonfun$2;
 /** @constructor */
 function $c_jl_ArithmeticException() {
   $c_jl_RuntimeException.call(this)
@@ -5860,64 +5666,6 @@ function $a_Lsri_core_ComponentP() {
   return $b_Lsri_core_ComponentP
 }
 /** @constructor */
-function $c_Lsri_macros_OptSpecified() {
-  $c_Lsri_macros_OptionalParam.call(this);
-  this.get$2 = null
-}
-$c_Lsri_macros_OptSpecified.prototype = new $h_Lsri_macros_OptionalParam();
-$c_Lsri_macros_OptSpecified.prototype.constructor = $c_Lsri_macros_OptSpecified;
-/** @constructor */
-function $h_Lsri_macros_OptSpecified() {
-  /*<skip>*/
-}
-$h_Lsri_macros_OptSpecified.prototype = $c_Lsri_macros_OptSpecified.prototype;
-$c_Lsri_macros_OptSpecified.prototype.productPrefix__T = (function() {
-  return "OptSpecified"
-});
-$c_Lsri_macros_OptSpecified.prototype.productArity__I = (function() {
-  return 1
-});
-$c_Lsri_macros_OptSpecified.prototype.productElement__I__O = (function(x$1) {
-  switch (x$1) {
-    case 0: {
-      return this.get$2;
-      break
-    }
-    default: {
-      throw new $c_jl_IndexOutOfBoundsException().init___T(("" + x$1))
-    }
-  }
-});
-$c_Lsri_macros_OptSpecified.prototype.toString__T = (function() {
-  return $m_sr_ScalaRunTime$().$$undtoString__s_Product__T(this)
-});
-$c_Lsri_macros_OptSpecified.prototype.foreach__F1__V = (function(f) {
-  f.apply__O__O(this.get$2)
-});
-$c_Lsri_macros_OptSpecified.prototype.init___O = (function(get) {
-  this.get$2 = get;
-  return this
-});
-$c_Lsri_macros_OptSpecified.prototype.hashCode__I = (function() {
-  var this$2 = $m_s_util_hashing_MurmurHash3$();
-  return this$2.productHash__s_Product__I__I(this, (-889275714))
-});
-$c_Lsri_macros_OptSpecified.prototype.productIterator__sc_Iterator = (function() {
-  return new $c_sr_ScalaRunTime$$anon$1().init___s_Product(this)
-});
-var $d_Lsri_macros_OptSpecified = new $TypeData().initClass({
-  Lsri_macros_OptSpecified: 0
-}, false, "sri.macros.OptSpecified", {
-  Lsri_macros_OptSpecified: 1,
-  Lsri_macros_OptionalParam: 1,
-  O: 1,
-  s_Product: 1,
-  s_Equals: 1,
-  s_Serializable: 1,
-  Ljava_io_Serializable: 1
-});
-$c_Lsri_macros_OptSpecified.prototype.$classData = $d_Lsri_macros_OptSpecified;
-/** @constructor */
 function $c_T2() {
   $c_O.call(this);
   this.$$und1$f = null;
@@ -6285,26 +6033,18 @@ var $d_sjsr_UndefinedBehaviorError = new $TypeData().initClass({
 });
 $c_sjsr_UndefinedBehaviorError.prototype.$classData = $d_sjsr_UndefinedBehaviorError;
 /** @constructor */
-function $c_Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen$$anonfun$1() {
+function $c_Lsri_mobile_examples_navigationx_stacksindrawer_MyNavScreen$$anonfun$1() {
   $c_sr_AbstractFunction0$mcZ$sp.call(this);
   this.$$outer$3 = null
 }
-$c_Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen$$anonfun$1.prototype = new $h_sr_AbstractFunction0$mcZ$sp();
-$c_Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen$$anonfun$1.prototype.constructor = $c_Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen$$anonfun$1;
+$c_Lsri_mobile_examples_navigationx_stacksindrawer_MyNavScreen$$anonfun$1.prototype = new $h_sr_AbstractFunction0$mcZ$sp();
+$c_Lsri_mobile_examples_navigationx_stacksindrawer_MyNavScreen$$anonfun$1.prototype.constructor = $c_Lsri_mobile_examples_navigationx_stacksindrawer_MyNavScreen$$anonfun$1;
 /** @constructor */
-function $h_Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen$$anonfun$1() {
+function $h_Lsri_mobile_examples_navigationx_stacksindrawer_MyNavScreen$$anonfun$1() {
   /*<skip>*/
 }
-$h_Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen$$anonfun$1.prototype = $c_Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen$$anonfun$1.prototype;
-$c_Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen$$anonfun$1.prototype.apply$mcZ$sp__Z = (function() {
-  $as_Lsri_navigation_NavigationCtrl$(this.$$outer$3.navigation);
-  var $this = {};
-  $this.name = null;
-  $this.name = "Jane";
-  var navigation = this.$$outer$3.navigationJS;
-  return $uZ(navigation.navigate($d_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen.getClassOf().getName__T(), $this))
-});
-$c_Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen$$anonfun$1.prototype.init___Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen = (function($$outer) {
+$h_Lsri_mobile_examples_navigationx_stacksindrawer_MyNavScreen$$anonfun$1.prototype = $c_Lsri_mobile_examples_navigationx_stacksindrawer_MyNavScreen$$anonfun$1.prototype;
+$c_Lsri_mobile_examples_navigationx_stacksindrawer_MyNavScreen$$anonfun$1.prototype.init___Lsri_mobile_examples_navigationx_stacksindrawer_MyNavScreen = (function($$outer) {
   if (($$outer === null)) {
     throw $m_sjsr_package$().unwrapJavaScriptException__jl_Throwable__O(null)
   } else {
@@ -6312,13 +6052,21 @@ $c_Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen$$anonfun$1.prototype
   };
   return this
 });
-$c_Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen$$anonfun$1.prototype.apply__O = (function() {
+$c_Lsri_mobile_examples_navigationx_stacksindrawer_MyNavScreen$$anonfun$1.prototype.apply$mcZ$sp__Z = (function() {
+  $as_Lsri_navigation_NavigationCtrl$(this.$$outer$3.navigation);
+  var $this = {};
+  $this.name = null;
+  $this.name = "Jane";
+  var navigation = this.$$outer$3.navigationJS;
+  return $uZ(navigation.navigate($d_Lsri_mobile_examples_navigationx_stacksindrawer_ProfileScreen.getClassOf().getName__T(), $this))
+});
+$c_Lsri_mobile_examples_navigationx_stacksindrawer_MyNavScreen$$anonfun$1.prototype.apply__O = (function() {
   return this.apply$mcZ$sp__Z()
 });
-var $d_Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen$$anonfun$1 = new $TypeData().initClass({
-  Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen$$anonfun$1: 0
-}, false, "sri.mobile.examples.navigationx.stackintabs.MyNavScreen$$anonfun$1", {
-  Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen$$anonfun$1: 1,
+var $d_Lsri_mobile_examples_navigationx_stacksindrawer_MyNavScreen$$anonfun$1 = new $TypeData().initClass({
+  Lsri_mobile_examples_navigationx_stacksindrawer_MyNavScreen$$anonfun$1: 0
+}, false, "sri.mobile.examples.navigationx.stacksindrawer.MyNavScreen$$anonfun$1", {
+  Lsri_mobile_examples_navigationx_stacksindrawer_MyNavScreen$$anonfun$1: 1,
   sr_AbstractFunction0$mcZ$sp: 1,
   sr_AbstractFunction0: 1,
   O: 1,
@@ -6327,35 +6075,31 @@ var $d_Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen$$anonfun$1 = new
   s_Serializable: 1,
   Ljava_io_Serializable: 1
 });
-$c_Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen$$anonfun$1.prototype.$classData = $d_Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen$$anonfun$1;
+$c_Lsri_mobile_examples_navigationx_stacksindrawer_MyNavScreen$$anonfun$1.prototype.$classData = $d_Lsri_mobile_examples_navigationx_stacksindrawer_MyNavScreen$$anonfun$1;
 /** @constructor */
-function $c_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen$$anonfun$2$$anonfun$1() {
+function $c_Lsri_mobile_examples_navigationx_stacksindrawer_package$$anonfun$2$$anonfun$1() {
   $c_sr_AbstractFunction0$mcZ$sp.call(this);
-  this.navigation$1$f = null
+  this.props$1$f = null
 }
-$c_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen$$anonfun$2$$anonfun$1.prototype = new $h_sr_AbstractFunction0$mcZ$sp();
-$c_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen$$anonfun$2$$anonfun$1.prototype.constructor = $c_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen$$anonfun$2$$anonfun$1;
+$c_Lsri_mobile_examples_navigationx_stacksindrawer_package$$anonfun$2$$anonfun$1.prototype = new $h_sr_AbstractFunction0$mcZ$sp();
+$c_Lsri_mobile_examples_navigationx_stacksindrawer_package$$anonfun$2$$anonfun$1.prototype.constructor = $c_Lsri_mobile_examples_navigationx_stacksindrawer_package$$anonfun$2$$anonfun$1;
 /** @constructor */
-function $h_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen$$anonfun$2$$anonfun$1() {
+function $h_Lsri_mobile_examples_navigationx_stacksindrawer_package$$anonfun$2$$anonfun$1() {
   /*<skip>*/
 }
-$h_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen$$anonfun$2$$anonfun$1.prototype = $c_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen$$anonfun$2$$anonfun$1.prototype;
-$c_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen$$anonfun$2$$anonfun$1.prototype.init___Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen$$anonfun$2__Lsri_navigation_NavigationScreenProp = (function($$outer, navigation$1) {
-  this.navigation$1$f = navigation$1;
-  return this
-});
-$c_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen$$anonfun$2$$anonfun$1.prototype.apply$mcZ$sp__Z = (function() {
-  var jsx$3 = this.navigation$1$f;
+$h_Lsri_mobile_examples_navigationx_stacksindrawer_package$$anonfun$2$$anonfun$1.prototype = $c_Lsri_mobile_examples_navigationx_stacksindrawer_package$$anonfun$2$$anonfun$1.prototype;
+$c_Lsri_mobile_examples_navigationx_stacksindrawer_package$$anonfun$2$$anonfun$1.prototype.apply$mcZ$sp__Z = (function() {
+  var jsx$3 = this.props$1$f.navigation;
   var $this = {};
   $this.mode = null;
-  var value = this.navigation$1$f.state.params;
+  var value = this.props$1$f.navigation.state.params;
   if ((value === (void 0))) {
     throw new $c_ju_NoSuchElementException().init___T("undefined.get")
   };
   var value$1 = value.mode;
   if ((value$1 !== (void 0))) {
-    var x$3 = $as_T(value$1);
-    var jsx$2 = (x$3 === "edit")
+    var x$2 = $as_T(value$1);
+    var jsx$2 = (x$2 === "edit")
   } else {
     var jsx$2 = false
   };
@@ -6363,13 +6107,17 @@ $c_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen$$anonfun$2$$anonfu
   var jsx$1 = jsx$3.setParams($this);
   return $uZ(jsx$1)
 });
-$c_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen$$anonfun$2$$anonfun$1.prototype.apply__O = (function() {
+$c_Lsri_mobile_examples_navigationx_stacksindrawer_package$$anonfun$2$$anonfun$1.prototype.init___Lsri_mobile_examples_navigationx_stacksindrawer_package$$anonfun$2__Lsri_navigation_NavigationScreenConfigProps = (function($$outer, props$1) {
+  this.props$1$f = props$1;
+  return this
+});
+$c_Lsri_mobile_examples_navigationx_stacksindrawer_package$$anonfun$2$$anonfun$1.prototype.apply__O = (function() {
   return this.apply$mcZ$sp__Z()
 });
-var $d_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen$$anonfun$2$$anonfun$1 = new $TypeData().initClass({
-  Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen$$anonfun$2$$anonfun$1: 0
-}, false, "sri.mobile.examples.navigationx.stackintabs.ProfileScreen$$anonfun$2$$anonfun$1", {
-  Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen$$anonfun$2$$anonfun$1: 1,
+var $d_Lsri_mobile_examples_navigationx_stacksindrawer_package$$anonfun$2$$anonfun$1 = new $TypeData().initClass({
+  Lsri_mobile_examples_navigationx_stacksindrawer_package$$anonfun$2$$anonfun$1: 0
+}, false, "sri.mobile.examples.navigationx.stacksindrawer.package$$anonfun$2$$anonfun$1", {
+  Lsri_mobile_examples_navigationx_stacksindrawer_package$$anonfun$2$$anonfun$1: 1,
   sr_AbstractFunction0$mcZ$sp: 1,
   sr_AbstractFunction0: 1,
   O: 1,
@@ -6378,7 +6126,7 @@ var $d_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen$$anonfun$2$$an
   s_Serializable: 1,
   Ljava_io_Serializable: 1
 });
-$c_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen$$anonfun$2$$anonfun$1.prototype.$classData = $d_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen$$anonfun$2$$anonfun$1;
+$c_Lsri_mobile_examples_navigationx_stacksindrawer_package$$anonfun$2$$anonfun$1.prototype.$classData = $d_Lsri_mobile_examples_navigationx_stacksindrawer_package$$anonfun$2$$anonfun$1;
 function $s_Lsri_navigation_NavigationAwareComponentP__navigationJS__Lsri_navigation_NavigationAwareComponentP__Lsri_navigation_NavigationScreenProp($this) {
   return $this.context.navigation
 }
@@ -6462,17 +6210,14 @@ function $h_scg_IndexedSeqFactory() {
   /*<skip>*/
 }
 $h_scg_IndexedSeqFactory.prototype = $c_scg_IndexedSeqFactory.prototype;
-function $s_Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen__clinit___() {
-  $m_Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen$()
-}
-function $s_Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen__render__Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen__Lsri_core_ReactElement($this) {
+function $s_Lsri_mobile_examples_navigationx_stacksindrawer_MyNavScreen__render__Lsri_mobile_examples_navigationx_stacksindrawer_MyNavScreen__Lsri_core_ReactElement($this) {
   var text = $as_T($this.scalaProps);
   var a = $m_Lsri_mobile_examples_navigationx_GlobalStyles$().sampleText$1;
   var fresh$macro$19 = {};
   fresh$macro$19.style = a;
   var ctor = $i_react$002dnative.Text;
   var a$1 = $i_react.createElement(ctor, fresh$macro$19, text);
-  var x$1 = new $c_Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen$$anonfun$1().init___Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen($this);
+  var x$1 = new $c_Lsri_mobile_examples_navigationx_stacksindrawer_MyNavScreen$$anonfun$1().init___Lsri_mobile_examples_navigationx_stacksindrawer_MyNavScreen($this);
   var fresh$macro$6 = {
     "title": "Go to a profile screen",
     "onPress": (function(f) {
@@ -6487,7 +6232,7 @@ function $s_Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen__render__Ls
     return (function() {
       $as_Lsri_navigation_NavigationCtrl$(arg$outer.navigation);
       var navigation = arg$outer.navigationJS;
-      return $uZ(navigation.navigate($d_Lsri_mobile_examples_navigationx_stackintabs_SettingsScreen.getClassOf().getName__T()))
+      return $uZ(navigation.navigate($d_Lsri_mobile_examples_navigationx_stacksindrawer_SettingsScreen.getClassOf().getName__T()))
     })
   })($this));
   var fresh$macro$6$1 = {
@@ -6504,7 +6249,7 @@ function $s_Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen__render__Ls
     return (function() {
       $as_Lsri_navigation_NavigationCtrl$(arg$outer$1.navigation);
       var navigation$1 = arg$outer$1.navigationJS;
-      return $uZ(navigation$1.navigate($d_Lsri_mobile_examples_navigationx_stackintabs_NotificationsSettingsScreen.getClassOf().getName__T()))
+      return $uZ(navigation$1.navigate($d_Lsri_mobile_examples_navigationx_stacksindrawer_NotificationsSettingsScreen.getClassOf().getName__T()))
     })
   })($this));
   var fresh$macro$6$2 = {
@@ -6519,9 +6264,7 @@ function $s_Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen__render__Ls
   var a$4 = $i_react.createElement(ctor$3, fresh$macro$6$2);
   var x$28 = new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function(arg$outer$2) {
     return (function() {
-      $as_Lsri_navigation_NavigationCtrl$(arg$outer$2.navigation);
-      var navigation$2 = arg$outer$2.navigationJS;
-      return $uZ(navigation$2.goBack(null))
+      return $uZ(arg$outer$2.navigationJS.goBack(null))
     })
   })($this));
   var fresh$macro$6$3 = {
@@ -6538,28 +6281,31 @@ function $s_Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen__render__Ls
   var x$17 = {};
   return $i_react.createElement(x$16$1, x$17, a$1, a$2, a$3, a$4, a$5)
 }
-var $b_Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen = (void 0);
-function $a_Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen() {
-  if ((!$b_Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen)) {
+function $s_Lsri_mobile_examples_navigationx_stacksindrawer_MyNavScreen__clinit___() {
+  $m_Lsri_mobile_examples_navigationx_stacksindrawer_MyNavScreen$()
+}
+var $b_Lsri_mobile_examples_navigationx_stacksindrawer_MyNavScreen = (void 0);
+function $a_Lsri_mobile_examples_navigationx_stacksindrawer_MyNavScreen() {
+  if ((!$b_Lsri_mobile_examples_navigationx_stacksindrawer_MyNavScreen)) {
     /** @constructor */
-    var $c_Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen = (function $c_Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen() {
+    var $c_Lsri_mobile_examples_navigationx_stacksindrawer_MyNavScreen = (function $c_Lsri_mobile_examples_navigationx_stacksindrawer_MyNavScreen() {
       $a_Lsri_navigation_NavigationAwareComponentP().call(this, $m_Lsri_core_package$().neq__Lsri_core_package$$eq$colon$bang$eq())
     });
     /** @constructor */
-    var $h_Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen = (function $h_Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen() {
+    var $h_Lsri_mobile_examples_navigationx_stacksindrawer_MyNavScreen = (function $h_Lsri_mobile_examples_navigationx_stacksindrawer_MyNavScreen() {
       /*<skip>*/
     });
-    $h_Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen.prototype = $a_Lsri_navigation_NavigationAwareComponentP().prototype;
-    $c_Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen.prototype = new $h_Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen();
-    $c_Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen.prototype.constructor = $c_Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen;
-    $c_Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen.prototype.render = (function() {
-      return $s_Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen__render__Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen__Lsri_core_ReactElement(this)
+    $h_Lsri_mobile_examples_navigationx_stacksindrawer_MyNavScreen.prototype = $a_Lsri_navigation_NavigationAwareComponentP().prototype;
+    $c_Lsri_mobile_examples_navigationx_stacksindrawer_MyNavScreen.prototype = new $h_Lsri_mobile_examples_navigationx_stacksindrawer_MyNavScreen();
+    $c_Lsri_mobile_examples_navigationx_stacksindrawer_MyNavScreen.prototype.constructor = $c_Lsri_mobile_examples_navigationx_stacksindrawer_MyNavScreen;
+    $c_Lsri_mobile_examples_navigationx_stacksindrawer_MyNavScreen.prototype.render = (function() {
+      return $s_Lsri_mobile_examples_navigationx_stacksindrawer_MyNavScreen__render__Lsri_mobile_examples_navigationx_stacksindrawer_MyNavScreen__Lsri_core_ReactElement(this)
     });
-    $c_Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen.contextTypes = null;
-    $b_Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen = $c_Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen;
-    $s_Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen__clinit___()
+    $c_Lsri_mobile_examples_navigationx_stacksindrawer_MyNavScreen.contextTypes = null;
+    $b_Lsri_mobile_examples_navigationx_stacksindrawer_MyNavScreen = $c_Lsri_mobile_examples_navigationx_stacksindrawer_MyNavScreen;
+    $s_Lsri_mobile_examples_navigationx_stacksindrawer_MyNavScreen__clinit___()
   };
-  return $b_Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen
+  return $b_Lsri_mobile_examples_navigationx_stacksindrawer_MyNavScreen
 }
 function $s_Lsri_navigation_NavigationScreenComponent__setParams__Lsri_navigation_NavigationScreenComponent__sjs_js_Object__Z($this, params) {
   return $uZ($this.props.navigation.setParams(params))
@@ -6809,11 +6555,8 @@ var $d_sjs_js_JavaScriptException = new $TypeData().initClass({
   s_Serializable: 1
 });
 $c_sjs_js_JavaScriptException.prototype.$classData = $d_sjs_js_JavaScriptException;
-function $s_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen__clinit___() {
-  $m_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen$()
-}
-function $s_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen__render__Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen__Lsri_core_ReactElement($this) {
-  var jsx$4 = $m_Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen$();
+function $s_Lsri_mobile_examples_navigationx_stacksindrawer_ProfileScreen__render__Lsri_mobile_examples_navigationx_stacksindrawer_ProfileScreen__Lsri_core_ReactElement($this) {
+  var jsx$4 = $m_Lsri_mobile_examples_navigationx_stacksindrawer_MyNavScreen$();
   var jsx$3 = new $c_s_StringContext().init___sc_Seq(new $c_sjs_js_WrappedArray().init___sjs_js_Array(["", " ", ""]));
   var value = $this.params;
   if ((value === (void 0))) {
@@ -6838,33 +6581,31 @@ function $s_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen__render__
   var value$3 = value$2.name;
   return jsx$4.apply__T__Lsri_core_ReactElement(jsx$3.s__sc_Seq__T(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$1, ((value$3 === (void 0)) ? "" : value$3)])))
 }
-var $b_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen = (void 0);
-function $a_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen() {
-  if ((!$b_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen)) {
+var $b_Lsri_mobile_examples_navigationx_stacksindrawer_ProfileScreen = (void 0);
+function $a_Lsri_mobile_examples_navigationx_stacksindrawer_ProfileScreen() {
+  if ((!$b_Lsri_mobile_examples_navigationx_stacksindrawer_ProfileScreen)) {
     /** @constructor */
-    var $c_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen = (function $c_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen() {
+    var $c_Lsri_mobile_examples_navigationx_stacksindrawer_ProfileScreen = (function $c_Lsri_mobile_examples_navigationx_stacksindrawer_ProfileScreen() {
       $a_Lsri_navigation_NavigationScreenComponent().call(this, $m_Lsri_core_package$().neq__Lsri_core_package$$eq$colon$bang$eq())
     });
     /** @constructor */
-    var $h_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen = (function $h_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen() {
+    var $h_Lsri_mobile_examples_navigationx_stacksindrawer_ProfileScreen = (function $h_Lsri_mobile_examples_navigationx_stacksindrawer_ProfileScreen() {
       /*<skip>*/
     });
-    $h_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen.prototype = $a_Lsri_navigation_NavigationScreenComponent().prototype;
-    $c_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen.prototype = new $h_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen();
-    $c_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen.prototype.constructor = $c_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen;
-    $c_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen.prototype.render = (function() {
-      return $s_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen__render__Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen__Lsri_core_ReactElement(this)
+    $h_Lsri_mobile_examples_navigationx_stacksindrawer_ProfileScreen.prototype = $a_Lsri_navigation_NavigationScreenComponent().prototype;
+    $c_Lsri_mobile_examples_navigationx_stacksindrawer_ProfileScreen.prototype = new $h_Lsri_mobile_examples_navigationx_stacksindrawer_ProfileScreen();
+    $c_Lsri_mobile_examples_navigationx_stacksindrawer_ProfileScreen.prototype.constructor = $c_Lsri_mobile_examples_navigationx_stacksindrawer_ProfileScreen;
+    $c_Lsri_mobile_examples_navigationx_stacksindrawer_ProfileScreen.prototype.render = (function() {
+      return $s_Lsri_mobile_examples_navigationx_stacksindrawer_ProfileScreen__render__Lsri_mobile_examples_navigationx_stacksindrawer_ProfileScreen__Lsri_core_ReactElement(this)
     });
-    $c_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen.navigationOptions = null;
-    $b_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen = $c_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen;
-    $s_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen__clinit___()
+    $b_Lsri_mobile_examples_navigationx_stacksindrawer_ProfileScreen = $c_Lsri_mobile_examples_navigationx_stacksindrawer_ProfileScreen
   };
-  return $b_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen
+  return $b_Lsri_mobile_examples_navigationx_stacksindrawer_ProfileScreen
 }
-var $d_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen = new $TypeData().initClass({
-  Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen: 0
-}, false, "sri.mobile.examples.navigationx.stackintabs.ProfileScreen", {
-  Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen: 1,
+var $d_Lsri_mobile_examples_navigationx_stacksindrawer_ProfileScreen = new $TypeData().initClass({
+  Lsri_mobile_examples_navigationx_stacksindrawer_ProfileScreen: 0
+}, false, "sri.mobile.examples.navigationx.stacksindrawer.ProfileScreen", {
+  Lsri_mobile_examples_navigationx_stacksindrawer_ProfileScreen: 1,
   Lsri_navigation_NavigationScreenComponent: 1,
   Lsri_core_ComponentJS: 1,
   Lsri_core_InternalComponentJS: 1,
@@ -6875,7 +6616,7 @@ var $d_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen = new $TypeDat
   Lsri_core_ReactClass: 1,
   Lsri_navigation_ScreenClass: 1
 }, true, (void 0), (function(x) {
-  return (x instanceof $a_Lsri_mobile_examples_navigationx_stackintabs_ProfileScreen())
+  return (x instanceof $a_Lsri_mobile_examples_navigationx_stacksindrawer_ProfileScreen())
 }));
 var $b_Lsri_navigation_NavigationScreenComponentNoPS = (void 0);
 function $a_Lsri_navigation_NavigationScreenComponentNoPS() {
@@ -7323,39 +7064,34 @@ function $m_sci_Stream$() {
   };
   return $n_sci_Stream$
 }
-function $s_Lsri_mobile_examples_navigationx_stackintabs_HomeScreen__render__Lsri_mobile_examples_navigationx_stackintabs_HomeScreen__Lsri_core_ReactElement($this) {
-  return $m_Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen$().apply__T__Lsri_core_ReactElement("Home Screen")
+function $s_Lsri_mobile_examples_navigationx_stacksindrawer_HomeScreen__render__Lsri_mobile_examples_navigationx_stacksindrawer_HomeScreen__Lsri_core_ReactElement($this) {
+  return $m_Lsri_mobile_examples_navigationx_stacksindrawer_MyNavScreen$().apply__T__Lsri_core_ReactElement("Home Screen")
 }
-function $s_Lsri_mobile_examples_navigationx_stackintabs_HomeScreen__clinit___() {
-  $m_Lsri_mobile_examples_navigationx_stackintabs_HomeScreen$()
-}
-var $b_Lsri_mobile_examples_navigationx_stackintabs_HomeScreen = (void 0);
-function $a_Lsri_mobile_examples_navigationx_stackintabs_HomeScreen() {
-  if ((!$b_Lsri_mobile_examples_navigationx_stackintabs_HomeScreen)) {
+var $b_Lsri_mobile_examples_navigationx_stacksindrawer_HomeScreen = (void 0);
+function $a_Lsri_mobile_examples_navigationx_stacksindrawer_HomeScreen() {
+  if ((!$b_Lsri_mobile_examples_navigationx_stacksindrawer_HomeScreen)) {
     /** @constructor */
-    var $c_Lsri_mobile_examples_navigationx_stackintabs_HomeScreen = (function $c_Lsri_mobile_examples_navigationx_stackintabs_HomeScreen() {
+    var $c_Lsri_mobile_examples_navigationx_stacksindrawer_HomeScreen = (function $c_Lsri_mobile_examples_navigationx_stacksindrawer_HomeScreen() {
       $a_Lsri_navigation_NavigationScreenComponentNoPS().call(this)
     });
     /** @constructor */
-    var $h_Lsri_mobile_examples_navigationx_stackintabs_HomeScreen = (function $h_Lsri_mobile_examples_navigationx_stackintabs_HomeScreen() {
+    var $h_Lsri_mobile_examples_navigationx_stacksindrawer_HomeScreen = (function $h_Lsri_mobile_examples_navigationx_stacksindrawer_HomeScreen() {
       /*<skip>*/
     });
-    $h_Lsri_mobile_examples_navigationx_stackintabs_HomeScreen.prototype = $a_Lsri_navigation_NavigationScreenComponentNoPS().prototype;
-    $c_Lsri_mobile_examples_navigationx_stackintabs_HomeScreen.prototype = new $h_Lsri_mobile_examples_navigationx_stackintabs_HomeScreen();
-    $c_Lsri_mobile_examples_navigationx_stackintabs_HomeScreen.prototype.constructor = $c_Lsri_mobile_examples_navigationx_stackintabs_HomeScreen;
-    $c_Lsri_mobile_examples_navigationx_stackintabs_HomeScreen.prototype.render = (function() {
-      return $s_Lsri_mobile_examples_navigationx_stackintabs_HomeScreen__render__Lsri_mobile_examples_navigationx_stackintabs_HomeScreen__Lsri_core_ReactElement(this)
+    $h_Lsri_mobile_examples_navigationx_stacksindrawer_HomeScreen.prototype = $a_Lsri_navigation_NavigationScreenComponentNoPS().prototype;
+    $c_Lsri_mobile_examples_navigationx_stacksindrawer_HomeScreen.prototype = new $h_Lsri_mobile_examples_navigationx_stacksindrawer_HomeScreen();
+    $c_Lsri_mobile_examples_navigationx_stacksindrawer_HomeScreen.prototype.constructor = $c_Lsri_mobile_examples_navigationx_stacksindrawer_HomeScreen;
+    $c_Lsri_mobile_examples_navigationx_stacksindrawer_HomeScreen.prototype.render = (function() {
+      return $s_Lsri_mobile_examples_navigationx_stacksindrawer_HomeScreen__render__Lsri_mobile_examples_navigationx_stacksindrawer_HomeScreen__Lsri_core_ReactElement(this)
     });
-    $c_Lsri_mobile_examples_navigationx_stackintabs_HomeScreen.navigationOptions = null;
-    $b_Lsri_mobile_examples_navigationx_stackintabs_HomeScreen = $c_Lsri_mobile_examples_navigationx_stackintabs_HomeScreen;
-    $s_Lsri_mobile_examples_navigationx_stackintabs_HomeScreen__clinit___()
+    $b_Lsri_mobile_examples_navigationx_stacksindrawer_HomeScreen = $c_Lsri_mobile_examples_navigationx_stacksindrawer_HomeScreen
   };
-  return $b_Lsri_mobile_examples_navigationx_stackintabs_HomeScreen
+  return $b_Lsri_mobile_examples_navigationx_stacksindrawer_HomeScreen
 }
-var $d_Lsri_mobile_examples_navigationx_stackintabs_HomeScreen = new $TypeData().initClass({
-  Lsri_mobile_examples_navigationx_stackintabs_HomeScreen: 0
-}, false, "sri.mobile.examples.navigationx.stackintabs.HomeScreen", {
-  Lsri_mobile_examples_navigationx_stackintabs_HomeScreen: 1,
+var $d_Lsri_mobile_examples_navigationx_stacksindrawer_HomeScreen = new $TypeData().initClass({
+  Lsri_mobile_examples_navigationx_stacksindrawer_HomeScreen: 0
+}, false, "sri.mobile.examples.navigationx.stacksindrawer.HomeScreen", {
+  Lsri_mobile_examples_navigationx_stacksindrawer_HomeScreen: 1,
   Lsri_navigation_NavigationScreenComponentNoPS: 1,
   Lsri_navigation_NavigationScreenComponent: 1,
   Lsri_core_ComponentJS: 1,
@@ -7367,41 +7103,36 @@ var $d_Lsri_mobile_examples_navigationx_stackintabs_HomeScreen = new $TypeData()
   Lsri_core_ReactClass: 1,
   Lsri_navigation_ScreenClass: 1
 }, true, (void 0), (function(x) {
-  return (x instanceof $a_Lsri_mobile_examples_navigationx_stackintabs_HomeScreen())
+  return (x instanceof $a_Lsri_mobile_examples_navigationx_stacksindrawer_HomeScreen())
 }));
-function $s_Lsri_mobile_examples_navigationx_stackintabs_NotificationsSettingsScreen__render__Lsri_mobile_examples_navigationx_stackintabs_NotificationsSettingsScreen__Lsri_core_ReactElement($this) {
-  return $m_Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen$().apply__T__Lsri_core_ReactElement("Notification Settings Screen")
+function $s_Lsri_mobile_examples_navigationx_stacksindrawer_NotificationsSettingsScreen__render__Lsri_mobile_examples_navigationx_stacksindrawer_NotificationsSettingsScreen__Lsri_core_ReactElement($this) {
+  return $m_Lsri_mobile_examples_navigationx_stacksindrawer_MyNavScreen$().apply__T__Lsri_core_ReactElement("Notification Settings Screen")
 }
-function $s_Lsri_mobile_examples_navigationx_stackintabs_NotificationsSettingsScreen__clinit___() {
-  $m_Lsri_mobile_examples_navigationx_stackintabs_NotificationsSettingsScreen$()
-}
-var $b_Lsri_mobile_examples_navigationx_stackintabs_NotificationsSettingsScreen = (void 0);
-function $a_Lsri_mobile_examples_navigationx_stackintabs_NotificationsSettingsScreen() {
-  if ((!$b_Lsri_mobile_examples_navigationx_stackintabs_NotificationsSettingsScreen)) {
+var $b_Lsri_mobile_examples_navigationx_stacksindrawer_NotificationsSettingsScreen = (void 0);
+function $a_Lsri_mobile_examples_navigationx_stacksindrawer_NotificationsSettingsScreen() {
+  if ((!$b_Lsri_mobile_examples_navigationx_stacksindrawer_NotificationsSettingsScreen)) {
     /** @constructor */
-    var $c_Lsri_mobile_examples_navigationx_stackintabs_NotificationsSettingsScreen = (function $c_Lsri_mobile_examples_navigationx_stackintabs_NotificationsSettingsScreen() {
+    var $c_Lsri_mobile_examples_navigationx_stacksindrawer_NotificationsSettingsScreen = (function $c_Lsri_mobile_examples_navigationx_stacksindrawer_NotificationsSettingsScreen() {
       $a_Lsri_navigation_NavigationScreenComponentNoPS().call(this)
     });
     /** @constructor */
-    var $h_Lsri_mobile_examples_navigationx_stackintabs_NotificationsSettingsScreen = (function $h_Lsri_mobile_examples_navigationx_stackintabs_NotificationsSettingsScreen() {
+    var $h_Lsri_mobile_examples_navigationx_stacksindrawer_NotificationsSettingsScreen = (function $h_Lsri_mobile_examples_navigationx_stacksindrawer_NotificationsSettingsScreen() {
       /*<skip>*/
     });
-    $h_Lsri_mobile_examples_navigationx_stackintabs_NotificationsSettingsScreen.prototype = $a_Lsri_navigation_NavigationScreenComponentNoPS().prototype;
-    $c_Lsri_mobile_examples_navigationx_stackintabs_NotificationsSettingsScreen.prototype = new $h_Lsri_mobile_examples_navigationx_stackintabs_NotificationsSettingsScreen();
-    $c_Lsri_mobile_examples_navigationx_stackintabs_NotificationsSettingsScreen.prototype.constructor = $c_Lsri_mobile_examples_navigationx_stackintabs_NotificationsSettingsScreen;
-    $c_Lsri_mobile_examples_navigationx_stackintabs_NotificationsSettingsScreen.prototype.render = (function() {
-      return $s_Lsri_mobile_examples_navigationx_stackintabs_NotificationsSettingsScreen__render__Lsri_mobile_examples_navigationx_stackintabs_NotificationsSettingsScreen__Lsri_core_ReactElement(this)
+    $h_Lsri_mobile_examples_navigationx_stacksindrawer_NotificationsSettingsScreen.prototype = $a_Lsri_navigation_NavigationScreenComponentNoPS().prototype;
+    $c_Lsri_mobile_examples_navigationx_stacksindrawer_NotificationsSettingsScreen.prototype = new $h_Lsri_mobile_examples_navigationx_stacksindrawer_NotificationsSettingsScreen();
+    $c_Lsri_mobile_examples_navigationx_stacksindrawer_NotificationsSettingsScreen.prototype.constructor = $c_Lsri_mobile_examples_navigationx_stacksindrawer_NotificationsSettingsScreen;
+    $c_Lsri_mobile_examples_navigationx_stacksindrawer_NotificationsSettingsScreen.prototype.render = (function() {
+      return $s_Lsri_mobile_examples_navigationx_stacksindrawer_NotificationsSettingsScreen__render__Lsri_mobile_examples_navigationx_stacksindrawer_NotificationsSettingsScreen__Lsri_core_ReactElement(this)
     });
-    $c_Lsri_mobile_examples_navigationx_stackintabs_NotificationsSettingsScreen.navigationOptions = null;
-    $b_Lsri_mobile_examples_navigationx_stackintabs_NotificationsSettingsScreen = $c_Lsri_mobile_examples_navigationx_stackintabs_NotificationsSettingsScreen;
-    $s_Lsri_mobile_examples_navigationx_stackintabs_NotificationsSettingsScreen__clinit___()
+    $b_Lsri_mobile_examples_navigationx_stacksindrawer_NotificationsSettingsScreen = $c_Lsri_mobile_examples_navigationx_stacksindrawer_NotificationsSettingsScreen
   };
-  return $b_Lsri_mobile_examples_navigationx_stackintabs_NotificationsSettingsScreen
+  return $b_Lsri_mobile_examples_navigationx_stacksindrawer_NotificationsSettingsScreen
 }
-var $d_Lsri_mobile_examples_navigationx_stackintabs_NotificationsSettingsScreen = new $TypeData().initClass({
-  Lsri_mobile_examples_navigationx_stackintabs_NotificationsSettingsScreen: 0
-}, false, "sri.mobile.examples.navigationx.stackintabs.NotificationsSettingsScreen", {
-  Lsri_mobile_examples_navigationx_stackintabs_NotificationsSettingsScreen: 1,
+var $d_Lsri_mobile_examples_navigationx_stacksindrawer_NotificationsSettingsScreen = new $TypeData().initClass({
+  Lsri_mobile_examples_navigationx_stacksindrawer_NotificationsSettingsScreen: 0
+}, false, "sri.mobile.examples.navigationx.stacksindrawer.NotificationsSettingsScreen", {
+  Lsri_mobile_examples_navigationx_stacksindrawer_NotificationsSettingsScreen: 1,
   Lsri_navigation_NavigationScreenComponentNoPS: 1,
   Lsri_navigation_NavigationScreenComponent: 1,
   Lsri_core_ComponentJS: 1,
@@ -7413,41 +7144,36 @@ var $d_Lsri_mobile_examples_navigationx_stackintabs_NotificationsSettingsScreen 
   Lsri_core_ReactClass: 1,
   Lsri_navigation_ScreenClass: 1
 }, true, (void 0), (function(x) {
-  return (x instanceof $a_Lsri_mobile_examples_navigationx_stackintabs_NotificationsSettingsScreen())
+  return (x instanceof $a_Lsri_mobile_examples_navigationx_stacksindrawer_NotificationsSettingsScreen())
 }));
-function $s_Lsri_mobile_examples_navigationx_stackintabs_SettingsScreen__render__Lsri_mobile_examples_navigationx_stackintabs_SettingsScreen__Lsri_core_ReactElement($this) {
-  return $m_Lsri_mobile_examples_navigationx_stackintabs_MyNavScreen$().apply__T__Lsri_core_ReactElement("Settings Screen")
+function $s_Lsri_mobile_examples_navigationx_stacksindrawer_SettingsScreen__render__Lsri_mobile_examples_navigationx_stacksindrawer_SettingsScreen__Lsri_core_ReactElement($this) {
+  return $m_Lsri_mobile_examples_navigationx_stacksindrawer_MyNavScreen$().apply__T__Lsri_core_ReactElement("Settings Screen")
 }
-function $s_Lsri_mobile_examples_navigationx_stackintabs_SettingsScreen__clinit___() {
-  $m_Lsri_mobile_examples_navigationx_stackintabs_SettingsScreen$()
-}
-var $b_Lsri_mobile_examples_navigationx_stackintabs_SettingsScreen = (void 0);
-function $a_Lsri_mobile_examples_navigationx_stackintabs_SettingsScreen() {
-  if ((!$b_Lsri_mobile_examples_navigationx_stackintabs_SettingsScreen)) {
+var $b_Lsri_mobile_examples_navigationx_stacksindrawer_SettingsScreen = (void 0);
+function $a_Lsri_mobile_examples_navigationx_stacksindrawer_SettingsScreen() {
+  if ((!$b_Lsri_mobile_examples_navigationx_stacksindrawer_SettingsScreen)) {
     /** @constructor */
-    var $c_Lsri_mobile_examples_navigationx_stackintabs_SettingsScreen = (function $c_Lsri_mobile_examples_navigationx_stackintabs_SettingsScreen() {
+    var $c_Lsri_mobile_examples_navigationx_stacksindrawer_SettingsScreen = (function $c_Lsri_mobile_examples_navigationx_stacksindrawer_SettingsScreen() {
       $a_Lsri_navigation_NavigationScreenComponentNoPS().call(this)
     });
     /** @constructor */
-    var $h_Lsri_mobile_examples_navigationx_stackintabs_SettingsScreen = (function $h_Lsri_mobile_examples_navigationx_stackintabs_SettingsScreen() {
+    var $h_Lsri_mobile_examples_navigationx_stacksindrawer_SettingsScreen = (function $h_Lsri_mobile_examples_navigationx_stacksindrawer_SettingsScreen() {
       /*<skip>*/
     });
-    $h_Lsri_mobile_examples_navigationx_stackintabs_SettingsScreen.prototype = $a_Lsri_navigation_NavigationScreenComponentNoPS().prototype;
-    $c_Lsri_mobile_examples_navigationx_stackintabs_SettingsScreen.prototype = new $h_Lsri_mobile_examples_navigationx_stackintabs_SettingsScreen();
-    $c_Lsri_mobile_examples_navigationx_stackintabs_SettingsScreen.prototype.constructor = $c_Lsri_mobile_examples_navigationx_stackintabs_SettingsScreen;
-    $c_Lsri_mobile_examples_navigationx_stackintabs_SettingsScreen.prototype.render = (function() {
-      return $s_Lsri_mobile_examples_navigationx_stackintabs_SettingsScreen__render__Lsri_mobile_examples_navigationx_stackintabs_SettingsScreen__Lsri_core_ReactElement(this)
+    $h_Lsri_mobile_examples_navigationx_stacksindrawer_SettingsScreen.prototype = $a_Lsri_navigation_NavigationScreenComponentNoPS().prototype;
+    $c_Lsri_mobile_examples_navigationx_stacksindrawer_SettingsScreen.prototype = new $h_Lsri_mobile_examples_navigationx_stacksindrawer_SettingsScreen();
+    $c_Lsri_mobile_examples_navigationx_stacksindrawer_SettingsScreen.prototype.constructor = $c_Lsri_mobile_examples_navigationx_stacksindrawer_SettingsScreen;
+    $c_Lsri_mobile_examples_navigationx_stacksindrawer_SettingsScreen.prototype.render = (function() {
+      return $s_Lsri_mobile_examples_navigationx_stacksindrawer_SettingsScreen__render__Lsri_mobile_examples_navigationx_stacksindrawer_SettingsScreen__Lsri_core_ReactElement(this)
     });
-    $c_Lsri_mobile_examples_navigationx_stackintabs_SettingsScreen.navigationOptions = null;
-    $b_Lsri_mobile_examples_navigationx_stackintabs_SettingsScreen = $c_Lsri_mobile_examples_navigationx_stackintabs_SettingsScreen;
-    $s_Lsri_mobile_examples_navigationx_stackintabs_SettingsScreen__clinit___()
+    $b_Lsri_mobile_examples_navigationx_stacksindrawer_SettingsScreen = $c_Lsri_mobile_examples_navigationx_stacksindrawer_SettingsScreen
   };
-  return $b_Lsri_mobile_examples_navigationx_stackintabs_SettingsScreen
+  return $b_Lsri_mobile_examples_navigationx_stacksindrawer_SettingsScreen
 }
-var $d_Lsri_mobile_examples_navigationx_stackintabs_SettingsScreen = new $TypeData().initClass({
-  Lsri_mobile_examples_navigationx_stackintabs_SettingsScreen: 0
-}, false, "sri.mobile.examples.navigationx.stackintabs.SettingsScreen", {
-  Lsri_mobile_examples_navigationx_stackintabs_SettingsScreen: 1,
+var $d_Lsri_mobile_examples_navigationx_stacksindrawer_SettingsScreen = new $TypeData().initClass({
+  Lsri_mobile_examples_navigationx_stacksindrawer_SettingsScreen: 0
+}, false, "sri.mobile.examples.navigationx.stacksindrawer.SettingsScreen", {
+  Lsri_mobile_examples_navigationx_stacksindrawer_SettingsScreen: 1,
   Lsri_navigation_NavigationScreenComponentNoPS: 1,
   Lsri_navigation_NavigationScreenComponent: 1,
   Lsri_core_ComponentJS: 1,
@@ -7459,7 +7185,7 @@ var $d_Lsri_mobile_examples_navigationx_stackintabs_SettingsScreen = new $TypeDa
   Lsri_core_ReactClass: 1,
   Lsri_navigation_ScreenClass: 1
 }, true, (void 0), (function(x) {
-  return (x instanceof $a_Lsri_mobile_examples_navigationx_stackintabs_SettingsScreen())
+  return (x instanceof $a_Lsri_mobile_examples_navigationx_stacksindrawer_SettingsScreen())
 }));
 /** @constructor */
 function $c_s_reflect_ManifestFactory$AnyManifest$() {
@@ -8291,4 +8017,5 @@ $e.sri.mobile = ($e.sri.mobile || {});
 $e.sri.mobile.examples = ($e.sri.mobile.examples || {});
 $e.sri.mobile.examples.navigationx = ($e.sri.mobile.examples.navigationx || {});
 $e.sri.mobile.examples.navigationx.MobileApp = $m_Lsri_mobile_examples_navigationx_MobileApp$;
+$m_Lsri_mobile_examples_navigationx_MobileApp$().main__V();
 //# sourceMappingURL=scalajs-output-ios.js.map

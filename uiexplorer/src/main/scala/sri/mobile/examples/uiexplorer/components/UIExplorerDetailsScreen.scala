@@ -1,17 +1,11 @@
 package sri.mobile.examples.uiexplorer.components
 
 import sri.core.ReactElement
-import sri.navigation.NavigationScreenOptionsImplicits._
-import sri.navigation.{
-  NavigationRoute,
-  NavigationScreenComponent,
-  NavigationScreenOptions,
-  NavigationScreenProp
-}
+import sri.navigation.NavigationScreenComponent
 import sri.universal.components._
 
 import scala.scalajs.js
-import scala.scalajs.js.annotation.{JSExportStatic, ScalaJSDefined}
+import scala.scalajs.js.annotation.ScalaJSDefined
 
 @ScalaJSDefined
 trait Params extends js.Object {
@@ -25,13 +19,4 @@ class UIExplorerDetailsScreen extends NavigationScreenComponent[Params, Null] {
     params.get.component()
   )
 
-}
-
-object UIExplorerDetailsScreen {
-  @JSExportStatic
-  val navigationOptions = NavigationScreenOptions[UIExplorerDetailsScreen](
-    title = (navigation: NavigationScreenProp[Params]) => {
-      navigation.state.params.get.title
-    }
-  )
 }

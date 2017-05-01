@@ -11,6 +11,6 @@ object MobileApp extends JSApp {
 
   def main() = {
     core.setReactElementType
-    AppRegistry.registerComponent("navigation", () => drawerstacktab.root)
+    AppRegistry.registerComponent("navigation", () => stacksindrawer.root)
   }
 }

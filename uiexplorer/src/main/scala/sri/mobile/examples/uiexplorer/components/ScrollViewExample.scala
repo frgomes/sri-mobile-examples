@@ -1,9 +1,9 @@
 package sri.mobile.examples.uiexplorer.components
 
 import sri.core._
-import sri.universal.{ReactEvent, _}
 import sri.universal.components._
 import sri.universal.styles.UniversalStyleSheet
+import sri.universal.{ReactEvent, _}
 
 import scala.scalajs.js
 

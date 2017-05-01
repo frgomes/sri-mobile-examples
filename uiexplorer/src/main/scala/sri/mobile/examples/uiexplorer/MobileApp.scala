@@ -14,8 +14,15 @@ object MobileApp extends JSApp {
 
   def main() = {
     sri.core.setReactElementType
-    val root = StackNavigator(registerScreen[UIExplorerListScreen],
-                              registerScreen[UIExplorerDetailsScreen])
+    val root = StackNavigator(
+      registerStackScreen[UIExplorerListScreen](navigationOptions =
+        NavigationStackScreenOptions(title = "UIExplorer")),
+      registerStackScreen[UIExplorerDetailsScreen](
+        navigationOptionsDynamic =
+          (props: NavigationScreenConfigProps[UIExplorerDetailsScreen]) =>
+            NavigationStackScreenOptions(
+              title = props.navigation.state.params.get.title))
+    )
     AppRegistry.registerComponent("UIExplorer", () => root)
   }
 }

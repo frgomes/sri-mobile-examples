@@ -9,10 +9,3 @@ class PhotosScreen extends NavigationScreenComponentNoPS {
 
   def render() = MyNavScreen("Home Screen")
 }
-
-object PhotosScreen {
-  @JSExportStatic
-  val navigationOptions = NavigationScreenOptions[PhotosScreen](
-    title = "Photos"
-  )
-}

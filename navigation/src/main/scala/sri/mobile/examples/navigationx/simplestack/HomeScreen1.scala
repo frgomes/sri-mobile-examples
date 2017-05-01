@@ -14,10 +14,3 @@ class HomeScreen extends NavigationScreenComponentNoPS {
 
   def render() = MyNavScreen("Home Screen1")
 }
-
-object HomeScreen {
-  @JSExportStatic
-  val navigationOptions = NavigationScreenOptions[HomeScreen](
-    title = "Home"
-  )
-}

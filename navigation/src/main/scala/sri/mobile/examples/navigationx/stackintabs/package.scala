@@ -2,16 +2,49 @@ package sri.mobile.examples.navigationx
 
 import sri.navigation._
 import sri.navigation.navigators._
+import sri.universal.components.Button
 import sri.universal.styles.UniversalStyleSheet
 import sri.vector.icons.{Ionicons, IoniconsList}
+
+import scala.scalajs.js
 
 package object stackintabs {
 
   val MainTab =
-    StackNavigator(registerScreen[HomeScreen], registerScreen[ProfileScreen])
+    StackNavigator(
+      registerStackScreen[HomeScreen](
+        navigationOptions = NavigationStackScreenOptions(title = "Home")),
+      registerStackScreen[ProfileScreen](
+        navigationOptionsDynamic =
+          (props: NavigationScreenConfigProps[ProfileScreen]) =>
+            NavigationStackScreenOptions(
+              title =
+                props.navigation.state.params.get.name.getOrElse("").toString,
+              headerRight = Button(
+                title =
+                  if (props.navigation.state.params.get.mode
+                        .exists(_ == "edit"))
+                    "Done"
+                  else "Edit",
+                onPress = () =>
+                  props.navigation.setParams(new ProfileParams {
+                    override val mode: js.UndefOr[String] =
+                      if (props.navigation.state.params.get.mode
+                            .exists(_ == "edit"))
+                        ""
+                      else "edit"
+                  })
+              )
+          ))
+    )
 
-  val SettingsTab = StackNavigator(registerScreen[SettingsScreen],
-                                   registerScreen[NotificationsSettingsScreen])
+  val SettingsTab = StackNavigator(
+    registerStackScreen[SettingsScreen](
+      navigationOptions = NavigationStackScreenOptions(title = "Settings")),
+    registerStackScreen[NotificationsSettingsScreen](
+      navigationOptions =
+        NavigationStackScreenOptions(title = "Notification Settings"))
+  )
 
   val root = TabNavigator(
     TabNavigatorConfig(
@@ -19,42 +52,38 @@ package object stackintabs {
       animationEnabled = false,
       swipeEnabled = false
     ),
-    registerNavigator(
+    registerNavigatorAsTabScreen(
       "MainTab",
       MainTab,
-      navigationOptions = NavigationScreenOptions[GenericScreen](
-        tabBar = TabBarConfig(
-          icon = (iconOptions: IconOptions) => {
-            Ionicons(
-              name =
-                if (iconOptions.focused) IoniconsList.IOS_HOME
-                else IoniconsList.IOS_HOME_OUTLINE,
-              size = 27,
-              style = UniversalStyleSheet.style(registerStyle = false,
-                                                color = iconOptions.tintColor)
-            )
-          },
-          label = "Home"
-        )
+      navigationOptions = NavigationTabScreenOptions(
+        tabBarIcon = (iconOptions: IconOptions) => {
+          Ionicons(
+            name =
+              if (iconOptions.focused) IoniconsList.IOS_HOME
+              else IoniconsList.IOS_HOME_OUTLINE,
+            size = 27,
+            style = UniversalStyleSheet.style(registerStyle = false,
+                                              color = iconOptions.tintColor)
+          )
+        },
+        tabBarLabel = "Home"
       )
     ),
-    registerNavigator(
+    registerNavigatorAsTabScreen(
       "SettingsTab",
       SettingsTab,
-      navigationOptions = NavigationScreenOptions[GenericScreen](
-        tabBar = TabBarConfig(
-          icon = (iconOptions: IconOptions) => {
-            Ionicons(
-              name =
-                if (iconOptions.focused) IoniconsList.IOS_SETTINGS
-                else IoniconsList.IOS_SETTINGS_OUTLINE,
-              size = 27,
-              style = UniversalStyleSheet.style(registerStyle = false,
-                                                color = iconOptions.tintColor)
-            )
-          },
-          label = "Settings"
-        )
+      navigationOptions = NavigationTabScreenOptions(
+        tabBarIcon = (iconOptions: IconOptions) => {
+          Ionicons(
+            name =
+              if (iconOptions.focused) IoniconsList.IOS_SETTINGS
+              else IoniconsList.IOS_SETTINGS_OUTLINE,
+            size = 27,
+            style = UniversalStyleSheet.style(registerStyle = false,
+                                              color = iconOptions.tintColor)
+          )
+        },
+        tabBarLabel = "Settings"
       )
     )
   )

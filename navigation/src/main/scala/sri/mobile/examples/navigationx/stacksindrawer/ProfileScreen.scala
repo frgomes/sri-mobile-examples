@@ -19,27 +19,3 @@ class ProfileScreen extends NavigationScreenComponent[ProfileParams, Null] {
     MyNavScreen(s"${if (params.get.mode.exists(_ == "edit")) "Now Editing"
     else ""} ${params.get.name.getOrElse("")}")
 }
-
-object ProfileScreen {
-
-  @JSExportStatic
-  val navigationOptions = NavigationScreenOptions[ProfileScreen](
-    title = "Profile",
-    header = ((navigation: NavigationScreenProp[ProfileParams]) => {
-      HeaderConfig(
-        title = navigation.state.params.get.name.getOrElse("").toString,
-        right = Button(
-          title =
-            if (navigation.state.params.get.mode.exists(_ == "edit")) "Done"
-            else "Edit",
-          onPress = () =>
-            navigation.setParams(new ProfileParams {
-              override val mode: js.UndefOr[String] =
-                if (navigation.state.params.get.mode.exists(_ == "edit")) ""
-                else "edit"
-            })
-        )
-      )
-    })
-  )
-}

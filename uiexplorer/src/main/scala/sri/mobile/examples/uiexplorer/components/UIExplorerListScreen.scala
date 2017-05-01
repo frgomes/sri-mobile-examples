@@ -6,8 +6,8 @@ import sri.mobile.examples.uiexplorer.apis._
 import sri.mobile.examples.uiexplorer.apis.android._
 import sri.mobile.examples.uiexplorer.components.android._
 import sri.mobile.examples.uiexplorer.components.ios._
-import sri.navigation.{NavigationScreenComponentS, NavigationScreenOptions}
-import sri.platform.SriPlatForm
+import sri.navigation.NavigationScreenComponentS
+import sri.platform.SriPlatform
 import sri.universal._
 import sri.universal.apis.PixelRatio
 import sri.universal.components._
@@ -16,7 +16,7 @@ import sri.universal.styles.UniversalStyleSheet
 import scala.scalajs.js
 import scala.scalajs.js.Dynamic.{literal => json}
 import scala.scalajs.js.JSConverters.genTravConvertible2JSRichGenTrav
-import scala.scalajs.js.annotation.{JSExportStatic, ScalaJSDefined}
+import scala.scalajs.js.annotation.ScalaJSDefined
 import scala.scalajs.js.|
 
 @ScalaJSDefined
@@ -96,11 +96,6 @@ class UIExplorerListScreen
 
 object UIExplorerListScreen {
 
-  @JSExportStatic
-  val navigationOptions = NavigationScreenOptions[UIExplorerListScreen](
-    title = "UIExplorer"
-  )
-
   val COMPONENTS: List[UIExample] = List(
     ViewExample,
     KeyboardAvoidingViewExample,
@@ -144,13 +139,13 @@ object UIExplorerListScreen {
   val ANDROID_APIS: List[UIExample] = List(ToastAndroidExample)
 
   def getComponents() = {
-    if (SriPlatForm.isIOS) {
+    if (SriPlatform.isIOS) {
       COMPONENTS.++(IOS_COMPONENTS).toJSArray
     } else COMPONENTS.++(ANDROID_COMPONENTS).toJSArray
   }
 
   def getAPIs() = {
-    if (SriPlatForm.isIOS) {
+    if (SriPlatform.isIOS) {
       APIS.++(IOS_APIS).toJSArray
     } else APIS.++(ANDROID_APIS).toJSArray
   }

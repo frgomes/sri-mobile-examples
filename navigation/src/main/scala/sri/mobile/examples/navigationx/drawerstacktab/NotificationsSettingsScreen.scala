@@ -9,11 +9,3 @@ class NotificationsSettingsScreen extends NavigationScreenComponentNoPS {
 
   def render() = MyNavScreen("Notification Settings Screen")
 }
-
-object NotificationsSettingsScreen {
-
-  @JSExportStatic
-  val navigationOptions = NavigationScreenOptions[NotificationsSettingsScreen](
-    title = "Notification Settings"
-  )
-}

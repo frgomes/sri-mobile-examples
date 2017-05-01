@@ -8,54 +8,82 @@ import sri.vector.icons.{Ionicons, IoniconsList}
 package object drawerstacktab {
 
   val ProfileTab = TabNavigator(
-    registerScreen[ProfileScreen],
-    registerScreen[ProfileScreen2]
+    registerTabScreen[ProfileScreen](
+      navigationOptions = NavigationTabScreenOptions(
+        tabBarIcon = (iconOptions: IconOptions) => {
+          Ionicons(
+            name =
+              if (iconOptions.focused) IoniconsList.IOS_HOME
+              else IoniconsList.IOS_HOME_OUTLINE,
+            size = 27,
+            style = UniversalStyleSheet.style(registerStyle = false,
+                                              color = iconOptions.tintColor)
+          )
+        },
+        tabBarLabel = "Profile1"
+      )),
+    registerTabScreen[ProfileScreen2](
+      navigationOptions = NavigationTabScreenOptions(
+        tabBarIcon = (iconOptions: IconOptions) => {
+          Ionicons(
+            name =
+              if (iconOptions.focused) IoniconsList.IOS_PEOPLE
+              else IoniconsList.IOS_PEOPLE_OUTLINE,
+            size = 27,
+            style = UniversalStyleSheet.style(registerStyle = false,
+                                              color = iconOptions.tintColor)
+          )
+        },
+        tabBarLabel = "Profile2"
+      ))
   )
 
-  val MainDrawer = StackNavigator(registerScreen[HomeScreen],
-                                  registerNavigator("ProfileTab", ProfileTab))
+  val MainDrawer = StackNavigator(
+    registerStackScreen[HomeScreen](
+      navigationOptions = NavigationStackScreenOptions(title = "Home")),
+    registerNavigatorAsStackScreen("ProfileTab", ProfileTab))
 
   val SettingsDrawer = StackNavigator(
-    registerScreen[SettingsScreen],
-    registerScreen[NotificationsSettingsScreen])
+    registerStackScreen[SettingsScreen](
+      navigationOptions = NavigationStackScreenOptions(title = "Settings")),
+    registerStackScreen[NotificationsSettingsScreen](
+      navigationOptions =
+        NavigationStackScreenOptions(title = "Notification Settings"))
+  )
 
   val root = DrawerNavigator(
-    registerNavigator(
+    registerNavigatorAsDrawerScreen(
       "HomeDrawer",
       MainDrawer,
-      navigationOptions = NavigationScreenOptions[GenericScreen](
-        drawer = DrawerConfig(
-          icon = (iconOptions: IconOptions) => {
-            Ionicons(
-              name =
-                if (iconOptions.focused) IoniconsList.IOS_HOME
-                else IoniconsList.IOS_HOME_OUTLINE,
-              size = 27,
-              style = UniversalStyleSheet.style(registerStyle = false,
-                                                color = iconOptions.tintColor)
-            )
-          },
-          label = "Home"
-        )
+      navigationOptions = NavigationDrawerScreenOptions(
+        drawerIcon = (iconOptions: IconOptions) => {
+          Ionicons(
+            name =
+              if (iconOptions.focused) IoniconsList.IOS_HOME
+              else IoniconsList.IOS_HOME_OUTLINE,
+            size = 27,
+            style = UniversalStyleSheet.style(registerStyle = false,
+                                              color = iconOptions.tintColor)
+          )
+        },
+        drawerLabel = "Home"
       )
     ),
-    registerNavigator(
+    registerNavigatorAsDrawerScreen(
       "SettingsDrawer",
       SettingsDrawer,
-      navigationOptions = NavigationScreenOptions[GenericScreen](
-        drawer = DrawerConfig(
-          icon = (iconOptions: IconOptions) => {
-            Ionicons(
-              name =
-                if (iconOptions.focused) IoniconsList.IOS_SETTINGS
-                else IoniconsList.IOS_SETTINGS_OUTLINE,
-              size = 27,
-              style = UniversalStyleSheet.style(registerStyle = false,
-                                                color = iconOptions.tintColor)
-            )
-          },
-          label = "Settings"
-        )
+      navigationOptions = NavigationDrawerScreenOptions(
+        drawerIcon = (iconOptions: IconOptions) => {
+          Ionicons(
+            name =
+              if (iconOptions.focused) IoniconsList.IOS_SETTINGS
+              else IoniconsList.IOS_SETTINGS_OUTLINE,
+            size = 27,
+            style = UniversalStyleSheet.style(registerStyle = false,
+                                              color = iconOptions.tintColor)
+          )
+        },
+        drawerLabel = "Settings"
       )
     )
   )

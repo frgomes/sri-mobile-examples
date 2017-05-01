@@ -9,10 +9,3 @@ class SettingsScreen extends NavigationScreenComponentNoPS {
 
   def render() = MyNavScreen("Settings Screen")
 }
-
-object SettingsScreen {
-  @JSExportStatic
-  val navigationOptions = NavigationScreenOptions[SettingsScreen](
-    title = "Settings"
-  )
-}

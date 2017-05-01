@@ -8,10 +8,3 @@ import scala.scalajs.js.annotation.{JSExportStatic, ScalaJSDefined}
 class HomeScreen extends NavigationScreenComponentNoPS {
   def render() = MyNavScreen("Home Screen")
 }
-
-object HomeScreen {
-  @JSExportStatic
-  val navigationOptions = NavigationScreenOptions[HomeScreen](
-    title = "Home"
-  )
-}

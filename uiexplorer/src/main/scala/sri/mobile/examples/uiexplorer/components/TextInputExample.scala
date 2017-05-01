@@ -2,7 +2,6 @@ package sri.mobile.examples.uiexplorer.components
 
 import sri.core._
 import sri.universal.components._
-import sri.universal._
 import sri.universal.styles.UniversalStyleSheet
 import sri.universal.{ReactEvent, TextInputEvent}
 

@@ -2,54 +2,80 @@ package sri.mobile.examples.navigationx
 
 import sri.navigation._
 import sri.navigation.navigators._
+import sri.universal.components.Button
 import sri.universal.styles.UniversalStyleSheet
 import sri.vector.icons.{Ionicons, IoniconsList}
+import scala.scalajs.js
 
 package object stacksindrawer {
 
   val MainTab =
-    StackNavigator(registerScreen[HomeScreen], registerScreen[ProfileScreen])
+    StackNavigator(
+      registerStackScreen[HomeScreen](
+        navigationOptions = NavigationStackScreenOptions(title = "Home")),
+      registerStackScreen[ProfileScreen](
+        navigationOptionsDynamic =
+          (props: NavigationScreenConfigProps[ProfileScreen]) =>
+            NavigationStackScreenOptions(
+              title =
+                props.navigation.state.params.get.name.getOrElse("").toString,
+              headerRight = Button(
+                title =
+                  if (props.navigation.state.params.get.mode
+                        .exists(_ == "edit")) "Done"
+                  else "Edit",
+                onPress = () =>
+                  props.navigation.setParams(new ProfileParams {
+                    override val mode: js.UndefOr[String] =
+                      if (props.navigation.state.params.get.mode
+                            .exists(_ == "edit")) ""
+                      else "edit"
+                  })
+              )
+          ))
+    )
 
-  val SettingsTab = StackNavigator(registerScreen[SettingsScreen],
-                                   registerScreen[NotificationsSettingsScreen])
+  val SettingsTab = StackNavigator(
+    registerStackScreen[SettingsScreen](
+      navigationOptions = NavigationStackScreenOptions(title = "Settings")),
+    registerStackScreen[NotificationsSettingsScreen](
+      navigationOptions =
+        NavigationStackScreenOptions(title = "Notification Settings"))
+  )
 
   val root = DrawerNavigator(
-    registerNavigator(
+    registerNavigatorAsDrawerScreen(
       "HomeDrawer",
       MainTab,
-      navigationOptions = NavigationScreenOptions[GenericScreen](
-        drawer = DrawerConfig(
-          icon = (iconOptions: IconOptions) => {
-            Ionicons(
-              name =
-                if (iconOptions.focused) IoniconsList.IOS_HOME
-                else IoniconsList.IOS_HOME_OUTLINE,
-              size = 27,
-              style = UniversalStyleSheet.style(color = iconOptions.tintColor,
-                                                registerStyle = false)
-            )
-          },
-          label = "Home"
-        )
+      navigationOptions = NavigationDrawerScreenOptions(
+        drawerIcon = (iconOptions: IconOptions) => {
+          Ionicons(
+            name =
+              if (iconOptions.focused) IoniconsList.IOS_HOME
+              else IoniconsList.IOS_HOME_OUTLINE,
+            size = 27,
+            style = UniversalStyleSheet.style(color = iconOptions.tintColor,
+                                              registerStyle = false)
+          )
+        },
+        drawerLabel = "Home"
       )
     ),
-    registerNavigator(
+    registerNavigatorAsDrawerScreen(
       "SettingsDrawer",
       SettingsTab,
-      navigationOptions = NavigationScreenOptions[GenericScreen](
-        drawer = DrawerConfig(
-          icon = (iconOptions: IconOptions) => {
-            Ionicons(
-              name =
-                if (iconOptions.focused) IoniconsList.IOS_SETTINGS
-                else IoniconsList.IOS_SETTINGS_OUTLINE,
-              size = 27,
-              style = UniversalStyleSheet.style(color = iconOptions.tintColor,
-                                                registerStyle = false)
-            )
-          },
-          label = "Settings"
-        )
+      navigationOptions = NavigationDrawerScreenOptions(
+        drawerIcon = (iconOptions: IconOptions) => {
+          Ionicons(
+            name =
+              if (iconOptions.focused) IoniconsList.IOS_SETTINGS
+              else IoniconsList.IOS_SETTINGS_OUTLINE,
+            size = 27,
+            style = UniversalStyleSheet.style(color = iconOptions.tintColor,
+                                              registerStyle = false)
+          )
+        },
+        drawerLabel = "Settings"
       )
     )
   )

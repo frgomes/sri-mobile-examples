@@ -3,7 +3,7 @@ package sri.mobile.examples.uiexplorer.components
 import sri.core.{ComponentP, CreateElement}
 import sri.macros.OptDefault
 import sri.mobile.examples.uiexplorer.images._
-import sri.platform.SriPlatForm
+import sri.platform.SriPlatform
 import sri.universal._
 import sri.universal.apis.StyleSheet
 import sri.universal.components._
@@ -191,7 +191,7 @@ object ListExamplesShared {
       backgroundColor = "gray"
     )
     val smallSwitch =
-      if (SriPlatForm.isAndroid)
+      if (SriPlatform.isAndroid)
         style(
           top = 1,
           margin = -6
