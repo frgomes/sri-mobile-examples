@@ -8,10 +8,7 @@ import sri.mobile.examples.uiexplorer.components.{
   UIExplorerPage
 }
 import sri.universal.components._
-import sri.universal.styles.UniversalStyleSheet
-
-import scala.scalajs.js.Dynamic.{literal => json}
-
+import sri.universal.styles.InlineStyleSheetUniversal
 object ToastAndroidExample extends UIExample {
 
   override val title: String = "Toast Example"
@@ -25,7 +22,7 @@ object ToastAndroidExample extends UIExample {
           onPress = () =>
             ToastAndroid.show("This is a toast with short duration",
                               ToastAndroid.SHORT))(
-          View(Text(style = styles.text)("Click me."))
+          ViewC(Text(style = styles.text)("Click me."))
         )
       ),
       UIExplorerBlock("Toast with long duration")(
@@ -33,7 +30,7 @@ object ToastAndroidExample extends UIExample {
           onPress = () =>
             ToastAndroid.show("This is a toast with long duration",
                               ToastAndroid.LONG))(
-          View(Text(style = styles.text)("Click me too."))
+          ViewC(Text(style = styles.text)("Click me too."))
         )
       )
     )
@@ -41,8 +38,11 @@ object ToastAndroidExample extends UIExample {
 
   val component = () => CreateElementSFNoP(Component)
 
-  object styles extends UniversalStyleSheet {
-    val text = style(color = "black")
+  object styles extends InlineStyleSheetUniversal {
+
+    import dsl._
+
+    val text = style(color := "black")
   }
 
 }

@@ -2,19 +2,18 @@ enablePlugins(SriPlatformPlugin)
 
 name := "UIExplorer"
 
-scalaVersion := "2.11.8"
+scalaVersion := "2.11.11"
 
-resolvers += Resolver.bintrayRepo("scalajs-react-interface", "maven")
 resolvers += Resolver.bintrayRepo("scalajs-react-interface", "maven")
 
 libraryDependencies ++= Seq(
-  "scalajs-react-interface" %%% "core" % "2017.4.23-beta",
-  "scalajs-react-interface" %%% "mobile" % "2017.5.2-beta",
+  "scalajs-react-interface" %%% "core" % "2017.7.9-RC",
+  "scalajs-react-interface" %%% "mobile" % "2017.7.9-RC",
   "org.scala-lang.modules" %% "scala-async" % "0.9.6",
-  "scalajs-react-interface" %%% "universal" % "2017.5.2-beta",
-  "scalajs-react-interface" %%% "navigation" % "2017.5.2-beta",
-  "scalajs-react-interface" %%% "platform-config-ios" % "2017.4.23-beta" % ios,
-  "scalajs-react-interface" %%% "platform-config-android" % "2017.4.23-beta" % android
+  "scalajs-react-interface" %%% "universal" % "2017.7.9-RC",
+  "scalajs-react-interface" %%% "navigation" % "2017.7.9-RC",
+  "scalajs-react-interface" %%% "platform-config-ios" % "2017.7.9-RC" % ios,
+  "scalajs-react-interface" %%% "platform-config-android" % "2017.7.9-RC" % android
 )
 
 scalacOptions ++= Seq(

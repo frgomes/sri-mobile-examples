@@ -3,21 +3,21 @@ package sri.mobile.examples.uiexplorer.components
 import sri.core.CreateElementSFNoP
 import sri.universal.apis.Alert
 import sri.universal.components._
-import sri.universal.styles.UniversalStyleSheet
+import sri.universal.styles.InlineStyleSheetUniversal
 
 object ButtonExample extends UIExample {
 
   val Component = () => {
     UIExplorerPage(
       UIExplorerBlock("Simple Button")(
-        Text(
+        TextC(
           "The title and onPress handler are required. It is recommended to set accessibilityLabel to help make your app usable by everyone. "),
         Button(title = "Press Me",
                accessibilityLabel = "See an informative alert",
                onPress = onButtonPress _)
       ),
       UIExplorerBlock("Adjusted color")(
-        Text(
+        TextC(
           "adjusts the color in a way that looks standard on each platform. On iOS, the color prop controls the color of the text. On  Android, the color adjusts the background color of the button. "),
         Button(title = "Press Purple",
                accessibilityLabel = "Learn more about purple",
@@ -25,7 +25,7 @@ object ButtonExample extends UIExample {
                onPress = onButtonPress _)
       ),
       UIExplorerBlock("Fit to text layout")(
-        Text(
+        TextC(
           "This layout strategy lets the title define the width of the button "),
         View(style = styles.button)(
           Button(title = "This looks great!",
@@ -38,7 +38,7 @@ object ButtonExample extends UIExample {
         )
       ),
       UIExplorerBlock("Disabled Button")(
-        Text("All interactions for the component are disabled."),
+        TextC("All interactions for the component are disabled."),
         Button(title = "I Am Disabled",
                disabled = true,
                accessibilityLabel = "See an informative alert",
@@ -51,10 +51,12 @@ object ButtonExample extends UIExample {
 
   val component = () => CreateElementSFNoP(Component)
 
-  object styles extends UniversalStyleSheet {
+  object styles extends InlineStyleSheetUniversal {
+
+    import dsl._
 
     val button =
-      style(flexDirection = "row", justifyContent = "space-between")
+      style(flexDirection.row, justifyContent.spaceBetween)
   }
 
   override def title: String = "Button"

@@ -1,9 +1,10 @@
 package sri.mobile.examples.uiexplorer.components
 
 import sri.core._
+import sri.universal.ReactEvent
 import sri.universal.components._
-import sri.universal.styles.UniversalStyleSheet
-import sri.universal.{ReactEvent, _}
+import sri.universal._
+import sri.universal.styles.InlineStyleSheetUniversal
 
 import scala.scalajs.js
 
@@ -74,30 +75,39 @@ object ScrollViewExample extends UIExample {
 
   val component = () => CreateElementSFNoP(Component)
 
-  object styles extends UniversalStyleSheet {
+  object styles extends InlineStyleSheetUniversal {
+
+    import dsl._
 
     val scrollView = style(
-      backgroundColor = "#6A85B1",
-      height = 300
+      backgroundColor := "#6A85B1",
+      height := 300
     )
     val horizontalScrollView =
-      js.Array(scrollView, style(height = 120))
+      js.Array(scrollView, style(height := 120))
     val containerPage =
-      style(height = 50, width = 50, backgroundColor = "#527FE4", padding = 5)
+      style(height := 50,
+            width := 50,
+            backgroundColor := "#527FE4",
+            padding := 5)
 
     val text =
-      style(fontSize = 20, color = "#888888", left = 80, top = 20, height = 40)
+      style(fontSize := 20,
+            color := "#888888",
+            left := 80,
+            top := 20,
+            height := 40)
 
-    val button = style(margin = 7,
-                       padding = 5,
-                       alignItems = "center",
-                       backgroundColor = "#eaeaea",
-                       borderRadius = 3)
+    val button = style(margin := 7,
+                       padding := 5,
+                       alignItems.center,
+                       backgroundColor := "#eaeaea",
+                       borderRadius := 3)
 
     val buttonContents =
-      style(flexDirection = "row", width = 64, height = 64)
+      style(flexDirection.row, width := 64, height := 64)
 
-    val img = style(width = 64, height = 64)
+    val img = style(width := 64, height := 64)
 
   }
 

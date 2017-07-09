@@ -1,16 +1,14 @@
 package sri.mobile.examples.navigationx.simplestack
 
-import sri.core.CreateElement
 import sri.navigation.{NavigationAwareComponentP, _}
 import sri.universal.components._
 
 import scala.scalajs.js
-import scala.scalajs.js.annotation.{JSExportStatic, ScalaJSDefined}
-@ScalaJSDefined
+
 class MyNavScreen extends NavigationAwareComponentP[String] {
 
   def render() = {
-    ScrollView(
+    ScrollViewC(
       sri.mobile.examples.navigationx.SampleText(props),
       Button(onPress = () =>
                navigation.navigate[ProfileScreen](new ProfileParams {
@@ -32,9 +30,5 @@ object Images {
 
 object MyNavScreen {
 
-  @JSExportStatic
-  val contextTypes =
-    navigationContextType
-
-  def apply(banner: String) = CreateElement[MyNavScreen](banner)
+  def apply(banner: String) = WithNavigation[MyNavScreen](banner)
 }

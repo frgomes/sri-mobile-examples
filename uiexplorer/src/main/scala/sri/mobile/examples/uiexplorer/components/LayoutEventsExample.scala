@@ -4,10 +4,9 @@ import org.scalajs.dom
 import sri.core._
 import sri.universal.apis.{Layout, LayoutAnimation, LayoutEvent}
 import sri.universal.components._
-import sri.universal.styles.UniversalStyleSheet
+import sri.universal.styles.InlineStyleSheetUniversal
 
 import scala.scalajs.js
-import scala.scalajs.js.annotation.ScalaJSDefined
 import scala.scalajs.js.{JSON, undefined, UndefOr => U}
 
 object LayoutEventsExample extends UIExample {
@@ -19,14 +18,13 @@ object LayoutEventsExample extends UIExample {
                    viewLayout: js.UndefOr[Layout] = undefined,
                    viewStyle: js.UndefOr[js.Any] = js.undefined)
 
-  @ScalaJSDefined
   class Component extends ComponentS[State] {
     initialState(State(viewStyle = styles.dynamicView(20)))
 
     def render() = {
       UIExplorerPage(
         View(style = styles.containerStyle)(
-          Text(
+          TextC(
             "layout events are called on mount and whenever layout is recalculated. Note that the layout event will typically be received",
             Text(style = styles.italicText)("before"),
             "the layout has updated on screen, especially when using layout animations.",
@@ -41,11 +39,11 @@ object LayoutEventsExample extends UIExample {
               source = ImageSource(uri =
                 "https://fbcdn-dragon-a.akamaihd.net/hphotos-ak-prn1/t39.1997/p128x128/851561_767334496626293_1958532586_n.png")
             ),
-            Text(
+            TextC(
               s"ViewLayout : ${JSON.stringify(state.viewLayout.getOrElse(""))} \n\n"),
             Text(style = styles.text, onLayout = onTextLayout _)(
               s"A simple piece of text.${state.extraText}"),
-            Text(
+            TextC(
               s"""
                  |
                  |Text w/h : ${if (state.textLayout.isDefined)
@@ -99,29 +97,31 @@ object LayoutEventsExample extends UIExample {
 
   val component = () => CreateElementNoProps[Component]()
 
-  object styles extends UniversalStyleSheet {
+  object styles extends InlineStyleSheetUniversal {
+
+    import dsl._
 
     def view(another: js.Any) =
       js.Array(another,
-               style(padding = 12,
-                     borderColor = "black",
-                     borderWidth = 0.5,
-                     backgroundColor = "transparent"))
+               styleUR(padding := 12,
+                       borderColor := "black",
+                       borderWidth := 0.5,
+                       backgroundColor := "transparent"))
 
-    val text = style(alignSelf = "flex-start",
-                     borderColor = "rgba(0, 0, 255, 0.2)",
-                     borderWidth = 0.5)
+    val text = style(alignSelf.flexStart,
+                     borderColor := "rgba(0, 0, 255, 0.2)",
+                     borderWidth := 0.5)
 
     val image =
-      style(width = 50, height = 50, marginBottom = 10, alignSelf = "center")
+      style(width := 50, height := 50, marginBottom := 10, alignSelf.center)
 
-    val pressText = style(fontWeight = "bold")
+    val pressText = style(fontWeight.bold)
 
-    val italicText = style(fontStyle = "italic")
+    val italicText = style(fontStyle.italic)
 
-    val containerStyle = style(width = 280)
+    val containerStyle = style(width := 280)
 
-    def dynamicView(value: Double) = style(margin = value)
+    def dynamicView(value: Double) = styleUR(margin := value)
 
   }
 

@@ -4,9 +4,7 @@ import sri.core._
 import sri.universal.components._
 
 import scala.scalajs.js.JSConverters.genTravConvertible2JSRichGenTrav
-import scala.scalajs.js.annotation.ScalaJSDefined
 
-@ScalaJSDefined
 class UIExplorerPage extends ComponentP[UIExplorerPage.Props] {
 
   def render() = {

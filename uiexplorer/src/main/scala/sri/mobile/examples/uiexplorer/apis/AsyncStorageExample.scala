@@ -1,20 +1,19 @@
 package sri.mobile.examples.uiexplorer.apis
 
-import sri.core._
 import sri.mobile.examples.uiexplorer.components.{
   UIExample,
   UIExplorerBlock,
   UIExplorerPage
 }
-import sri.universal._
 import sri.universal.apis.{AsyncStorage, AsyncStorageException}
 import sri.universal.components._
-import sri.universal.styles.UniversalStyleSheet
+import sri.universal.styles.InlineStyleSheetUniversal
 
 import scala.async.Async.{async, await}
 import scala.scalajs.concurrent.JSExecutionContext.Implicits.queue
 import scala.scalajs.js
-import scala.scalajs.js.annotation.ScalaJSDefined
+import sri.core._
+import sri.universal._
 
 object AsyncStorageExample extends UIExample {
 
@@ -24,7 +23,6 @@ object AsyncStorageExample extends UIExample {
   case class State(selectedValue: String = COLORS.head,
                    messages: js.Array[String] = js.Array())
 
-  @ScalaJSDefined
   class Component extends ComponentS[State] {
 
     initialState(State())
@@ -32,23 +30,23 @@ object AsyncStorageExample extends UIExample {
     def render() = {
       UIExplorerPage(
         UIExplorerBlock("Basics - getItem, setItem, removeItem")(
-          View(
+          ViewC(
             Picker(selectedValue = state.selectedValue,
                    onValueChange = onValueChange)(
               COLORS.map(v => PickerItem(key = v, value = v, label = v))
             ),
-            Text(
+            TextC(
               "Selected : ",
               Text(style = styles.getColorstyle(state.selectedValue))(
                 state.selectedValue)
             ),
-            Text(" "),
+            TextC(" "),
             Text(onPress = removeStorage _)(
               "Press here to remove from storage"),
-            Text(" "),
-            Text("Messages : "),
-            View(
-              state.messages.map(m => Text(m)).asInstanceOf[ReactNode]
+            TextC(" "),
+            TextC("Messages : "),
+            ViewC(
+              state.messages.map(m => TextC(m)).asInstanceOf[ReactNode]
             )
           )
         )
@@ -100,9 +98,9 @@ object AsyncStorageExample extends UIExample {
 
   val component = () => CreateElementNoProps[Component]()
 
-  object styles extends UniversalStyleSheet {
-
-    def getColorstyle(c: String) = style(color = c)
+  object styles extends InlineStyleSheetUniversal {
+    import dsl._
+    def getColorstyle(c: String) = styleUR(color := c)
   }
 
   override def title: String = "AsyncStorage"

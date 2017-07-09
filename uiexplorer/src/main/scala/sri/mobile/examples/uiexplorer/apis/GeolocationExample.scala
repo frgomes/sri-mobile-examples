@@ -5,11 +5,10 @@ import org.scalajs.dom.window
 import sri.core._
 import sri.mobile.examples.uiexplorer.components.UIExample
 import sri.universal.components._
-import sri.universal.styles.UniversalStyleSheet
+import sri.universal.styles.InlineStyleSheetUniversal
 
 import scala.scalajs.js
 import scala.scalajs.js.Dynamic.{literal => json}
-import scala.scalajs.js.annotation.ScalaJSDefined
 import scala.scalajs.js.{JSON, undefined, UndefOr => U}
 
 object GeolocationExample extends UIExample {
@@ -17,18 +16,17 @@ object GeolocationExample extends UIExample {
   case class State(initialPosition: String = "unknown",
                    lastPosition: String = "unknown")
 
-  @ScalaJSDefined
   class Component extends ComponentS[State] {
 
     initialState(State())
 
     def render() = {
-      View(
-        Text(
+      ViewC(
+        TextC(
           Text(style = styles.title)("Initial position:"),
           state.initialPosition
         ),
-        Text(
+        TextC(
           Text(style = styles.title)("Current position:"),
           state.lastPosition
         )
@@ -63,8 +61,9 @@ object GeolocationExample extends UIExample {
     }
   }
 
-  object styles extends UniversalStyleSheet {
-    val title = style(fontWeight = "500")
+  object styles extends InlineStyleSheetUniversal {
+    import dsl._
+    val title = style(fontWeight := "500")
   }
 
   override val component = () => CreateElementNoProps[Component]()

@@ -1,7 +1,9 @@
-var transformer = require('react-native/packager/transformer');
+var transformer = require('metro-bundler/build/transformer');
 
-function transform(src, filename, options) {
-  options = options || {};
+function transform(input) {
+  var options = input.options || {};
+  var src = input.src;
+    var filename = input.filename;
   if(filename.indexOf('scalajs-output-') > -1) {
   return {
         code: src,
@@ -9,7 +11,7 @@ function transform(src, filename, options) {
 //        map: filename, //TODO check later for .map
       };
   } else {
-   return transformer.transform(src,filename,options)
+   return transformer.transform(input)
   }
 
 }

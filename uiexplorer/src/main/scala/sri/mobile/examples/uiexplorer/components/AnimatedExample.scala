@@ -4,10 +4,9 @@ import sri.core.{ReactElement, _}
 import sri.universal._
 import sri.universal.apis.{Animated, AnimatedValue, TimingAnimationConfig}
 import sri.universal.components.{Text, View, _}
-import sri.universal.styles.UniversalStyleSheet
+import sri.universal.styles.InlineStyleSheetUniversal
 
 import scala.scalajs.js
-import scala.scalajs.js.annotation.ScalaJSDefined
 
 object AnimatedExample extends UIExample {
 
@@ -15,7 +14,6 @@ object AnimatedExample extends UIExample {
 
     case class State(fadeAnim: AnimatedValue = new AnimatedValue(0))
 
-    @ScalaJSDefined
     class Component extends ComponentS[State] {
 
       initialState(State())
@@ -46,19 +44,18 @@ object AnimatedExample extends UIExample {
 
     case class State(show: Boolean = true)
 
-    @ScalaJSDefined
     class Component extends ComponentS[State] {
 
       initialState(State())
 
       def render() = {
-        View(
+        ViewC(
           UIExplorerButton(
             () => setState((state: State) => state.copy(show = !state.show)))(
             s"Press to ${if (state.show) "Hide" else "Show"}"
           ),
           state.show ?= FadeInView(
-            View(style = styles.content)(Text("FadeInView")))
+            View(style = styles.content)(TextC("FadeInView")))
         )
       }
 
@@ -68,7 +65,6 @@ object AnimatedExample extends UIExample {
 
   }
 
-  @ScalaJSDefined
   class Component extends ComponentNoPS {
 
     def render() = UIExplorerPage(
@@ -89,18 +85,20 @@ object AnimatedExample extends UIExample {
 
   val component = () => CreateElementNoProps[Component]()
 
-  object styles extends UniversalStyleSheet {
+  object styles extends InlineStyleSheetUniversal {
+
+    import dsl._
 
     def fadeInViewstyle(value: AnimatedValue) =
-      style(opacity = value)
+      styleUR(opacity := value)
 
-    val content = style(backgroundColor = "deepskyblue",
-                        borderWidth = 1,
-                        borderColor = "dodgerblue",
-                        padding = 20,
-                        margin = 20,
-                        borderRadius = 10,
-                        alignItems = "center")
+    val content = style(backgroundColor := "deepskyblue",
+                        borderWidth := 1,
+                        borderColor := "dodgerblue",
+                        padding := 20,
+                        margin := 20,
+                        borderRadius := 10,
+                        alignItems.center)
 
   }
 

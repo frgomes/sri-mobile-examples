@@ -2,7 +2,6 @@ package sri.mobile.examples.navigationx
 
 import sri.navigation._
 import sri.navigation.navigators._
-import sri.universal.styles.UniversalStyleSheet
 import sri.vector.icons.{Ionicons, IoniconsList}
 
 package object drawerstacktab {
@@ -16,8 +15,7 @@ package object drawerstacktab {
               if (iconOptions.focused) IoniconsList.IOS_HOME
               else IoniconsList.IOS_HOME_OUTLINE,
             size = 27,
-            style = UniversalStyleSheet.style(registerStyle = false,
-                                              color = iconOptions.tintColor)
+            style = GlobalStyles.dynamicColor(iconOptions.tintColor)
           )
         },
         tabBarLabel = "Profile1"
@@ -30,8 +28,7 @@ package object drawerstacktab {
               if (iconOptions.focused) IoniconsList.IOS_PEOPLE
               else IoniconsList.IOS_PEOPLE_OUTLINE,
             size = 27,
-            style = UniversalStyleSheet.style(registerStyle = false,
-                                              color = iconOptions.tintColor)
+            style = GlobalStyles.dynamicColor(iconOptions.tintColor)
           )
         },
         tabBarLabel = "Profile2"
@@ -62,8 +59,7 @@ package object drawerstacktab {
               if (iconOptions.focused) IoniconsList.IOS_HOME
               else IoniconsList.IOS_HOME_OUTLINE,
             size = 27,
-            style = UniversalStyleSheet.style(registerStyle = false,
-                                              color = iconOptions.tintColor)
+            style = GlobalStyles.dynamicColor(iconOptions.tintColor)
           )
         },
         drawerLabel = "Home"
@@ -79,8 +75,7 @@ package object drawerstacktab {
               if (iconOptions.focused) IoniconsList.IOS_SETTINGS
               else IoniconsList.IOS_SETTINGS_OUTLINE,
             size = 27,
-            style = UniversalStyleSheet.style(registerStyle = false,
-                                              color = iconOptions.tintColor)
+            style = GlobalStyles.dynamicColor(iconOptions.tintColor)
           )
         },
         drawerLabel = "Settings"

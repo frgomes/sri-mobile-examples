@@ -2,10 +2,9 @@ package sri.mobile.examples.uiexplorer.components
 
 import sri.core._
 import sri.universal.components._
-import sri.universal.styles.UniversalStyleSheet
+import sri.universal.styles.InlineStyleSheetUniversal
 
 import scala.scalajs.js
-import scala.scalajs.js.annotation.ScalaJSDefined
 
 object ModalExample extends UIExample {
 
@@ -14,7 +13,7 @@ object ModalExample extends UIExample {
 //
 //    case class State(active: Boolean = false)
 //
-//    @ScalaJSDefined
+//
 //    class Component extends Component[Props, State] {
 //
 //      initialState(State())
@@ -45,7 +44,6 @@ object ModalExample extends UIExample {
                    modalVisible: Boolean = false,
                    transparent: Boolean = false)
 
-  @ScalaJSDefined
   class Component extends ComponentS[State] {
 
     initialState(State())
@@ -57,7 +55,7 @@ object ModalExample extends UIExample {
               visible = state.modalVisible)(
           View(style = styles.customContainer(state.transparent))(
             View(style = styles.customInnerContainer(state.transparent))(
-              Text(
+              TextC(
                 s"This modal was presented ${if (state.animationType == ModalAnimationType.NONE) "without"
                 else "with"} animation"),
               Button(onPress = () => setModalVisible(false),
@@ -119,48 +117,51 @@ object ModalExample extends UIExample {
 
   val component = () => CreateElementNoProps[Component]()
 
-  object styles extends UniversalStyleSheet {
+  object styles extends InlineStyleSheetUniversal {
+
+    import dsl._
+
     val container =
-      style(flex = 1, justifyContent = "center", padding = 20)
-    val innerContainer = style(borderRadius = 10)
-    val modalRow = style(alignItems = "center",
-                         flex = 1,
-                         flexDirection = "row",
-                         marginBottom = 20)
+      style(flex := 1, justifyContent.center, padding := 20)
+    val innerContainer = style(borderRadius := 10)
+    val modalRow = style(alignItems.center,
+                         flex := 1,
+                         flexDirection.row,
+                         marginBottom := 20)
 
-    val rowTitle = style(flex = 1, fontWeight = "bold")
+    val rowTitle = style(flex := 1, fontWeight.bold)
 
-    val button = style(borderRadius = 5,
-                       flex = 1,
-                       height = 44,
-                       justifyContent = "center",
-                       overflow = "hidden")
+    val button = style(borderRadius := 5,
+                       flex := 1,
+                       height := 44,
+                       justifyContent.center,
+                       overflow.hidden)
 
     val buttonText =
-      style(fontSize = 18, margin = 5, textAlign = "center")
+      style(fontSize := 18, margin := 5, textAlign.center)
 
-    val modalButton = style(marginTop = 100)
+    val modalButton = style(marginTop := 100)
 
     def buttonstyle(userStyle: js.Any) = js.Array(button, userStyle)
 
     def buttonTextstyle(active: Boolean) = {
       val c = if (active) "#fff" else "#000"
-      js.Array(buttonText, style(color = c))
+      js.Array(buttonText, styleUR(color := c))
     }
 
     def customContainer(transparent: Boolean) = {
       val c = if (transparent) "rgba(0, 0, 0, 0.5)" else "#f5fcff"
-      js.Array(container, style(backgroundColor = c))
+      js.Array(container, styleUR(backgroundColor := c))
     }
 
     def customInnerContainer(transparent: Boolean) = {
       val c =
-        if (transparent) style(backgroundColor = "#fff", padding = 20)
-        else style()
+        if (transparent) styleUR(backgroundColor := "#fff", padding := 20)
+        else js.Dynamic.literal()
       js.Array(innerContainer, c)
     }
 
-    val activeButtonStyle = style(backgroundColor = "#ddd")
+    val activeButtonStyle = style(backgroundColor := "#ddd")
   }
 
   override def title: String = "Modal"

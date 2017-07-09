@@ -11,15 +11,13 @@ import sri.platform.SriPlatform
 import sri.universal._
 import sri.universal.apis.PixelRatio
 import sri.universal.components._
-import sri.universal.styles.UniversalStyleSheet
+import sri.universal.styles.InlineStyleSheetUniversal
 
 import scala.scalajs.js
 import scala.scalajs.js.Dynamic.{literal => json}
 import scala.scalajs.js.JSConverters.genTravConvertible2JSRichGenTrav
-import scala.scalajs.js.annotation.ScalaJSDefined
 import scala.scalajs.js.|
 
-@ScalaJSDefined
 class UIExplorerListScreen
     extends NavigationScreenComponentS[UIExplorerListScreen.State] {
   import UIExplorerListScreen._
@@ -163,54 +161,57 @@ object UIExplorerListScreen {
         ds.cloneWithRowsAndSections(
           json(componenets = finalComponentsList, apis = finalAPIList)))
 
-  object styles extends UniversalStyleSheet {
+  object styles extends InlineStyleSheetUniversal {
+
+    import dsl._
+
     val listContainer = style(
-      flex = 1
+      flex := 1
     )
     val list = style(
-      backgroundColor = "#eeeeee"
+      backgroundColor := "#eeeeee"
     )
     val sectionHeader = style(
-      padding = 5
+      padding := 5
     )
     val group = style(
-      backgroundColor = "white"
+      backgroundColor := "white"
     )
     val sectionHeaderTitle = style(
-      fontWeight = "500",
-      fontSize = 11
+      fontWeight := "500",
+      fontSize := 11
     )
     val listRow = style(
-      backgroundColor = "white",
-      justifyContent = "center",
-      paddingHorizontal = 15,
-      paddingVertical = 8
+      backgroundColor := "white",
+      justifyContent.center,
+      paddingHorizontal := 15,
+      paddingVertical := 8
     )
     val separator = style(
-      height = 1.0 / PixelRatio.get(),
-      backgroundColor = "#bbbbbb",
-      marginLeft = 15
+      height := 1.0 / PixelRatio.get(),
+      backgroundColor := "#bbbbbb",
+      marginLeft := 15
     )
     val rowTitleText = style(
-      fontSize = 17,
-      fontWeight = "500"
+      fontSize := 17,
+      fontWeight := "500"
     )
     val rowDetailText = style(
-      fontSize = 15,
-      color = "#888888",
-      lineHeight = 20
+      fontSize := 15,
+      color := "#888888",
+      lineHeight := 20
     )
     val searchRow = style(
-      backgroundColor = "#eeeeee",
-      padding = 10
+      backgroundColor := "#eeeeee",
+      padding := 10
     )
     val searchTextInput = style(
-      backgroundColor = "white",
-      borderColor = "#cccccc",
-      borderRadius = 3,
-      borderWidth = 1,
-      height = 40,
-      paddingLeft = 8
+      backgroundColor := "white",
+      borderColor := "#cccccc",
+      borderRadius := 3,
+      borderWidth := 1,
+      height := 40,
+      paddingLeft := 8
     )
   }
 

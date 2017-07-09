@@ -1,13 +1,11 @@
 package sri.mobile.examples.uiexplorer.components
 
 import sri.core._
-import sri.universal._
 import sri.universal.apis.PixelRatio
 import sri.universal.components.{ImageSource, _}
-import sri.universal.styles.UniversalStyleSheet
-
+import sri.universal.styles.InlineStyleSheetUniversal
+import sri.universal._
 import scala.scalajs.js
-import scala.scalajs.js.annotation.ScalaJSDefined
 
 object TouchableExample extends UIExample {
 
@@ -18,12 +16,11 @@ object TouchableExample extends UIExample {
 
     case class State(eventLog: js.Array[String] = js.Array())
 
-    @ScalaJSDefined
     class Component extends ComponentS[State] {
 
       initialState(State())
 
-      def render() = View(
+      def render() = ViewC(
         View(style = styles.wrapper)(
           TouchableOpacity(
             style = styles.wrapper,
@@ -82,43 +79,45 @@ object TouchableExample extends UIExample {
 
   val component = () => CreateElementSFNoP(Component)
 
-  object styles extends UniversalStyleSheet {
+  object styles extends InlineStyleSheetUniversal {
 
-    val touchableRow = style(justifyContent = "center", flexDirection = "row")
+    import dsl._
 
-    val icon = style(width = 24, height = 24)
+    val touchableRow = style(justifyContent.center, flexDirection.row)
 
-    val image = style(width = 50, height = 50)
+    val icon = style(width := 24, height := 24)
 
-    val text = style(fontSize = 15)
+    val image = style(width := 50, height := 50)
 
-    val button = style(color = "#007AFF")
+    val text = style(fontSize := 15)
 
-    val wrapper = style(borderRadius = 8)
+    val button = style(color := "#007AFF")
+
+    val wrapper = style(borderRadius := 8)
 
     val wrapperCustom = style(
-      borderRadius = 8,
-      padding = 6
+      borderRadius := 8,
+      padding := 6
     )
     val logBox = style(
-      padding = 20,
-      margin = 10,
-      borderWidth = 1.0 / PixelRatio.get(),
-      borderColor = "#f0f0f0",
-      backgroundColor = "#f9f9f9"
+      padding := 20,
+      margin := 10,
+      borderWidth := 1.0 / PixelRatio.get(),
+      borderColor := "#f0f0f0",
+      backgroundColor := "#f9f9f9"
     )
     val eventLogBox = style(
-      padding = 10,
-      margin = 10,
-      height = 120,
-      borderWidth = 1.0 / PixelRatio.get(),
-      borderColor = "#f0f0f0",
-      backgroundColor = "#f9f9f9"
+      padding := 10,
+      margin := 10,
+      height := 120,
+      borderWidth := 1.0 / PixelRatio.get(),
+      borderColor := "#f0f0f0",
+      backgroundColor := "#f9f9f9"
     )
 
     val textBlock = style(
-      fontWeight = "500",
-      color = "blue"
+      fontWeight := "500",
+      color := "blue"
     )
   }
 

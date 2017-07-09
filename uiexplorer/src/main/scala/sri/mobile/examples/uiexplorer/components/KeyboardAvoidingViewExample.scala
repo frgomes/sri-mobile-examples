@@ -1,13 +1,11 @@
 package sri.mobile.examples.uiexplorer.components
 
 import sri.core.{ComponentS, CreateElementNoProps}
-import sri.mobile.components._
 import sri.universal.components.{View, _}
-import sri.universal.styles.UniversalStyleSheet
-
+import sri.universal.styles.InlineStyleSheetUniversal
+import sri.mobile.components.ios._
 import scala.scalajs.js
 import scala.scalajs.js.Dynamic.{literal => json}
-import scala.scalajs.js.annotation.ScalaJSDefined
 
 object KeyboardAvoidingViewExample extends UIExample {
 
@@ -15,7 +13,6 @@ object KeyboardAvoidingViewExample extends UIExample {
                      KeyboardAvoidingViewBehaviour.PADDING,
                    modalOpen: Boolean = false)
 
-  @ScalaJSDefined
   class Component extends ComponentS[State] {
 
     initialState(State())
@@ -43,12 +40,12 @@ object KeyboardAvoidingViewExample extends UIExample {
               style = styles.closeButton,
               onPress = () =>
                 setState((state: State) => state.copy(modalOpen = false)))(
-              Text("Close")
+              TextC("Close")
             )
           ),
           TouchableHighlight(onPress = () =>
             setState((state: State) => state.copy(modalOpen = true)))(
-            Text("Open Example")
+            TextC("Open Example")
           )
         )
       )
@@ -60,7 +57,7 @@ object KeyboardAvoidingViewExample extends UIExample {
 
     def onSegmentChange(segment: String): Unit = {
       val behaviour = segment match {
-        case Padding => KeyboardAvoidingViewBehaviour.PADDING
+        case Padding  => KeyboardAvoidingViewBehaviour.PADDING
         case Position => KeyboardAvoidingViewBehaviour.POSITION
       }
       setState((state: State) => state.copy(behaviour = behaviour))
@@ -69,24 +66,26 @@ object KeyboardAvoidingViewExample extends UIExample {
 
   val component = () => CreateElementNoProps[Component]()
 
-  object styles extends UniversalStyleSheet {
+  object styles extends InlineStyleSheetUniversal {
 
-    val outerContainer = style(flex = 1)
+    import dsl._
 
-    val container = style(flex = 1,
-                          justifyContent = "center",
-                          paddingHorizontal = 20,
-                          paddingTop = 20)
+    val outerContainer = style(flex := 1)
 
-    val textInput = style(borderRadius = 5,
-                          borderWidth = 1,
-                          height = 44,
-                          paddingHorizontal = 10)
+    val container = style(flex := 1,
+                          justifyContent.center,
+                          paddingHorizontal := 20,
+                          paddingTop := 20)
 
-    val segment = style(marginBottom = 10)
+    val textInput = style(borderRadius := 5,
+                          borderWidth := 1,
+                          height := 44,
+                          paddingHorizontal := 10)
+
+    val segment = style(marginBottom := 10)
 
     val closeButton =
-      style(position = "absolute", top = 30, left = 30)
+      style(position.absolute, top := 30, left := 30)
 
   }
 

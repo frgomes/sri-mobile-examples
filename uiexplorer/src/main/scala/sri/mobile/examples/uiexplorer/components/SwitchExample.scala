@@ -2,10 +2,9 @@ package sri.mobile.examples.uiexplorer.components
 
 import sri.core._
 import sri.universal.components._
-import sri.universal.styles.UniversalStyleSheet
+import sri.universal.styles.InlineStyleSheetUniversal
 
 import scala.scalajs.js
-import scala.scalajs.js.annotation.ScalaJSDefined
 
 object SwitchExample extends UIExample {
 
@@ -14,12 +13,11 @@ object SwitchExample extends UIExample {
 
   object BasicSwitchExample {
 
-    @ScalaJSDefined
     class Component extends ComponentS[BasicState] {
 
       initialState(BasicState())
 
-      def render() = View(
+      def render() = ViewC(
         Switch(onValueChange = handleFalseSwitch _,
                style = styles.basicFalseSwitch,
                value = state.falseSwitchIsOn),
@@ -43,9 +41,8 @@ object SwitchExample extends UIExample {
 
   object DisabledSwitchExample {
 
-    @ScalaJSDefined
     class Component extends ComponentNoPS {
-      def render() = View(
+      def render() = ViewC(
         Switch(disabled = true, style = styles.basicFalseSwitch, value = true),
         Switch(disabled = true, value = false)
       )
@@ -57,12 +54,11 @@ object SwitchExample extends UIExample {
 
   object ColorSwitchExample {
 
-    @ScalaJSDefined
     class Component extends ComponentS[BasicState] {
 
       initialState(BasicState())
 
-      def render() = View(
+      def render() = ViewC(
         Switch(onValueChange = handleFalseSwitch _,
                style = styles.basicFalseSwitch,
                onTintColor = "#00ff00",
@@ -93,29 +89,28 @@ object SwitchExample extends UIExample {
     case class State(eventSwitchIsOn: Boolean = false,
                      eventSwitchRegressionIsOn: Boolean = true)
 
-    @ScalaJSDefined
     class Component extends ComponentS[State] {
 
       initialState(State())
 
       def render() = View(style = styles.eventsContainer)(
-        View(
+        ViewC(
           Switch(onValueChange = handleEventSwitch _,
                  style = styles.basicFalseSwitch,
                  value = state.eventSwitchIsOn),
           Switch(onValueChange = handleEventSwitch _,
                  style = styles.basicFalseSwitch,
                  value = state.eventSwitchIsOn),
-          Text(if (state.eventSwitchIsOn) "On" else "Off")
+          TextC(if (state.eventSwitchIsOn) "On" else "Off")
         ),
-        View(
+        ViewC(
           Switch(onValueChange = handleEventSwitchRegression _,
                  style = styles.basicFalseSwitch,
                  value = state.eventSwitchRegressionIsOn),
           Switch(onValueChange = handleEventSwitchRegression _,
                  style = styles.basicFalseSwitch,
                  value = state.eventSwitchRegressionIsOn),
-          Text(if (state.eventSwitchRegressionIsOn) "On" else "Off")
+          TextC(if (state.eventSwitchRegressionIsOn) "On" else "Off")
         )
       )
 
@@ -153,12 +148,14 @@ object SwitchExample extends UIExample {
 
   val component = () => CreateElementSFNoP(Component)
 
-  object styles extends UniversalStyleSheet {
+  object styles extends InlineStyleSheetUniversal {
 
-    val basicFalseSwitch = style(marginBottom = 10)
+    import dsl._
+
+    val basicFalseSwitch = style(marginBottom := 10)
 
     val eventsContainer =
-      style(flexDirection = "row", justifyContent = "space-around")
+      style(flexDirection.row, justifyContent.spaceAround)
   }
 
   override def title: String = "Switch"

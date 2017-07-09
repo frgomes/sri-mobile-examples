@@ -2,22 +2,19 @@ package sri.mobile.examples.uiexplorer.components
 
 import sri.core.{ComponentS, CreateElementNoProps}
 import sri.universal.components._
-import sri.universal.styles.UniversalStyleSheet
-
-import scala.scalajs.js.annotation.ScalaJSDefined
+import sri.universal.styles.InlineStyleSheetUniversal
 
 object SliderExample extends UIExample {
 
   case class State(value: Double = 0)
 
-  @ScalaJSDefined
   class Component extends ComponentS[State] {
 
     initialState(State())
 
     def render() = UIExplorerPage(
       UIExplorerBlock("SliderIOS")(
-        View(
+        ViewC(
           Text(style = styles.text)(
             state.value
           ),
@@ -35,14 +32,17 @@ object SliderExample extends UIExample {
 
   val component = () => CreateElementNoProps[Component]()
 
-  object styles extends UniversalStyleSheet {
-    val slider = style(height = 10, margin = 10)
+  object styles extends InlineStyleSheetUniversal {
+
+    import dsl._
+
+    val slider = style(height := 10, margin := 10)
 
     val text = style(
-      fontSize = 14,
-      textAlign = "center",
-      fontWeight = "500",
-      margin = 10
+      fontSize := 14,
+      textAlign.center,
+      fontWeight := "500",
+      margin := 10
     )
 
   }

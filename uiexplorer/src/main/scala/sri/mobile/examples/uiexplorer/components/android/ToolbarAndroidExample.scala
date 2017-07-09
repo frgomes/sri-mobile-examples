@@ -1,8 +1,8 @@
 package sri.mobile.examples.uiexplorer.components.android
 
 import sri.core._
-import sri.mobile.components._
 import sri.mobile.components.android.{
+  ToolbarAndroid,
   ToolbarAndroidAction,
   ToolbarAndroidActionShow
 }
@@ -12,11 +12,10 @@ import sri.mobile.examples.uiexplorer.components.{
   UIExplorerPage
 }
 import sri.mobile.examples.uiexplorer.images._
-import sri.universal.components.{Switch, Text, View}
-import sri.universal.styles.UniversalStyleSheet
+import sri.universal.components._
+import sri.universal.styles.InlineStyleSheetUniversal
 
 import scala.scalajs.js
-import scala.scalajs.js.annotation.ScalaJSDefined
 
 object ToolbarAndroidExample extends UIExample {
 
@@ -39,7 +38,6 @@ object ToolbarAndroidExample extends UIExample {
                    titleColor: String = "#3b5998",
                    subtitleColor: String = "#6a7180")
 
-  @ScalaJSDefined
   class Component extends ComponentS[State] {
 
     initialState(State())
@@ -55,7 +53,7 @@ object ToolbarAndroidExample extends UIExample {
             onActionSelected = onActionSelected _,
             subtitle = state.actionText
           )(),
-          Text(state.actionText)
+          TextC(state.actionText)
         ),
         UIExplorerBlock(
           "Toolbar with logo & custom title view (a View with Switch+Text)")(
@@ -63,7 +61,7 @@ object ToolbarAndroidExample extends UIExample {
             View(style = styles.view1)(
               Switch(value = state.toolbarSwitch,
                      onValueChange = handleSwitchChange _),
-              Text(s"a switch")
+              TextC(s"a switch")
             )
           )
         ),
@@ -87,7 +85,7 @@ object ToolbarAndroidExample extends UIExample {
             subtitleColor = state.subtitleColor,
             titleColor = state.titleColor
           )(),
-          Text(
+          TextC(
             "Touch the icon to reset the custom colors to the default (theme-provided) ones.")
         )
       )
@@ -106,12 +104,14 @@ object ToolbarAndroidExample extends UIExample {
 
   val component = () => CreateElementNoProps[Component]()
 
-  object styles extends UniversalStyleSheet {
+  object styles extends InlineStyleSheetUniversal {
 
-    val toolbar = style(backgroundColor = "#e9eaed", height = 56)
+    import dsl._
+
+    val toolbar = style(backgroundColor := "#e9eaed", height := 56)
 
     val view1 =
-      style(height = 56, flexDirection = "row", alignItems = "center")
+      style(height := 56, flexDirection.row, alignItems.center)
   }
 
 }

@@ -3,7 +3,6 @@ package sri.mobile.examples.navigationx
 import sri.navigation._
 import sri.navigation.navigators._
 import sri.universal.components.Button
-import sri.universal.styles.UniversalStyleSheet
 import sri.vector.icons.{Ionicons, IoniconsList}
 
 import scala.scalajs.js
@@ -62,8 +61,7 @@ package object stackintabs {
               if (iconOptions.focused) IoniconsList.IOS_HOME
               else IoniconsList.IOS_HOME_OUTLINE,
             size = 27,
-            style = UniversalStyleSheet.style(registerStyle = false,
-                                              color = iconOptions.tintColor)
+            style = GlobalStyles.dynamicColor(iconOptions.tintColor)
           )
         },
         tabBarLabel = "Home"
@@ -79,8 +77,7 @@ package object stackintabs {
               if (iconOptions.focused) IoniconsList.IOS_SETTINGS
               else IoniconsList.IOS_SETTINGS_OUTLINE,
             size = 27,
-            style = UniversalStyleSheet.style(registerStyle = false,
-                                              color = iconOptions.tintColor)
+            style = GlobalStyles.dynamicColor(iconOptions.tintColor)
           )
         },
         tabBarLabel = "Settings"

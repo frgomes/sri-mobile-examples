@@ -1,8 +1,9 @@
 package sri.mobile.examples.uiexplorer.components
 
-import sri.universal.styles.UniversalStyleSheet
+import sri.universal.styles.InlineStyleSheetUniversal
 
-object GlobalStyles extends UniversalStyleSheet {
+object GlobalStyles extends InlineStyleSheetUniversal {
 
-  val wholeContainer = style(flex = 1)
+  import dsl._
+  val wholeContainer = style(flex := 1)
 }

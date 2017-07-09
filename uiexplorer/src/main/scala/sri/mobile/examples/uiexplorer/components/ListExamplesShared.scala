@@ -4,14 +4,13 @@ import sri.core.{ComponentP, CreateElement}
 import sri.macros.OptDefault
 import sri.mobile.examples.uiexplorer.images._
 import sri.platform.SriPlatform
-import sri.universal._
 import sri.universal.apis.StyleSheet
 import sri.universal.components._
-import sri.universal.styles.UniversalStyleSheet
+import sri.universal.styles.InlineStyleSheetUniversal
 
 import scala.scalajs.js
 import scala.scalajs.js.JSConverters.JSRichGenTraversableOnce
-import scala.scalajs.js.annotation.ScalaJSDefined
+import scala.scalajs.js.annotation.JSName
 
 object ListExamplesShared {
 
@@ -24,7 +23,6 @@ object ListExamplesShared {
        |modus, putant invidunt reprehendunt ne qui.;
      """.stripMargin
 
-  @ScalaJSDefined
   trait Item extends js.Object {
     val title: String
     val key: Int
@@ -51,16 +49,16 @@ object ListExamplesShared {
 
   val SeparatorComponent = View(style = styles.separator)(null)
 
-  val HeaderComponent = View(
+  val HeaderComponent = ViewC(
     View(style = styles.headerFooter)(
-      Text("LIST HEADER")
+      TextC("LIST HEADER")
     ),
     SeparatorComponent
   )
 
-  val FooterComponent = View(
+  val FooterComponent = ViewC(
     SeparatorComponent,
-    View(style = styles.headerFooter)(Text("LIST FOOTER")))
+    View(style = styles.headerFooter)(TextC("LIST FOOTER")))
 
   val THUMB_URLS = js.Array(LikeImage,
                             DislikeImage,
@@ -77,7 +75,6 @@ object ListExamplesShared {
 
   val HORIZ_WIDTH = 200
 
-  @ScalaJSDefined
   class ItemComponent extends ComponentP[ItemComponent.Props] {
 
     def render() = {
@@ -89,9 +86,7 @@ object ListExamplesShared {
         View(
           style =
             if (props.horizontal)
-              js.Array(styles.itemRow,
-                       UniversalStyleSheet.style(width = HORIZ_WIDTH,
-                                                 registerStyle = false))
+              js.Array(styles.itemRow, styles.hWidth)
             else styles.itemRow)(
           if (props.item.noImage.isEmpty)
             Image(style = styles.thumb, sourceDynamic = imageSource)
@@ -144,81 +139,87 @@ object ListExamplesShared {
                               value: Boolean,
                               onChange: Boolean => _) = {
     View(style = styles.option)(
-      Text(key),
+      TextC(key),
       Switch(style = styles.smallSwitch,
              value = value,
              onValueChange = onChange)
     )
   }
 
-  object styles extends UniversalStyleSheet {
+  object styles extends InlineStyleSheetUniversal {
+
+    import dsl._
+
     val headerFooter = style(
-      height = 30,
-      width = 100,
-      alignSelf = "center",
-      alignItems = "center",
-      justifyContent = "center"
+      height := 30,
+      width := 100,
+      alignSelf := "center",
+      alignItems := "center",
+      justifyContent := "center"
     )
     val horizItem = style(
-      alignSelf = "flex-start" // Necessary for touch highlight
+      alignSelf := "flex-start" // Necessary for touch highlight
     )
     val item = style(
-      flex = 1
+      flex := 1
     )
     val option = style(
-      flexDirection = "row",
-      padding = 8,
-      paddingRight = 0
+      flexDirection := "row",
+      padding := 8,
+      paddingRight := 0
     )
     val itemRow = style(
-      flexDirection = "row",
-      padding = 10,
-      backgroundColor = "#F6F6F6"
+      flexDirection := "row",
+      padding := 10,
+      backgroundColor := "#F6F6F6"
     )
     val searchTextInput = style(
-      backgroundColor = "white",
-      borderColor = "#cccccc",
-      borderRadius = 3,
-      borderWidth = 1,
-      paddingLeft = 8,
-      paddingVertical = 0,
-      height = 26,
-      fontSize = 14,
-      flexGrow = 1
+      backgroundColor := "white",
+      borderColor := "#cccccc",
+      borderRadius := 3,
+      borderWidth := 1,
+      paddingLeft := 8,
+      paddingVertical := 0,
+      height := 26,
+      fontSize := 14,
+      flexGrow := 1
     )
     val separator = style(
-      height = SEPARATOR_HEIGHT,
-      backgroundColor = "gray"
+      height := SEPARATOR_HEIGHT,
+      backgroundColor := "gray"
     )
     val smallSwitch =
       if (SriPlatform.isAndroid)
         style(
-          top = 1,
-          margin = -6
-          //        transform = [{scale = 0.7}]
+          top := 1,
+          margin := -6
+          //        transform := [{scale := 0.7}]
         )
       else
         style(
-          top = 4,
-          margin = -10
-          //        transform = [{scale = 0.5}]
+          top := 4,
+          margin := -10
+          //        transform := [{scale := 0.5}]
         )
     val stacked = style(
-      alignItems = "center",
-      backgroundColor = "#F6F6F6",
-      padding = 10
+      alignItems := "center",
+      backgroundColor := "#F6F6F6",
+      padding := 10
     )
     val thumb = style(
-      width = 64,
-      height = 64
+      width := 64,
+      height := 64
     )
     val stackedText = style(
-      padding = 4,
-      fontSize = 18
+      padding := 4,
+      fontSize := 18
     )
     val text = style(
-      flex = 1
+      flex := 1
     )
+
+    val hWidth = style(width := HORIZ_WIDTH)
+
   }
 
 }

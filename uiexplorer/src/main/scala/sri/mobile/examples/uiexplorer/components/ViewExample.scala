@@ -2,7 +2,7 @@ package sri.mobile.examples.uiexplorer.components
 
 import sri.core.CreateElementSFNoP
 import sri.universal.components.{View, _}
-import sri.universal.styles.UniversalStyleSheet
+import sri.universal.styles.InlineStyleSheetUniversal
 
 import scala.scalajs.js.Dynamic.{literal => json}
 
@@ -32,21 +32,24 @@ object ViewExample extends UIExample {
 
   val component = () => CreateElementSFNoP(Component)
 
-  object styles extends UniversalStyleSheet {
-    val container = style(flex = 1, backgroundColor = "#F5FCFF")
+  object styles extends InlineStyleSheetUniversal {
 
-    val text = style(fontSize = 11)
+    import dsl._
 
-    val bgColorView = style(backgroundColor = "#527FE4", padding = 5)
+    val container = style(flex := 1, backgroundColor := "#F5FCFF")
+
+    val text = style(fontSize := 11)
+
+    val bgColorView = style(backgroundColor := "#527FE4", padding := 5)
 
     val borderView =
-      style(borderColor = "#527FE4", padding = 10, borderWidth = 5)
+      style(borderColor := "#527FE4", padding := 10, borderWidth := 5)
 
     val borderRadiusView =
-      style(borderRadius = 5, padding = 5, borderWidth = 0.5)
+      style(borderRadius := 5, padding := 5, borderWidth := 0.5)
 
     val borderRadiusCircle =
-      style(borderRadius = 10, borderWidth = 1, width = 20, height = 20)
+      style(borderRadius := 10, borderWidth := 1, width := 20, height := 20)
   }
 
   override def title: String = "View"

@@ -8,7 +8,7 @@ import sri.mobile.examples.uiexplorer.components.{
 }
 import sri.universal.apis.{Alert, AlertButton}
 import sri.universal.components._
-import sri.universal.styles.UniversalStyleSheet
+import sri.universal.styles.InlineStyleSheetUniversal
 
 import scala.scalajs.js
 import scala.scalajs.js.Dynamic.{literal => json}
@@ -75,27 +75,27 @@ object AlertExample extends UIExample {
         View(style = json(flex = 1))(
           TouchableHighlight(style = styles.wrapper, onPress = a1)(
             View(style = styles.button)(
-              Text("Alert Message with default button")
+              TextC("Alert Message with default button")
             )
           ),
           TouchableHighlight(style = styles.wrapper, onPress = a2)(
             View(style = styles.button)(
-              Text("Alert with only one button")
+              TextC("Alert with only one button")
             )
           ),
           TouchableHighlight(style = styles.wrapper, onPress = a3)(
             View(style = styles.button)(
-              Text("Alert with two buttons")
+              TextC("Alert with two buttons")
             )
           ),
           TouchableHighlight(style = styles.wrapper, onPress = a4)(
             View(style = styles.button)(
-              Text("Alert with 3 buttons")
+              TextC("Alert with 3 buttons")
             )
           ),
           TouchableHighlight(style = styles.wrapper, onPress = a5)(
             View(style = styles.button)(
-              Text("Alert with too many buttons")
+              TextC("Alert with too many buttons")
             )
           )
         )
@@ -105,11 +105,12 @@ object AlertExample extends UIExample {
 
   val component = () => CreateElementSFNoP(Component)
 
-  object styles extends UniversalStyleSheet {
-    val alertsContainer =
-      style(backgroundColor = "white", padding = 20)
-    val wrapper = style(borderRadius = 5, marginBottom = 5)
-    val button = style(backgroundColor = "#eeeeee", padding = 10)
+  object styles extends InlineStyleSheetUniversal {
+
+    import dsl._
+    val alertsContainer = style(backgroundColor := "white", padding := 20)
+    val wrapper = style(borderRadius := 5, marginBottom := 5)
+    val button = style(backgroundColor := "#eeeeee", padding := 10)
   }
 
   override def description: String = "alerts and action sheets"

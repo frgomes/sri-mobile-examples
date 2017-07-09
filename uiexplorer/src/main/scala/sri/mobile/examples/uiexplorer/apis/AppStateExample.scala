@@ -10,19 +10,17 @@ import sri.universal.apis.AppState
 import sri.universal.components._
 
 import scala.scalajs.js
-import scala.scalajs.js.annotation.ScalaJSDefined
 
 object AppStateExample extends UIExample {
 
-  @ScalaJSDefined
   class AppStateSubscription
       extends Component[AppStateSubscription.Props, AppStateSubscription.State] {
     import AppStateSubscription._
     initialState(State())
 
-    def render() = View(
-      if (props.state) Text(state.appState)
-      else Text(state.previousAppSates.mkString(","))
+    def render() = ViewC(
+      if (props.state) TextC(state.appState)
+      else TextC(state.previousAppSates.mkString(","))
     )
 
     val handleAppStateChange = (appState: String) => {
@@ -52,7 +50,7 @@ object AppStateExample extends UIExample {
   val Component = () => {
     UIExplorerPage(
       UIExplorerBlock("AppState.currentState")(
-        Text(AppState.currentState.get)
+        TextC(AppState.currentState.get)
       ),
       UIExplorerBlock("Subscribed AppState:")(
         AppStateSubscription(true)

@@ -1,9 +1,8 @@
 package sri.mobile.examples.navigationx
 
 import sri.navigation._
-import sri.platform._
 import sri.navigation.navigators._
-import sri.universal.styles.UniversalStyleSheet
+import sri.platform._
 import sri.vector.icons.{Ionicons, IoniconsList}
 package object simpletab {
 
@@ -20,8 +19,7 @@ package object simpletab {
               if (SriPlatform.isAndroid) IoniconsList.IOS_HOME
               else IoniconsList.IOS_HOME_OUTLINE,
             size = 27,
-            style = UniversalStyleSheet.style(registerStyle = false,
-                                              color = iconOptions.tintColor)
+            style = GlobalStyles.dynamicColor(iconOptions.tintColor)
           )
         },
         tabBarLabel = "Home"
@@ -34,8 +32,7 @@ package object simpletab {
               if (iconOptions.focused) IoniconsList.IOS_SETTINGS
               else IoniconsList.IOS_SETTINGS_OUTLINE,
             size = 27,
-            style = UniversalStyleSheet.style(registerStyle = false,
-                                              color = iconOptions.tintColor)
+            style = GlobalStyles.dynamicColor(iconOptions.tintColor)
           )
         },
         tabBarLabel = "Settings"
@@ -48,8 +45,7 @@ package object simpletab {
               if (iconOptions.focused) IoniconsList.IOS_CHATBOXES
               else IoniconsList.IOS_CHATBOXES_OUTLINE,
             size = 27,
-            style = UniversalStyleSheet.style(registerStyle = false,
-                                              color = iconOptions.tintColor)
+            style = GlobalStyles.dynamicColor(iconOptions.tintColor)
           )
         },
         tabBarLabel = "Chat"
@@ -62,8 +58,7 @@ package object simpletab {
               if (iconOptions.focused) IoniconsList.IOS_PEOPLE
               else IoniconsList.IOS_PEOPLE_OUTLINE,
             size = 27,
-            style = UniversalStyleSheet.style(registerStyle = false,
-                                              color = iconOptions.tintColor)
+            style = GlobalStyles.dynamicColor(iconOptions.tintColor)
           )
         },
         tabBarLabel = "People"

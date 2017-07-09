@@ -4,10 +4,9 @@ import org.scalajs.dom
 import sri.core._
 import sri.universal._
 import sri.universal.components._
-import sri.universal.styles.UniversalStyleSheet
+import sri.universal.styles.InlineStyleSheetUniversal
 
 import scala.scalajs.js
-import scala.scalajs.js.annotation.ScalaJSDefined
 import scala.scalajs.js.{UndefOr => U}
 
 object RefreshControlExample extends UIExample {
@@ -36,7 +35,6 @@ object RefreshControlExample extends UIExample {
         .map(i => RowData(text = s"Initial row $i", clicks = 0, i))
         .toVector)
 
-  @ScalaJSDefined
   class Component extends ComponentS[State] {
 
     initialState(State())
@@ -85,20 +83,23 @@ object RefreshControlExample extends UIExample {
     }
   }
 
-  object styles extends UniversalStyleSheet {
+  object styles extends InlineStyleSheetUniversal {
+
+    import dsl._
+
     val refreshControlRow = style(
-      borderColor = "grey",
-      borderWidth = 1,
-      padding = 20,
-      backgroundColor = "#3a5795",
-      margin = 5
+      borderColor := "grey",
+      borderWidth := 1,
+      padding := 20,
+      backgroundColor := "#3a5795",
+      margin := 5
     )
     val text = style(
-      alignSelf = "center",
-      color = "#fff"
+      alignSelf.center,
+      color := "#fff"
     )
     val scrollview = style(
-      flex = 1
+      flex := 1
     )
 
   }

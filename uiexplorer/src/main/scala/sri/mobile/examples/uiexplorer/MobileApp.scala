@@ -10,10 +10,9 @@ import sri.universal.apis.AppRegistry
 
 import scala.scalajs.js.JSApp
 
-object MobileApp extends JSApp {
+object MobileApp {
 
-  def main() = {
-    sri.core.setReactElementType
+  def main(args: Array[String]) = {
     val root = StackNavigator(
       registerStackScreen[UIExplorerListScreen](navigationOptions =
         NavigationStackScreenOptions(title = "UIExplorer")),

@@ -8,7 +8,7 @@ import sri.mobile.examples.uiexplorer.components.{
 }
 import sri.universal.apis.Linking
 import sri.universal.components._
-import sri.universal.styles.UniversalStyleSheet
+import sri.universal.styles.InlineStyleSheetUniversal
 
 import scala.scalajs.concurrent.JSExecutionContext.Implicits.queue
 import scala.scalajs.js.Thenable.Implicits._
@@ -52,13 +52,19 @@ object LinkingExample extends UIExample {
 
   val component = () => CreateElementSFNoP(Component)
 
-  object styles extends UniversalStyleSheet {
+  object styles extends InlineStyleSheetUniversal {
+
+    import dsl._
+
     val container =
-      style(flex = 1, backgroundColor = "white", padding = 10, paddingTop = 30)
+      style(flex := 1,
+            backgroundColor := "white",
+            padding := 10,
+            paddingTop := 30)
 
     val button =
-      style(padding = 10, backgroundColor = "#3B5998", marginBottom = 10)
-    val text = style(color = "white")
+      style(padding := 10, backgroundColor := "#3B5998", marginBottom := 10)
+    val text = style(color := "white")
   }
 
 }

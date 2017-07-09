@@ -1,79 +1,64 @@
 package sri.mobile.examples.uiexplorer
 
+import sri.universal.AssetLoader
+
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSImport
 
 package object images {
 
-  @js.native
-  @JSImport("./images/thumbnails/like.png",JSImport.Default)
-  object LikeImage extends js.Object
+  def LikeImage =
+    AssetLoader
+      .require[js.Dynamic]("../images/thumbnails/like.png")
 
-  @js.native
-  @JSImport("./images/thumbnails/dislike.png",JSImport.Default)
-  object DislikeImage extends js.Object
+  def DislikeImage =
+    AssetLoader.require[js.Dynamic]("../images/thumbnails/dislike.png")
 
-  @js.native
-  @JSImport("./images/thumbnails/call.png",JSImport.Default)
-  object CallImage extends js.Object
+  def CallImage =
+    AssetLoader.require[js.Dynamic]("../images/thumbnails/call.png")
 
-  @js.native
-  @JSImport("./images/thumbnails/fist.png",JSImport.Default)
-  object FistImage extends js.Object
+  def FistImage =
+    AssetLoader.require[js.Dynamic]("../images/thumbnails/fist.png")
 
-  @js.native
-  @JSImport("./images/thumbnails/bandaged.png",JSImport.Default)
-  object BandagedImage extends js.Object
+  def BandagedImage =
+    AssetLoader.require[js.Dynamic]("../images/thumbnails/bandaged.png")
 
-  @js.native
-  @JSImport("./images/thumbnails/flowers.png",JSImport.Default)
-  object FlowersImage extends js.Object
+  def FlowersImage =
+    AssetLoader.require[js.Dynamic]("../images/thumbnails/flowers.png")
 
-  @js.native
-  @JSImport("./images/thumbnails/heart.png",JSImport.Default)
-  object HeartImage extends js.Object
+  def HeartImage =
+    AssetLoader.require[js.Dynamic]("../images/thumbnails/heart.png")
 
-  @js.native
-  @JSImport("./images/thumbnails/liking.png",JSImport.Default)
-  object LikingImage extends js.Object
+  def LikingImage =
+    AssetLoader.require[js.Dynamic]("../images/thumbnails/liking.png")
 
-  @js.native
-  @JSImport("./images/thumbnails/party.png",JSImport.Default)
-  object PartyImage extends js.Object
+  def PartyImage =
+    AssetLoader.require[js.Dynamic]("../images/thumbnails/party.png")
 
-  @js.native
-  @JSImport("./images/thumbnails/poke.png",JSImport.Default)
-  object PokeImage extends js.Object
+  def PokeImage =
+    AssetLoader.require[js.Dynamic]("../images/thumbnails/poke.png")
 
-  @js.native
-  @JSImport("./images/thumbnails/superlike.png",JSImport.Default)
-  object SuperLikeImage extends js.Object
+  def SuperLikeImage =
+    AssetLoader.require[js.Dynamic]("../images/thumbnails/superlike.png")
 
-  @js.native
-  @JSImport("./images/thumbnails/victory.png",JSImport.Default)
-  object VictoryImage extends js.Object
+  def VictoryImage =
+    AssetLoader.require[js.Dynamic]("../images/thumbnails/victory.png")
 
-  @js.native
-  @JSImport("./images/ic_create_black_48dp.png",JSImport.Default)
-  object CreateImage extends js.Object
+  def CreateImage =
+    AssetLoader.require[js.Dynamic]("../images/ic_create_black_48dp.png")
 
-  @js.native
-  @JSImport("./images/ic_settings_black_48dp.png",JSImport.Default)
-  object SettingImage extends js.Object
+  def SettingImage =
+    AssetLoader.require[js.Dynamic]("../images/ic_settings_black_48dp.png")
 
-  @js.native
-  @JSImport("./images/ic_menu_black_24dp.png",JSImport.Default)
-  object BlackMenuImage extends js.Object
+  def BlackMenuImage =
+    AssetLoader.require[js.Dynamic]("../images/ic_menu_black_24dp.png")
 
-  @js.native
-  @JSImport("./images/launcher_icon.png",JSImport.Default)
-  object LauncherImage extends js.Object
+  def LauncherImage =
+    AssetLoader.require[js.Dynamic]("../images/launcher_icon.png")
 
-  @js.native
-  @JSImport("./images/android_search_white.png",JSImport.Default)
-  object AndroidSearchWhiteImage extends js.Object
+  def AndroidSearchWhiteImage =
+    AssetLoader.require[js.Dynamic]("../images/android_search_white.png")
 
-  @js.native
-  @JSImport("./images/android_back_white.png",JSImport.Default)
-  object AndroidBackWhiteImage extends js.Object
+  def AndroidBackWhiteImage =
+    AssetLoader.require[js.Dynamic]("../images/android_back_white.png")
 }

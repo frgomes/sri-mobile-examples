@@ -1,25 +1,24 @@
 package sri.mobile.examples.uiexplorer.components.ios
 
 import sri.core._
-import sri.mobile.components._
 import sri.mobile.examples.uiexplorer.components.{
   UIExample,
   UIExplorerBlock,
   UIExplorerPage
 }
 import sri.universal.components._
-import sri.universal.styles.UniversalStyleSheet
+import sri.mobile.components.ios._
+import sri.universal.styles.InlineStyleSheetUniversal
 
 import scala.scalajs.js
 import scala.scalajs.js.Dynamic.{literal => json}
-import scala.scalajs.js.annotation.ScalaJSDefined
 
 object SegmentedControlExample extends UIExample {
 
   object BasicSegmentedControlExample {
 
     val Component = () => {
-      View(
+      ViewC(
         SegmentedControlIOS(values = js.Array("One", "Two"))
       )
     }
@@ -30,7 +29,7 @@ object SegmentedControlExample extends UIExample {
   object PreSelectedSegmentedControlExample {
 
     val Component = () => {
-      View(
+      ViewC(
         SegmentedControlIOS(values = js.Array("One", "Two"), selectedIndex = 0)
       )
     }
@@ -41,7 +40,7 @@ object SegmentedControlExample extends UIExample {
   object MomentarySegmentedControlExample {
 
     val Component = () => {
-      View(
+      ViewC(
         SegmentedControlIOS(values = js.Array("One", "Two"), momentary = true)
       )
     }
@@ -52,7 +51,7 @@ object SegmentedControlExample extends UIExample {
   object DisabledSegmentedControlExample {
 
     val Component = () => {
-      View(
+      ViewC(
         SegmentedControlIOS(values = js.Array("One", "Two"),
                             enabled = false,
                             selectedIndex = 0)
@@ -65,7 +64,7 @@ object SegmentedControlExample extends UIExample {
   object ColorSegmentedControlExample {
 
     val Component = () => {
-      View(
+      ViewC(
         SegmentedControlIOS(values = js.Array("One", "Two"),
                             selectedIndex = 0,
                             tintColor = "#ff0000")
@@ -82,12 +81,11 @@ object SegmentedControlExample extends UIExample {
                      value: String = "One",
                      index: Int = 0)
 
-    @ScalaJSDefined
     class Component extends ComponentS[State] {
 
       initialState(State())
 
-      def render() = View(
+      def render() = ViewC(
         Text(style = styles.text)(s"Value : ${state.value}"),
         Text(style = styles.text)(
           s"Index : ${state.values.indexOf(state.value)}"),
@@ -99,10 +97,8 @@ object SegmentedControlExample extends UIExample {
       )
 
       def onChange(e: js.Dynamic) = {
-        setState(
-          (state: State) =>
-            state.copy(
-              index = e.nativeEvent.selectedSegmentIndex.toString.toInt))
+        val index = e.nativeEvent.selectedSegmentIndex.toString.toInt
+        setState((state: State) => state.copy(index = index))
       }
 
       def onValueChange(value: String) =
@@ -116,7 +112,7 @@ object SegmentedControlExample extends UIExample {
 
   val Component = () => {
     UIExplorerPage(
-      View(
+      ViewC(
         UIExplorerBlock("Segmented controls can have values")(
           BasicSegmentedControlExample()
         ),
@@ -141,12 +137,14 @@ object SegmentedControlExample extends UIExample {
 
   val component = () => CreateElementSFNoP(Component)
 
-  object styles extends UniversalStyleSheet {
+  object styles extends InlineStyleSheetUniversal {
 
-    val text = style(fontSize = 14,
-                     textAlign = "center",
-                     fontWeight = "500",
-                     margin = 10)
+    import dsl._
+
+    val text = style(fontSize := 14,
+                     textAlign.center,
+                     fontWeight := "500",
+                     margin := 10)
 
   }
 

@@ -1,10 +1,7 @@
 package sri.mobile.examples.navigationx.simplestack
 
-import sri.navigation.{NavigationScreenComponentNoPS, NavigationScreenOptions}
+import sri.navigation.NavigationScreenComponentNoPS
 
-import scala.scalajs.js.annotation.{JSExportStatic, ScalaJSDefined}
-
-@ScalaJSDefined
 class PhotosScreen extends NavigationScreenComponentNoPS {
 
   def render() = MyNavScreen("Home Screen")

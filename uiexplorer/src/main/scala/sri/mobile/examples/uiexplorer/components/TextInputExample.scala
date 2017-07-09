@@ -2,18 +2,16 @@ package sri.mobile.examples.uiexplorer.components
 
 import sri.core._
 import sri.universal.components._
-import sri.universal.styles.UniversalStyleSheet
+import sri.universal.styles.InlineStyleSheetUniversal
 import sri.universal.{ReactEvent, TextInputEvent}
 
 import scala.scalajs.js
 import scala.scalajs.js.JSConverters.genTravConvertible2JSRichGenTrav
-import scala.scalajs.js.annotation.ScalaJSDefined
 
 object TextInputExample extends UIExample {
 
   object WithLabel {
 
-    @ScalaJSDefined
     class Component extends ComponentP[String] {
 
       def render() = {
@@ -39,12 +37,11 @@ object TextInputExample extends UIExample {
     case class State(curText: String = "No Event",
                      prevText: String = "No Event")
 
-    @ScalaJSDefined
     class Component extends ComponentS[State] {
 
       initialState(State())
 
-      def render() = View(
+      def render() = ViewC(
         TextInput(
           autoCapitalize = TextInputAutoCapitalize.NONE,
           placeholder = "Enter text to see events",
@@ -83,7 +80,7 @@ object TextInputExample extends UIExample {
         TextInput(autoFocus = true, style = styles.default)
       ),
       UIExplorerBlock("Auto-capitalize")(
-        View(
+        ViewC(
           WithLabel("none")(
             TextInput(autoCapitalize = TextInputAutoCapitalize.NONE,
                       key = "none",
@@ -106,7 +103,7 @@ object TextInputExample extends UIExample {
         TextEventsExample()
       ),
       UIExplorerBlock("Auto-correct")(
-        View(
+        ViewC(
           WithLabel("true")(
             TextInput(autoCorrect = true,
                       key = "none",
@@ -118,7 +115,7 @@ object TextInputExample extends UIExample {
         )
       ),
       UIExplorerBlock("Clear button mode")(
-        View(
+        ViewC(
           WithLabel("never")(
             TextInput(clearButtonMode = "never",
                       key = "never",
@@ -142,32 +139,34 @@ object TextInputExample extends UIExample {
 
   val component = () => CreateElementSFNoP(Component)
 
-  object styles extends UniversalStyleSheet {
+  object styles extends InlineStyleSheetUniversal {
 
-    val page = style(paddingBottom = 30)
+    import dsl._
 
-    val default = style(height = 26,
-                        borderWidth = 0.5,
-                        borderColor = "#0f0f0f",
-                        flex = 1,
-                        fontSize = 13)
+    val page = style(paddingBottom := 30)
 
-    val multiline = style(borderWidth = 0.5,
-                          borderColor = "#0f0f0f",
-                          flex = 1,
-                          fontSize = 13,
-                          height = 50)
+    val default = style(height := 26,
+                        borderWidth := 0.5,
+                        borderColor := "#0f0f0f",
+                        flex := 1,
+                        fontSize := 13)
 
-    val label = style(width = 120,
-                      justifyContent = "flex-end",
-                      flexDirection = "row",
-                      marginRight = 10,
-                      paddingTop = 2)
+    val multiline = style(borderWidth := 0.5,
+                          borderColor := "#0f0f0f",
+                          flex := 1,
+                          fontSize := 13,
+                          height := 50)
 
-    val eventLabel = style(margin = 3, fontSize = 12)
+    val label = style(width := 120,
+                      justifyContent.flexEnd,
+                      flexDirection.row,
+                      marginRight := 10,
+                      paddingTop := 2)
+
+    val eventLabel = style(margin := 3, fontSize := 12)
 
     val labelContainer =
-      style(flexDirection = "row", marginVertical = 2, flex = 1)
+      style(flexDirection.row, marginVertical := 2, flex := 1)
 
   }
 

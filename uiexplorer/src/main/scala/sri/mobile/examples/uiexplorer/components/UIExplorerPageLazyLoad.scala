@@ -3,16 +3,14 @@ package sri.mobile.examples.uiexplorer.components
 import sri.core.{ComponentS, CreateElementNoPropsWithChildren, ReactNode}
 import sri.universal.apis.InteractionManager
 import sri.universal.components._
-import sri.universal.styles.UniversalStyleSheet
+import sri.universal.styles.InlineStyleSheetUniversal
 
 import scala.scalajs.js.JSConverters.genTravConvertible2JSRichGenTrav
-import scala.scalajs.js.annotation.ScalaJSDefined
 
 object UIExplorerPageLazyLoad {
 
   case class State(isLoading: Boolean = true)
 
-  @ScalaJSDefined
   class Component extends ComponentS[State] {
 
     initialState(State())
@@ -39,9 +37,12 @@ object UIExplorerPageLazyLoad {
     }
   }
 
-  object styles extends UniversalStyleSheet {
+  object styles extends InlineStyleSheetUniversal {
+
+    import dsl._
+
     val spinner =
-      style(justifyContent = "center", alignItems = "center", marginTop = 40)
+      style(justifyContent.center, alignItems.center, marginTop := 40)
   }
 
   def apply(children: ReactNode*) =

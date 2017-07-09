@@ -7,11 +7,10 @@ import sri.mobile.examples.uiexplorer.components.ListExamplesShared.{
   renderSmallSwitchOption
 }
 import sri.universal.components._
-import sri.universal.styles.UniversalStyleSheet
+import sri.universal.styles.InlineStyleSheetUniversal
 
 import scala.scalajs.js
 import scala.scalajs.js.UndefOr
-import scala.scalajs.js.annotation.ScalaJSDefined
 
 object FlatListExample extends UIExample {
 
@@ -29,7 +28,6 @@ object FlatListExample extends UIExample {
                    logViewable: Boolean = false,
                    virtualized: Boolean = true)
 
-  @ScalaJSDefined
   class Component extends ComponentS[State] {
 
     initialState(State(data = ListExamplesShared.genItemData(1000)))
@@ -118,11 +116,12 @@ object FlatListExample extends UIExample {
 
   val component = () => CreateElementNoProps[Component]()
 
-  object styles extends UniversalStyleSheet {
+  object styles extends InlineStyleSheetUniversal {
 
+    import dsl._
     val options =
-      style(flexDirection = row, flexWrap = wrap, alignItems = center)
-    val searchRow = style(paddingHorizontal = 0)
+      style(flexDirection.row, flexWrap.wrap, alignItems.center)
+    val searchRow = style(paddingHorizontal := 0)
   }
 
   override def title: String = "FlatList"

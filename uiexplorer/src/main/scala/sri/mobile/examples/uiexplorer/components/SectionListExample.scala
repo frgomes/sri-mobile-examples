@@ -8,11 +8,10 @@ import sri.mobile.examples.uiexplorer.components.ListExamplesShared.{
   renderSmallSwitchOption
 }
 import sri.universal.components._
-import sri.universal.styles.UniversalStyleSheet
+import sri.universal.styles.InlineStyleSheetUniversal
 
 import scala.scalajs.js
 import scala.scalajs.js.UndefOr
-import scala.scalajs.js.annotation.ScalaJSDefined
 
 object SectionListExample extends UIExample {
 
@@ -30,7 +29,6 @@ object SectionListExample extends UIExample {
                    logViewable: Boolean = false,
                    virtualized: Boolean = true)
 
-  @ScalaJSDefined
   class Component extends ComponentS[State] {
 
     initialState(State(data = ListExamplesShared.genItemData(1000)))
@@ -88,7 +86,7 @@ object SectionListExample extends UIExample {
           sections = js
             .Array(
               new SectionBase[ListExamplesShared.Item] {
-                override val key = "s1"
+                override val key: js.UndefOr[String] = "s1"
                 override val data = js.Array(new Item {
                   override val text: String = "Section s1"
                   override val key: Int = 0
@@ -96,10 +94,10 @@ object SectionListExample extends UIExample {
                 })
               },
               new SectionBase[ListExamplesShared.Item] {
-                override val key = "s2"
+                override val key: js.UndefOr[String] = "s2"
                 override val data = js.Array(new Item {
                   override val text: String = "Section s2"
-                  override val key: Int = 0
+                  override val key: Int = 1
                   override val title: String = "Item In Header Section2"
                 })
               }
@@ -108,7 +106,8 @@ object SectionListExample extends UIExample {
           disableVirtualization = !state.virtualized,
           renderItem = renderItem _,
           renderSectionHeader = (si: SectionItem[ListExamplesShared.Item]) => {
-            View(Text(si.section.key), ListExamplesShared.SeparatorComponent)
+            ViewC(TextC(si.section.key.getOrElse("").toString),
+                  ListExamplesShared.SeparatorComponent)
           }
         )
       )
@@ -141,11 +140,13 @@ object SectionListExample extends UIExample {
 
   val component = () => CreateElementNoProps[Component]()
 
-  object styles extends UniversalStyleSheet {
+  object styles extends InlineStyleSheetUniversal {
+
+    import dsl._
 
     val options =
-      style(flexDirection = row, flexWrap = wrap, alignItems = center)
-    val searchRow = style(paddingHorizontal = 0)
+      style(flexDirection.row, flexWrap.wrap, alignItems.center)
+    val searchRow = style(paddingHorizontal := 0)
   }
 
   override def title: String = "SectionList"

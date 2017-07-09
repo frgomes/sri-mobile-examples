@@ -1,5 +1,8 @@
 # UIExplorer
 
+
+![Demo](demo.gif)
+
 #### How to run
 
 //start server
