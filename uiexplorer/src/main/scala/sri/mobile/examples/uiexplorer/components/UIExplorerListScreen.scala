@@ -24,7 +24,7 @@ class UIExplorerListScreen
   initialState(State())
   dom.window.console.log(
     s"hello",
-    json(componenets = finalComponentsList, apis = finalAPIList))
+    json(components = finalComponentsList, apis = finalAPIList))
 
   def render() = {
     View(style = styles.listContainer)(
@@ -60,7 +60,7 @@ class UIExplorerListScreen
     setState(
       (state: State) =>
         state.copy(datasource = ds.cloneWithRowsAndSections(
-          json(componenets = filteredComponents, apis = filteredAPIS))))
+          json(components = filteredComponents, apis = filteredAPIS))))
   }
 
   def renderRow(example: UIExample,
@@ -159,7 +159,7 @@ object UIExplorerListScreen {
   case class State(
       datasource: ListViewDataSource[UIExample, String] =
         ds.cloneWithRowsAndSections(
-          json(componenets = finalComponentsList, apis = finalAPIList)))
+          json(components = finalComponentsList, apis = finalAPIList)))
 
   object styles extends InlineStyleSheetUniversal {
 

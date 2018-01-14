@@ -44,7 +44,7 @@ object RefreshControlExample extends UIExample {
         style = GlobalStyles.wholeContainer,
         refreshControl = RefreshControl(
           refreshing = state.isRefreshing,
-          onRefresh = _onRefresh _,
+          onRefresh = () => _onRefresh(),
           tintColor = "#ff0000",
           title = "Loading...",
           colors = js.Array("#ff0000", "#00ff00", "#0000ff"),
