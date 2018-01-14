@@ -1,7 +1,7 @@
 package sri.mobile.examples.uiexplorer.components
 
 import sri.core.{ComponentP, CreateElement}
-import sri.macros.OptDefault
+import scalajsplus.OptDefault
 import sri.mobile.examples.uiexplorer.images._
 import sri.platform.SriPlatform
 import sri.universal.apis.StyleSheet

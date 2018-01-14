@@ -8,8 +8,6 @@ import sri.navigation._
 import sri.navigation.navigators._
 import sri.universal.apis.AppRegistry
 
-import scala.scalajs.js.JSApp
-
 object MobileApp {
 
   def main(args: Array[String]) = {

@@ -41,7 +41,7 @@ object AsyncStorageExample extends UIExample {
                 state.selectedValue)
             ),
             TextC(" "),
-            Text(onPress = removeStorage _)(
+            Text(onPress = () => removeStorage)(
               "Press here to remove from storage"),
             TextC(" "),
             TextC("Messages : "),

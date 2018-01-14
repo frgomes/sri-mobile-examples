@@ -28,7 +28,7 @@ object LayoutEventsExample extends UIExample {
             "layout events are called on mount and whenever layout is recalculated. Note that the layout event will typically be received",
             Text(style = styles.italicText)("before"),
             "the layout has updated on screen, especially when using layout animations.",
-            Text(style = styles.pressText, onPress = animateViewLayout _)(
+            Text(style = styles.pressText, onPress = () => animateViewLayout)(
               " Press here to change layout.")
           ),
           View(onLayout = onViewLayout _,

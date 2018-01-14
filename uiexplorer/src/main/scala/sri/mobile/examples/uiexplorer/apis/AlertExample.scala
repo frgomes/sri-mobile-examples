@@ -22,41 +22,42 @@ object AlertExample extends UIExample {
     val a2 = () =>
       Alert.alert("Foo title",
                   "alert message",
-                  buttons = js.Array(new AlertButton {
-                    text = "Button";
-                    onPress = (() => println("Button Pressed")): js.Function
-                  }))
+                  buttons = js.Array(AlertButton(
+                    text = "Button",
+                    onPress = (() => println("Button Pressed"))
+                  )))
     val a3 = () =>
       Alert.alert(
         title = "Foo Title",
         message = "My Alert Msg",
         buttons = js.Array(
-          new AlertButton {
-            text = "Foo";
-            onPress = (() => println("Foo Button Pressed")): js.Function
-          },
-          new AlertButton {
-            text = "Bar";
-            onPress = (() => println("Bar Button Pressed")): js.Function
-          }
+          AlertButton(
+            text = "Foo",
+            onPress = (() => println("Foo Button Pressed"))
+          )
+          ,
+          AlertButton(
+            text = "Bar",
+            onPress = (() => println("Bar Button Pressed"))
+          )
         )
     )
     val a4 = () =>
       Alert.alert(
         title = "Foo Title",
         buttons = js.Array(
-          new AlertButton {
-            text = "Foo";
-            onPress = (() => println("Foo Button Pressed")): js.Function
-          },
-          new AlertButton {
-            text = "Bar";
-            onPress = (() => println("Bar Button Pressed")): js.Function
-          },
-          new AlertButton {
-            text = "Baz";
-            onPress = (() => println("Baz Button Pressed")): js.Function
-          }
+          AlertButton(
+            text = "Foo",
+            onPress = (() => println("Foo Button Pressed"))
+          ),
+          AlertButton(
+            text = "Bar",
+            onPress = (() => println("Bar Button Pressed"))
+          ),
+          AlertButton(
+            text = "Baz",
+            onPress = (() => println("Baz Button Pressed"))
+          )
         )
     )
     val a5 = () =>
@@ -64,10 +65,10 @@ object AlertExample extends UIExample {
         title = "Foo title",
         buttons = (1 to 10)
           .map(i =>
-            new AlertButton {
-              text = s"Button $i";
-              onPress = (() => println(s"Button $i pressed")): js.Function
-          })
+            AlertButton(
+              text = s"Button $i",
+              onPress = (() => println(s"Button $i pressed"))
+            ))
           .toJSArray)
 
     UIExplorerPage(
