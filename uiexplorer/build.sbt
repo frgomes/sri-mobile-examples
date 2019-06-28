@@ -1,20 +1,25 @@
 enablePlugins(SriPlatformPlugin)
 
-name := "UIExplorer"
+name := "mobile-examples-uiexplorer"
+organization := "scalajs-react-interface"
 
-scalaVersion := "2.12.4"
+val scala212 = "2.12.8"
+val scala213 = "2.13.0"
+
+scalaVersion := scala212
+crossScalaVersions := Seq(scala212, scala213)
 
 resolvers += Resolver.bintrayRepo("scalajs-react-interface", "maven")
 resolvers += Resolver.bintrayRepo("scalajs-plus", "maven")
 
 libraryDependencies ++= Seq(
-  "scalajs-react-interface" %%% "core" % "2017.12.28-RC",
-  "scalajs-react-interface" %%% "mobile" % "2017.12.28-RC",
-  "org.scala-lang.modules" %% "scala-async" % "0.9.6",
-  "scalajs-react-interface" %%% "universal" % "2017.12.28-RC",
-  "scalajs-react-interface" %%% "navigation" % "2017.12.28-RC",
-  "scalajs-react-interface" %%% "platform-config-ios" % "2017.12.28-RC" % ios,
-  "scalajs-react-interface" %%% "platform-config-android" % "2017.12.28-RC" % android
+  "scalajs-react-interface" %%% "core" % "2019.06.26",
+  "scalajs-react-interface" %%% "mobile" % "2019.06.26",
+  "org.scala-lang.modules" %% "scala-async" % "0.9.7",
+  "scalajs-react-interface" %%% "universal" % "2019.06.26",
+  "scalajs-react-interface" %%% "navigation" % "2019.06.26",
+  "scalajs-react-interface" %%% "platform-config-ios" % "2019.06.26" % IOS,
+  "scalajs-react-interface" %%% "platform-config-android" % "2019.06.26" % Android,
 )
 
 scalacOptions ++= Seq(
